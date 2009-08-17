@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: CHANGES</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>CHANGES</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>CHANGES
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Mon Aug 17 15:44:42 -0500 2009</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <h1>Limelight Changelog</h1>
+<h2>Version 0.4.0</h2>
+<p>
+Solved issues, improved usability.
+</p>
+<ul>
+<li>Required Limelight Version - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/137">limelight.lighthouseapp.com/projects/12073/tickets/137</a>
+
+</li>
+<li>Allow opening of URLs in browser - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/139">limelight.lighthouseapp.com/projects/12073/tickets/139</a>
+
+</li>
+<li>Add specs to generators - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/138">limelight.lighthouseapp.com/projects/12073/tickets/138</a>
+
+</li>
+<li>Resize Window doesn&#8216;t trigger layout - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/55">limelight.lighthouseapp.com/projects/12073/tickets/55</a>
+
+</li>
+<li>Stage placement helpers - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/135">limelight.lighthouseapp.com/projects/12073/tickets/135</a>
+
+</li>
+<li>Hook to let players know when they are casted - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/132">limelight.lighthouseapp.com/projects/12073/tickets/132</a>
+
+</li>
+<li>scale_to_fit background_image_fill_strategy - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/62">limelight.lighthouseapp.com/projects/12073/tickets/62</a>
+
+</li>
+<li>Background image fill strategy: positioning and single dimension repeats -
+<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/131">limelight.lighthouseapp.com/projects/12073/tickets/131</a>
+
+</li>
+<li>Allow updates to occur in multiple stages at the same time. - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/130">limelight.lighthouseapp.com/projects/12073/tickets/130</a>
+
+</li>
+<li>Flashing animation - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/129">limelight.lighthouseapp.com/projects/12073/tickets/129</a>
+
+</li>
+<li>Scene not displayed when frame not opened with focus - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/128">limelight.lighthouseapp.com/projects/12073/tickets/128</a>
+
+</li>
+<li>Capture OS X Quit event - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/124">limelight.lighthouseapp.com/projects/12073/tickets/124</a>
+
+</li>
+<li><a href="../classes/Production.html">Production</a> events - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/123">limelight.lighthouseapp.com/projects/12073/tickets/123</a>
+
+</li>
+<li>Ask scene if it can close - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/122">limelight.lighthouseapp.com/projects/12073/tickets/122</a>
+
+</li>
+<li>Kiosk Mode - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/121">limelight.lighthouseapp.com/projects/12073/tickets/121</a>
+
+</li>
+<li>DRb <a href="../classes/Production.html">Production</a> - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/117">limelight.lighthouseapp.com/projects/12073/tickets/117</a>
+
+</li>
+<li>Use jruby-complete jar - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/116">limelight.lighthouseapp.com/projects/12073/tickets/116</a>
+
+</li>
+<li>very slow animation - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/113">limelight.lighthouseapp.com/projects/12073/tickets/113</a>
+
+</li>
+<li>Optional Menubar - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/111">limelight.lighthouseapp.com/projects/12073/tickets/111</a>
+
+</li>
+<li>Remove use of full Frame. - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/76">limelight.lighthouseapp.com/projects/12073/tickets/76</a>
+
+</li>
+<li>hide and show for stages - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/104">limelight.lighthouseapp.com/projects/12073/tickets/104</a>
+
+</li>
+<li>Stage Background Color - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/109">limelight.lighthouseapp.com/projects/12073/tickets/109</a>
+
+</li>
+<li>Fullscreen - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/107">limelight.lighthouseapp.com/projects/12073/tickets/107</a>
+
+</li>
+<li>Always On Top - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/108">limelight.lighthouseapp.com/projects/12073/tickets/108</a>
+
+</li>
+<li>JRuby 1.1.5 - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/77">limelight.lighthouseapp.com/projects/12073/tickets/77</a>
+
+</li>
+<li>Move init.rb inside the Limelight module - <a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/56">limelight.lighthouseapp.com/projects/12073/tickets/56</a>
+
+</li>
+</ul>
+<h2>Version 0.3.1</h2>
+<p>
+Some New Features and Bug Fixes
+</p>
+<ul>
+<li>Unindexing prop - bug (<a
+href="http://limelight.lighthouseapp.com:80/projects/12073/tickets/94-unindexing-prop">limelight.lighthouseapp.com:80/projects/12073/tickets/94-unindexing-prop</a>)
+
+</li>
+<li>&#8212;version command - feature request (<a
+href="http://limelight.lighthouseapp.com:80/projects/12073/tickets/80--version-command">limelight.lighthouseapp.com:80/projects/12073/tickets/80--version-command</a>)
+
+</li>
+<li>web page nits - bug (<a
+href="http://limelight.lighthouseapp.com:80/projects/12073/tickets/83-web-page-nits">limelight.lighthouseapp.com:80/projects/12073/tickets/83-web-page-nits</a>)
+
+</li>
+<li>Password Field - feature request (<a
+href="http://limelight.lighthouseapp.com:80/projects/12073/tickets/87-password-field">limelight.lighthouseapp.com:80/projects/12073/tickets/87-password-field</a>)
+
+</li>
+<li>Alignment short cut - feature request (<a
+href="http://limelight.lighthouseapp.com:80/projects/12073/tickets/60-alignment-short-cut">limelight.lighthouseapp.com:80/projects/12073/tickets/60-alignment-short-cut</a>)
+
+</li>
+<li>Percentage values for Margin, Border, and Padding - feature request (<a
+href="http://limelight.lighthouseapp.com:80/projects/12073/tickets/58-percentage-values-for-margin-border-and-padding">limelight.lighthouseapp.com:80/projects/12073/tickets/58-percentage-values-for-margin-border-and-padding</a>)
+
+</li>
+<li>Percentages as floats - feature request (<a
+href="http://limelight.lighthouseapp.com:80/projects/12073/tickets/59-percentages-as-floats">limelight.lighthouseapp.com:80/projects/12073/tickets/59-percentages-as-floats</a>)
+
+</li>
+<li>Styles take objects, not just strings. - feature request (<a
+href="http://limelight.lighthouseapp.com:80/projects/12073/tickets/78-styles-take-objects-not-just-strings">limelight.lighthouseapp.com:80/projects/12073/tickets/78-styles-take-objects-not-just-strings</a>)
+
+</li>
+<li>Convenience getter methods for Player modules - feature request (<a
+href="http://limelight.lighthouseapp.com:80/projects/12073/tickets/64-convenience-getter-methods-for-player-modules">limelight.lighthouseapp.com:80/projects/12073/tickets/64-convenience-getter-methods-for-player-modules</a>)
+
+</li>
+<li>Windoze, screen repaint wrong - bug (<a
+href="http://limelight.lighthouseapp.com:80/projects/12073/tickets/73-windoze-screen-repaint-wrong">limelight.lighthouseapp.com:80/projects/12073/tickets/73-windoze-screen-repaint-wrong</a>)
+
+</li>
+</ul>
+<h2>Version 0.3.0</h2>
+<p>
+Major New Release
+</p>
+<ul>
+<li>Many new feature and much more stability
+
+</li>
+<li>Default event implementation - feature_request (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/52">limelight.lighthouseapp.com/projects/12073/tickets/52</a>)
+
+</li>
+<li>Image player - feature_request (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/63">limelight.lighthouseapp.com/projects/12073/tickets/63</a>)
+
+</li>
+<li>Sending variables to partials - feature_request (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/61">limelight.lighthouseapp.com/projects/12073/tickets/61</a>)
+
+</li>
+<li>CPU Hog - (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/35">limelight.lighthouseapp.com/projects/12073/tickets/35</a>)
+
+</li>
+<li>Gems in productions - feature_request (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/12">limelight.lighthouseapp.com/projects/12073/tickets/12</a>)
+
+</li>
+<li>Giving Floats to prop styles - feature_request (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/17">limelight.lighthouseapp.com/projects/12073/tickets/17</a>)
+
+</li>
+<li>Scene&#8216;s Default name - feature_request (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/47">limelight.lighthouseapp.com/projects/12073/tickets/47</a>)
+
+</li>
+<li>Hand Cursor Stays - bug (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/36">limelight.lighthouseapp.com/projects/12073/tickets/36</a>)
+
+</li>
+<li>generate production templates - feature_request (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/46">limelight.lighthouseapp.com/projects/12073/tickets/46</a>)
+
+</li>
+<li>Validate styles - feature_request (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/53">limelight.lighthouseapp.com/projects/12073/tickets/53</a>)
+
+</li>
+<li>Auto resizing doesn&#8216;t trigger update on parent. - bug (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/51">limelight.lighthouseapp.com/projects/12073/tickets/51</a>)
+
+</li>
+<li>Double click to open production - feature_request (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/27">limelight.lighthouseapp.com/projects/12073/tickets/27</a>)
+
+</li>
+<li>Color as a hash - feature_request (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/32">limelight.lighthouseapp.com/projects/12073/tickets/32</a>)
+
+</li>
+<li>Add more Known colors - feature_request (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/54">limelight.lighthouseapp.com/projects/12073/tickets/54</a>)
+
+</li>
+<li>Need to relaunch when changing player. - feature_request (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/50">limelight.lighthouseapp.com/projects/12073/tickets/50</a>)
+
+</li>
+<li>Shared Players - feature_request (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/48">limelight.lighthouseapp.com/projects/12073/tickets/48</a>)
+
+</li>
+<li>Unique IDs - bug (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/49">limelight.lighthouseapp.com/projects/12073/tickets/49</a>)
+
+</li>
+<li>Building a <a href="../classes/Production.html">Production</a> -
+documentation (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/41">limelight.lighthouseapp.com/projects/12073/tickets/41</a>)
+
+</li>
+<li>Document Events - documentation (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/15">limelight.lighthouseapp.com/projects/12073/tickets/15</a>)
+
+</li>
+<li>Document Prop API - documentation (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/16">limelight.lighthouseapp.com/projects/12073/tickets/16</a>)
+
+</li>
+<li>Document Styles - documentation (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/14">limelight.lighthouseapp.com/projects/12073/tickets/14</a>)
+
+</li>
+<li>Variable size text areas - feature_request (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/37">limelight.lighthouseapp.com/projects/12073/tickets/37</a>)
+
+</li>
+<li>Editable TextArea size - bug (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/39">limelight.lighthouseapp.com/projects/12073/tickets/39</a>)
+
+</li>
+<li>Simple App screencast - documentation (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/42">limelight.lighthouseapp.com/projects/12073/tickets/42</a>)
+
+</li>
+<li>RDoc - documentation (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/40">limelight.lighthouseapp.com/projects/12073/tickets/40</a>)
+
+</li>
+<li>finish 0.2.0 release - release (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/43">limelight.lighthouseapp.com/projects/12073/tickets/43</a>)
+
+</li>
+<li>Reserved prop keywords - bug (<a
+href="http://limelight.lighthouseapp.com/projects/12073/tickets/45">limelight.lighthouseapp.com/projects/12073/tickets/45</a>)
+
+</li>
+</ul>
+<h2>Version 0.2.1</h2>
+<p>
+Minor Fixes
+</p>
+<ul>
+<li>stripped DSL builder of all methods except those needed.
+
+</li>
+<li>catch uneeded paint updates
+
+</li>
+<li>text measurement fixed
+
+</li>
+<li>frame insets detectable and used in sizing
+
+</li>
+<li>rdoc
+
+</li>
+</ul>
+<h2>Version 0.2.0</h2>
+<p>
+Redesigned Model
+</p>
+<ul>
+<li>The UI model was redesigned to avoid such of Swing&#8216;s hierarchy
+
+</li>
+<li>Changes listed here: <a
+href="http://limelight.lighthouseapp.com/projects/12073-limelight/tickets?q=milestone%3A%22Limelight+0.2%22&filter=all">limelight.lighthouseapp.com/projects/12073-limelight/tickets?q=milestone%3A%22Limelight+0.2%22&filter=all</a>
+
+</li>
+</ul>
+<h2>Version 0.1.0</h2>
+<p>
+First Beta release
+</p>
+<ul>
+<li>Default production is now presentable
+
+</li>
+</ul>
+<h2>Version 0.0.1</h2>
+<p>
+Initial Release
+</p>
+<ul>
+<li>All the stuff for the initial release
+
+</li>
+</ul>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

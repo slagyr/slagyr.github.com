@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Limelight::DSL::PropBuilder</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Limelight::DSL::PropBuilder</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../files/lib/limelight/dsl/prop_builder_rb.html">
+                lib/limelight/dsl/prop_builder.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+The basis of the <a href="../DSL.html">DSL</a> for building <a
+href="../Prop.html">Limelight::Prop</a> objects.
+</p>
+<p>
+Sample usage:
+</p>
+<pre>
+  builder = Limelight::PropBuilder.new(a_prop)
+  builder.instance_eval(&amp;block)
+</pre>
+<p>
+The prop passed into the constructor will be the root of the contructed <a
+href="../Prop.html">Prop</a> tree. The block passed into instance_eval
+contains the <a href="../DSL.html">DSL</a> for building props.
+</p>
+<p>
+Example block/DSL:
+</p>
+<pre>
+  parent :id =&gt; &quot;the_parent&quot; do
+    child_one do
+      grand_child_one :id =&gt; &quot;gc_1&quot;, :styles =&gt; &quot;grand_child&quot;
+      grand_child_two :id =&gt; &quot;gc_2&quot;, :styles =&gt; &quot;grand_child&quot;
+    end
+    child_two
+  end
+</pre>
+<p>
+The above example will create a <a href="../Prop.html">Limelight::Prop</a>
+named &#8216;parent&#8217; and add it to the root prop passed into the
+builder. The &#8216;parent&#8217; prop will contain two props named
+&#8216;child_one&#8217; and &#8216;child_two&#8217;.
+&#8216;child_one&#8217; will contain two props named
+&#8216;grand_child_one&#8217; and &#8216;grand_child_two&#8217;.
+&#8216;child_two&#8217; has no child props nor do
+&#8216;grand_child_one&#8217; or &#8216;grand_child_two&#8217;.
+</p>
+<p>
+An options Hash may be passed into each prop. The key, value pairs in the
+hash will be used to set properties on the prop when it is added to a <a
+href="../Scene.html">Limelight::Scene</a>.
+</p>
+<p>
+See <a href="../Prop.html">Limelight::Prop</a>
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000088">__</a>&nbsp;&nbsp;
+      <a href="#M000089">__install</a>&nbsp;&nbsp;
+      <a href="#M000090">__install_instance_variables</a>&nbsp;&nbsp;
+      <a href="#M000087">new</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+    <div id="aliases-list">
+      <h3 class="section-bar">External Aliases</h3>
+
+      <div class="name-list">
+                        <table summary="aliases">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">instance_variables</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">__instance_variables</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">instance_variable_get</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">__instance_variable_get</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">instance_variable_set</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">__instance_variable_set</td>
+        </tr>
+                        </table>
+      </div>
+    </div>
+
+
+    <div id="attribute-list">
+      <h3 class="section-bar">Attributes</h3>
+
+      <div class="name-list">
+        <table>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">__loader__</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">__prop__</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc">
+Returns the root prop either passed in or created by this builder.
+
+</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000087" class="method-detail">
+        <a name="M000087"></a>
+
+        <div class="method-heading">
+          <a href="#M000087" class="method-signature">
+          <span class="method-name">new</span><span class="method-args">(options)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Creates a <a href="PropBuilder.html#M000087">new</a> builder. If a prop is
+passed it, it will be the root on which props are created. If the paramter
+is a Hash, the Hash will be used to construct a prop that will be used as
+the root.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000087-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000087-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/limelight/dsl/prop_builder.rb, line 73</span>
+73:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">options</span>)
+74:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Prop</span>)
+75:           <span class="ruby-ivar">@__prop__</span> = <span class="ruby-identifier">options</span>
+76:         <span class="ruby-keyword kw">else</span>
+77:           <span class="ruby-ivar">@__prop__</span> = <span class="ruby-constant">Prop</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">options</span>)
+78:         <span class="ruby-keyword kw">end</span>
+79:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000088" class="method-detail">
+        <a name="M000088"></a>
+
+        <div class="method-heading">
+          <a href="#M000088" class="method-signature">
+          <span class="method-name">__</span><span class="method-args">(options)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Add extra initialization options to the prop currently under construction.
+</p>
+<pre>
+  tree :id =&gt; &quot;stump&quot; do
+    __ :height =&gt; &quot;100%&quot;, :width =&gt; &quot;30&quot;, :background_color =&gt; :brown
+    branch :height =&gt; &quot;100&quot;, :width =&gt; &quot;20&quot;
+    branch do
+      __ :height =&gt; &quot;100&quot;, :width =&gt; &quot;20&quot;
+    end
+  end
+</pre>
+<p>
+In the above example, the &#8216;tree&#8217; prop has the following
+initialization options: id, height, width, background_color. The two
+&#8216;branch&#8217; child props are identical.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000088-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000088-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/limelight/dsl/prop_builder.rb, line 94</span>
+94:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">__</span>(<span class="ruby-identifier">options</span>)
+95:         <span class="ruby-ivar">@__prop__</span>.<span class="ruby-identifier">add_options</span>(<span class="ruby-identifier">options</span>)
+96:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000089" class="method-detail">
+        <a name="M000089"></a>
+
+        <div class="method-heading">
+          <a href="#M000089" class="method-signature">
+          <span class="method-name">__install</span><span class="method-args">(file, instance_variables = {})</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Installs props from another file using the prop <a
+href="../DSL.html">DSL</a>. The path will be relative to the root directory
+of the current production.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000089-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000089-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/dsl/prop_builder.rb, line 101</span>
+101:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">__install</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">instance_variables</span> = {})
+102:         <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Cannot install external props because no loader was provided&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@__loader__</span>.<span class="ruby-identifier">nil?</span>
+103:         <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;External prop file: '#{file}' doesn't exist&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@__loader__</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">file</span>)
+104:         <span class="ruby-identifier">content</span> = <span class="ruby-ivar">@__loader__</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">file</span>)
+105:         <span class="ruby-keyword kw">begin</span>
+106:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">__install_instance_variables</span>(<span class="ruby-identifier">instance_variables</span>)
+107:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-identifier">content</span>)
+108:         <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+109:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">BuildException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">content</span>, <span class="ruby-identifier">e</span>)
+110:         <span class="ruby-keyword kw">end</span>
+111:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000090" class="method-detail">
+        <a name="M000090"></a>
+
+        <div class="method-heading">
+          <a href="#M000090" class="method-signature">
+          <span class="method-name">__install_instance_variables</span><span class="method-args">(instance_variables)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Installs instance variables, specified by the passed hash, into the <a
+href="PropBuilder.html">PropBuilder</a> instance. The following call&#8230;
+</p>
+<pre>
+  __install_instance_variables :one =&gt; &quot;1&quot;, &quot;two&quot; =&gt; &quot;two&quot;, :three =&gt; 3
+</pre>
+<p>
+&#8230;will result in the following instance variables.
+</p>
+<pre>
+  @one   = &quot;1&quot;
+  @two   = &quot;2&quot;
+  @three = 3
+</pre>
+<p>
+Instance variables are propogated to nested builders so that they need only
+be defined on the top level builder and all children will have access to
+them.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000090-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000090-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/dsl/prop_builder.rb, line 127</span>
+127:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">__install_instance_variables</span>(<span class="ruby-identifier">instance_variables</span>)
+128:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">instance_variables</span>.<span class="ruby-identifier">nil?</span>
+129:         <span class="ruby-identifier">instance_variables</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+130:           <span class="ruby-identifier">name</span> = <span class="ruby-node">&quot;@#{key}&quot;</span>
+131:           <span class="ruby-identifier">__instance_variable_set</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span>)
+132:         <span class="ruby-keyword kw">end</span>
+133:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>
