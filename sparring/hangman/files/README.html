@@ -56,7 +56,7 @@
     </tr>
     <tr class="top-aligned-row">
       <td><strong>Last Update:</strong></td>
-      <td>Mon Aug 10 15:08:48 -0500 2009</td>
+      <td>Fri Aug 28 10:21:03 -0500 2009</td>
     </tr>
     </table>
   </div>
@@ -98,7 +98,7 @@ There are 4 simple steps to participate.
   # sudo gem install rspec
   cd some_creative_and_unique_name
   rake gem
-  sudo gem install pkg/some_creative_and_unique_name-1.0.gem
+  sudo gem install pkg/hangman_some_creative_and_unique_name-1.0.gem
 </pre>
 <p>
 4 Enter data, choose password, and submit your player
@@ -113,7 +113,8 @@ You&#8216;ll need Limelight to watch your player play.
 </p>
 <p>
 1 Download an installer from <a
-href="http://limelight.8thlight.com">limelight.8thlight.com</a>
+href="http://limelight.8thlight.com">limelight.8thlight.com</a>. (Minimum
+version required is 0.4.0)
 </p>
 <p>
 2 Install
@@ -122,11 +123,15 @@ href="http://limelight.8thlight.com">limelight.8thlight.com</a>
 3 Create a Limelight Link file
 </p>
 <pre>
-  echo &quot;http://sparring.rubyforge.org/hangman/hangman.llp&quot; &gt; ~/Desktop/hangman.lll
+  echo &quot;http://slagyr.github.com/sparring/hangman/hangman.llp&quot; &gt; ~/Desktop/hangman.lll
 </pre>
 <p>
-4 Go to your desktop and double click on hangman.lll
+4 Go to your desktop and double click on hangman.lll. Or if you&#8216;ve
+installed the Limelight gem&#8230;
 </p>
+<pre>
+  jruby -S limelight open ~/Desktop/hangman.lll
+</pre>
 <p>
 Click on the link at the top that says &quot;Computer AIs&quot; You should
 see your player in the list along with Letter Letdown. Have it play a few
@@ -150,11 +155,10 @@ Use of rSpec is required.
 </p>
 <p>
 There are plenty of comments in the generated source code. Go nuts! Add
-code. Change code. Add files. Turn your player into a masterfull hangman
-AI.
+code. Change code. Add files. Turn your player into a masterful hangman AI.
 </p>
 <p>
-Whe your player is ready, be sure to submit again. Make sure you remember
+When your player is ready, be sure to submit again. Make sure you remember
 your players password. You may submit as many times as you like. Each
 submission will overwrite the previous submission.
 </p>
@@ -179,7 +183,7 @@ hangman. All players will receive the same words in the same order. The
 Tournament Champion will be the player that wins the most games.
 </p>
 <p>
-However, there is a more prestegious title to which players should aspire.
+However, there is a more prestigious title to which players should aspire.
 The Tournament Master. This coveted title is awarded not to the player who
 wins the most games but to the player that also has the best source code. A
 series of metrics will be collected on your player&#8216;s source code and
@@ -189,7 +193,7 @@ will be honored as Tournament Master.
 <p>
 The Hangman Limelight production provides a Locker Room scene where you can
 run some sample analysis on your player. This is just an example of the
-analysis that will be perfomed but it should give you an idea of what is
+analysis that will be performed but it should give you an idea of what is
 expected.
 </p>
 <p>
@@ -213,7 +217,7 @@ dependancies, installed:
  2 Tampering with the Hangman.Rakefile file.
  3 Providing invalid letter guesses.
  4 Making use of Kernel.set_trace_func
- 5 Tampering or abusing tournament infractruscure and facilities
+ 5 Tampering or abusing tournament infrastructure and facilities
 </pre>
 <h2>Troubleshooting</h2>
 <p>
