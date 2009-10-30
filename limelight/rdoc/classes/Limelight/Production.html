@@ -80,10 +80,11 @@
 
     <div id="description">
       <p>
-The root object of Limelight <a href="Production.html">Production</a>.
-Every <a href="Prop.html">Prop</a> in a production has access to its <a
-href="Production.html">Production</a> object. Therefore it is typical to
-store reasources in the <a href="Production.html">Production</a>.
+The root object of <a href="../Limelight.html">Limelight</a> <a
+href="Production.html">Production</a>. Every <a href="Prop.html">Prop</a>
+in a production has access to its <a href="Production.html">Production</a>
+object. Therefore it is typical to store reasources in the <a
+href="Production.html">Production</a>.
 </p>
 <p>
 Productions are configured, and attributes are added, by the
@@ -99,24 +100,31 @@ ProductionBuilder.
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000147">allow_close?</a>&nbsp;&nbsp;
-      <a href="#M000153">close</a>&nbsp;&nbsp;
-      <a href="#M000154">default_scene</a>&nbsp;&nbsp;
-      <a href="#M000144">gems_directory</a>&nbsp;&nbsp;
-      <a href="#M000140">init_file</a>&nbsp;&nbsp;
-      <a href="#M000146">minimum_limelight_version</a>&nbsp;&nbsp;
-      <a href="#M000138">name=</a>&nbsp;&nbsp;
-      <a href="#M000137">new</a>&nbsp;&nbsp;
-      <a href="#M000139">path</a>&nbsp;&nbsp;
-      <a href="#M000152">production_closed</a>&nbsp;&nbsp;
-      <a href="#M000151">production_closing</a>&nbsp;&nbsp;
-      <a href="#M000141">production_file</a>&nbsp;&nbsp;
-      <a href="#M000149">production_loaded</a>&nbsp;&nbsp;
-      <a href="#M000150">production_opened</a>&nbsp;&nbsp;
-      <a href="#M000148">production_opening</a>&nbsp;&nbsp;
-      <a href="#M000145">scene_directory</a>&nbsp;&nbsp;
-      <a href="#M000142">stages_file</a>&nbsp;&nbsp;
-      <a href="#M000143">styles_file</a>&nbsp;&nbsp;
+      <a href="#M000177">allowClose</a>&nbsp;&nbsp;
+      <a href="#M000164">allow_close?</a>&nbsp;&nbsp;
+      <a href="#M000171">close</a>&nbsp;&nbsp;
+      <a href="#M000170">closed?</a>&nbsp;&nbsp;
+      <a href="#M000174">default_scene</a>&nbsp;&nbsp;
+      <a href="#M000160">gems_directory</a>&nbsp;&nbsp;
+      <a href="#M000161">gems_root</a>&nbsp;&nbsp;
+      <a href="#M000156">init_file</a>&nbsp;&nbsp;
+      <a href="#M000163">minimum_limelight_version</a>&nbsp;&nbsp;
+      <a href="#M000154">name=</a>&nbsp;&nbsp;
+      <a href="#M000153">new</a>&nbsp;&nbsp;
+      <a href="#M000155">path</a>&nbsp;&nbsp;
+      <a href="#M000169">production_closed</a>&nbsp;&nbsp;
+      <a href="#M000168">production_closing</a>&nbsp;&nbsp;
+      <a href="#M000157">production_file</a>&nbsp;&nbsp;
+      <a href="#M000166">production_loaded</a>&nbsp;&nbsp;
+      <a href="#M000167">production_opened</a>&nbsp;&nbsp;
+      <a href="#M000165">production_opening</a>&nbsp;&nbsp;
+      <a href="#M000172">publish_on_drb</a>&nbsp;&nbsp;
+      <a href="#M000175">root_styles</a>&nbsp;&nbsp;
+      <a href="#M000162">scene_directory</a>&nbsp;&nbsp;
+      <a href="#M000176">setName</a>&nbsp;&nbsp;
+      <a href="#M000158">stages_file</a>&nbsp;&nbsp;
+      <a href="#M000159">styles_file</a>&nbsp;&nbsp;
+      <a href="#M000173">theater_empty!</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -124,11 +132,31 @@ ProductionBuilder.
 
 
     <!-- if includes -->
+    <div id="includes">
+      <h3 class="section-bar">Included Modules</h3>
+
+      <div id="includes-list">
+        <span class="include-name"><a href="Production.html">UI::Api::Production</a></span>
+      </div>
+    </div>
 
     <div id="section">
 
 
 
+    <div id="aliases-list">
+      <h3 class="section-bar">External Aliases</h3>
+
+      <div class="name-list">
+                        <table summary="aliases">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">name</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">getName</td>
+        </tr>
+                        </table>
+      </div>
+    </div>
 
 
     <div id="attribute-list">
@@ -166,11 +194,11 @@ ProductionBuilder.
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M000137" class="method-detail">
-        <a name="M000137"></a>
+      <div id="method-M000153" class="method-detail">
+        <a name="M000153"></a>
 
         <div class="method-heading">
-          <a href="#M000137" class="method-signature">
+          <a href="#M000153" class="method-signature">
           <span class="method-name">new</span><span class="method-args">(path)</span>
           </a>
         </div>
@@ -181,14 +209,14 @@ Users typically need not create <a href="Production.html">Production</a>
 objects.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000137-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000137-source">
+            onclick="toggleCode('M000153-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000153-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 31</span>
-31:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">path</span>)
-32:       <span class="ruby-ivar">@root</span> = <span class="ruby-constant">FileLoader</span>.<span class="ruby-identifier">for_root</span>(<span class="ruby-identifier">path</span>)
-33:       <span class="ruby-ivar">@name</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">path</span>)
-34:     <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 36</span>
+36:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">path</span>)
+37:       <span class="ruby-ivar">@root</span> = <span class="ruby-constant">FileLoader</span>.<span class="ruby-identifier">for_root</span>(<span class="ruby-identifier">path</span>)
+38:       <span class="ruby-ivar">@name</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">path</span>)
+39:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -196,11 +224,25 @@ objects.
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000147" class="method-detail">
-        <a name="M000147"></a>
+      <div id="method-M000177" class="method-detail">
+        <a name="M000177"></a>
 
         <div class="method-heading">
-          <a href="#M000147" class="method-signature">
+          <span class="method-name">allowClose</span><span class="method-args">()</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for allow_close?
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000164" class="method-detail">
+        <a name="M000164"></a>
+
+        <div class="method-heading">
+          <a href="#M000164" class="method-signature">
           <span class="method-name">allow_close?</span><span class="method-args">()</span>
           </a>
         </div>
@@ -209,57 +251,83 @@ objects.
           <p>
 Returns true if the production allows itself to be closed. The system will
 call this methods when it wishes to <a
-href="Production.html#M000153">close</a> the production, perhaps when the
+href="Production.html#M000171">close</a> the production, perhaps when the
 user quits the application. By default the production will always return
 true.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000147-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000147-source">
+            onclick="toggleCode('M000164-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000164-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 98</span>
- 98:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">allow_close?</span>
- 99:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
-100:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 109</span>
+109:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">allow_close?</span>
+110:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+111:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000153" class="method-detail">
-        <a name="M000153"></a>
+      <div id="method-M000171" class="method-detail">
+        <a name="M000171"></a>
 
         <div class="method-heading">
-          <a href="#M000153" class="method-signature">
+          <a href="#M000171" class="method-signature">
           <span class="method-name">close</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Closes the production. If there are no more productions open, the Limelight
-runtime will shutdown.
+Closes the production. If there are no more productions open, the <a
+href="../Limelight.html">Limelight</a> runtime will shutdown. The
+production will actually delegate to it&#8216;s producer and the producer
+will <a href="Production.html#M000171">close</a> the production down.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000153-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000153-source">
+            onclick="toggleCode('M000171-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000171-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 134</span>
-134:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close</span>
-135:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">production_closing</span>
-136:       <span class="ruby-constant">Studio</span>.<span class="ruby-identifier">production_closed</span>(<span class="ruby-keyword kw">self</span>)
-137:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">production_closed</span>
-138:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 152</span>
+152:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close</span>
+153:       <span class="ruby-ivar">@producer</span>.<span class="ruby-identifier">close</span>
+154:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000154" class="method-detail">
-        <a name="M000154"></a>
+      <div id="method-M000170" class="method-detail">
+        <a name="M000170"></a>
 
         <div class="method-heading">
-          <a href="#M000154" class="method-signature">
+          <a href="#M000170" class="method-signature">
+          <span class="method-name">closed?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+returns true if the production has been closed.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000170-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000170-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 145</span>
+145:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">closed?</span>
+146:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@closed</span>
+147:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000174" class="method-detail">
+        <a name="M000174"></a>
+
+        <div class="method-heading">
+          <a href="#M000174" class="method-signature">
           <span class="method-name">default_scene</span><span class="method-args">()</span>
           </a>
         </div>
@@ -272,77 +340,104 @@ production&#8216;s root directory is the default scene. Return nil if there
 are not defaults.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000154-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000154-source">
+            onclick="toggleCode('M000174-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000174-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 143</span>
-143:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">default_scene</span>
-144:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">:root</span>
-145:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 173</span>
+173:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">default_scene</span>
+174:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">:root</span>
+175:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000144" class="method-detail">
-        <a name="M000144"></a>
+      <div id="method-M000160" class="method-detail">
+        <a name="M000160"></a>
 
         <div class="method-heading">
-          <a href="#M000144" class="method-signature">
+          <a href="#M000160" class="method-signature">
           <span class="method-name">gems_directory</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Returns the <a href="Production.html#M000139">path</a> to the
+Returns the <a href="Production.html#M000155">path</a> to the
 production&#8216;s gems directory
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000144-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000144-source">
+            onclick="toggleCode('M000160-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000160-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 75</span>
-75:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gems_directory</span>
-76:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">path_to</span>(<span class="ruby-value str">&quot;__resources/gems&quot;</span>)
-77:     <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 80</span>
+80:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gems_directory</span>
+81:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">path_to</span>(<span class="ruby-value str">&quot;__resources/gems/gems&quot;</span>)
+82:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000140" class="method-detail">
-        <a name="M000140"></a>
+      <div id="method-M000161" class="method-detail">
+        <a name="M000161"></a>
 
         <div class="method-heading">
-          <a href="#M000140" class="method-signature">
+          <a href="#M000161" class="method-signature">
+          <span class="method-name">gems_root</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the <a href="Production.html#M000155">path</a> to the productions
+gems root
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000161-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000161-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 86</span>
+86:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gems_root</span>
+87:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">path_to</span>(<span class="ruby-value str">&quot;__resources/gems&quot;</span>)
+88:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000156" class="method-detail">
+        <a name="M000156"></a>
+
+        <div class="method-heading">
+          <a href="#M000156" class="method-signature">
           <span class="method-name">init_file</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Returns the <a href="Production.html#M000139">path</a> to the
+Returns the <a href="Production.html#M000155">path</a> to the
 production&#8216;s init file
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000140-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000140-source">
+            onclick="toggleCode('M000156-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000156-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 51</span>
-51:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">init_file</span>
-52:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">path_to</span>(<span class="ruby-value str">&quot;init.rb&quot;</span>)
-53:     <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 56</span>
+56:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">init_file</span>
+57:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">path_to</span>(<span class="ruby-value str">&quot;init.rb&quot;</span>)
+58:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000146" class="method-detail">
-        <a name="M000146"></a>
+      <div id="method-M000163" class="method-detail">
+        <a name="M000163"></a>
 
         <div class="method-heading">
-          <a href="#M000146" class="method-signature">
+          <a href="#M000163" class="method-signature">
           <span class="method-name">minimum_limelight_version</span><span class="method-args">()</span>
           </a>
         </div>
@@ -355,23 +450,23 @@ production is less than the minimum, an error will be displayed (starting
 with version 0.4.0).
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000146-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000146-source">
+            onclick="toggleCode('M000163-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000163-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 90</span>
-90:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">minimum_limelight_version</span>
-91:       <span class="ruby-keyword kw">return</span> <span class="ruby-value str">&quot;0.0.0&quot;</span>
-92:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 101</span>
+101:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">minimum_limelight_version</span>
+102:       <span class="ruby-keyword kw">return</span> <span class="ruby-value str">&quot;0.0.0&quot;</span>
+103:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000138" class="method-detail">
-        <a name="M000138"></a>
+      <div id="method-M000154" class="method-detail">
+        <a name="M000154"></a>
 
         <div class="method-heading">
-          <a href="#M000138" class="method-signature">
+          <a href="#M000154" class="method-signature">
           <span class="method-name">name=</span><span class="method-args">(value)</span>
           </a>
         </div>
@@ -382,51 +477,51 @@ Sets the name of the <a href="Production.html">Production</a>. The name
 must be unique amongst all Productions in memory.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000138-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000138-source">
+            onclick="toggleCode('M000154-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000154-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 38</span>
-38:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name=</span>(<span class="ruby-identifier">value</span>)
-39:       <span class="ruby-constant">Studio</span>.<span class="ruby-identifier">error_if_duplicate_name</span>(<span class="ruby-identifier">value</span>)
-40:       <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">value</span>
-41:     <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 43</span>
+43:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name=</span>(<span class="ruby-identifier">value</span>)
+44:       <span class="ruby-constant">Context</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">studio</span>.<span class="ruby-identifier">error_if_duplicate_name</span>(<span class="ruby-identifier">value</span>)
+45:       <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">value</span>
+46:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000139" class="method-detail">
-        <a name="M000139"></a>
+      <div id="method-M000155" class="method-detail">
+        <a name="M000155"></a>
 
         <div class="method-heading">
-          <a href="#M000139" class="method-signature">
+          <a href="#M000155" class="method-signature">
           <span class="method-name">path</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Return the <a href="Production.html#M000139">path</a> to the root directory
+Return the <a href="Production.html#M000155">path</a> to the root directory
 of the production
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000139-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000139-source">
+            onclick="toggleCode('M000155-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000155-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 45</span>
-45:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">path</span>
-46:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">root</span>
-47:     <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 50</span>
+50:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">path</span>
+51:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">root</span>
+52:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000152" class="method-detail">
-        <a name="M000152"></a>
+      <div id="method-M000169" class="method-detail">
+        <a name="M000169"></a>
 
         <div class="method-heading">
-          <a href="#M000152" class="method-signature">
+          <a href="#M000169" class="method-signature">
           <span class="method-name">production_closed</span><span class="method-args">()</span>
           </a>
         </div>
@@ -437,22 +532,22 @@ Called when the production is fully closed. The default implementation does
 nothing but you may re-implement it in the production.rb file.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000152-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000152-source">
+            onclick="toggleCode('M000169-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000169-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 129</span>
-129:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">production_closed</span>
-130:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 140</span>
+140:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">production_closed</span>
+141:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000151" class="method-detail">
-        <a name="M000151"></a>
+      <div id="method-M000168" class="method-detail">
+        <a name="M000168"></a>
 
         <div class="method-heading">
-          <a href="#M000151" class="method-signature">
+          <a href="#M000168" class="method-signature">
           <span class="method-name">production_closing</span><span class="method-args">()</span>
           </a>
         </div>
@@ -464,49 +559,49 @@ implementation does nothing but you may re-implement it in the
 production.rb file.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000151-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000151-source">
+            onclick="toggleCode('M000168-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000168-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 123</span>
-123:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">production_closing</span>
-124:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 134</span>
+134:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">production_closing</span>
+135:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000141" class="method-detail">
-        <a name="M000141"></a>
+      <div id="method-M000157" class="method-detail">
+        <a name="M000157"></a>
 
         <div class="method-heading">
-          <a href="#M000141" class="method-signature">
+          <a href="#M000157" class="method-signature">
           <span class="method-name">production_file</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Returns the <a href="Production.html#M000139">path</a> to the
+Returns the <a href="Production.html#M000155">path</a> to the
 production&#8216;s production.rb file
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000141-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000141-source">
+            onclick="toggleCode('M000157-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000157-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 57</span>
-57:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">production_file</span>
-58:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">path_to</span>(<span class="ruby-value str">&quot;production.rb&quot;</span>)
-59:     <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 62</span>
+62:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">production_file</span>
+63:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">path_to</span>(<span class="ruby-value str">&quot;production.rb&quot;</span>)
+64:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000149" class="method-detail">
-        <a name="M000149"></a>
+      <div id="method-M000166" class="method-detail">
+        <a name="M000166"></a>
 
         <div class="method-heading">
-          <a href="#M000149" class="method-signature">
+          <a href="#M000166" class="method-signature">
           <span class="method-name">production_loaded</span><span class="method-args">()</span>
           </a>
         </div>
@@ -517,22 +612,22 @@ Called when the production has been loaded. That is, when all the gems have
 been loaded stages have been instantiated.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000149-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000149-source">
+            onclick="toggleCode('M000166-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000166-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 111</span>
-111:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">production_loaded</span>
-112:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 122</span>
+122:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">production_loaded</span>
+123:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000150" class="method-detail">
-        <a name="M000150"></a>
+      <div id="method-M000167" class="method-detail">
+        <a name="M000167"></a>
 
         <div class="method-heading">
-          <a href="#M000150" class="method-signature">
+          <a href="#M000167" class="method-signature">
           <span class="method-name">production_opened</span><span class="method-args">()</span>
           </a>
         </div>
@@ -543,22 +638,22 @@ Called when the production is fully opened. The default implementation does
 nothing but you may re-implement it in the production.rb file.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000150-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000150-source">
+            onclick="toggleCode('M000167-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000167-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 117</span>
-117:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">production_opened</span>
-118:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 128</span>
+128:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">production_opened</span>
+129:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000148" class="method-detail">
-        <a name="M000148"></a>
+      <div id="method-M000165" class="method-detail">
+        <a name="M000165"></a>
 
         <div class="method-heading">
-          <a href="#M000148" class="method-signature">
+          <a href="#M000165" class="method-signature">
           <span class="method-name">production_opening</span><span class="method-args">()</span>
           </a>
         </div>
@@ -570,95 +665,201 @@ implementation does nothing but you may re-implement it in the
 production.rb file.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000148-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000148-source">
+            onclick="toggleCode('M000165-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000165-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 105</span>
-105:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">production_opening</span>
-106:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 116</span>
+116:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">production_opening</span>
+117:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000145" class="method-detail">
-        <a name="M000145"></a>
+      <div id="method-M000172" class="method-detail">
+        <a name="M000172"></a>
 
         <div class="method-heading">
-          <a href="#M000145" class="method-signature">
+          <a href="#M000172" class="method-signature">
+          <span class="method-name">publish_on_drb</span><span class="method-args">(port)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Publish this production using DRb on the specified port. The production
+will delegate to its producer to actually do the publishing.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000172-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000172-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 159</span>
+159:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">publish_on_drb</span>(<span class="ruby-identifier">port</span>)
+160:       <span class="ruby-ivar">@producer</span>.<span class="ruby-identifier">publish_production_on_drb</span>(<span class="ruby-identifier">port</span>)
+161:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000175" class="method-detail">
+        <a name="M000175"></a>
+
+        <div class="method-heading">
+          <a href="#M000175" class="method-signature">
+          <span class="method-name">root_styles</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+A production with multiple Scenes may have a &#8216;styles.rb&#8217; file
+in the root directory. This is called the <a
+href="Production.html#M000175">root_styles</a>. This method loads the <a
+href="Production.html#M000175">root_styles</a>, if they haven&#8216;t
+already been loaded, and returns them.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000175-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000175-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 180</span>
+180:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">root_styles</span>
+181:       <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@root_styles</span>
+182:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">styles_file</span>)
+183:           <span class="ruby-ivar">@root_styles</span> = <span class="ruby-constant">Limelight</span>.<span class="ruby-identifier">build_styles_from_file</span>(<span class="ruby-identifier">styles_file</span>)
+184:         <span class="ruby-keyword kw">else</span>
+185:           <span class="ruby-ivar">@root_styles</span> = {}
+186:         <span class="ruby-keyword kw">end</span>
+187:       <span class="ruby-keyword kw">end</span>
+188:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@root_styles</span>
+189:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000162" class="method-detail">
+        <a name="M000162"></a>
+
+        <div class="method-heading">
+          <a href="#M000162" class="method-signature">
           <span class="method-name">scene_directory</span><span class="method-args">(name)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Returns the <a href="Production.html#M000139">path</a> to the named <a
+Returns the <a href="Production.html#M000155">path</a> to the named <a
 href="Scene.html">Scene</a>&#8216;s directory within the <a
 href="Production.html">Production</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000145-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000145-source">
+            onclick="toggleCode('M000162-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000162-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 81</span>
-81:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">scene_directory</span>(<span class="ruby-identifier">name</span>)
-82:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">root</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">:root</span>
-83:         <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">path_to</span>(<span class="ruby-identifier">name</span>)
-84:     <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 92</span>
+92:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">scene_directory</span>(<span class="ruby-identifier">name</span>)
+93:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">root</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">:root</span>
+94:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">path_to</span>(<span class="ruby-identifier">name</span>)
+95:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000142" class="method-detail">
-        <a name="M000142"></a>
+      <div id="method-M000176" class="method-detail">
+        <a name="M000176"></a>
 
         <div class="method-heading">
-          <a href="#M000142" class="method-signature">
+          <span class="method-name">setName</span><span class="method-args">(value)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for name=
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000158" class="method-detail">
+        <a name="M000158"></a>
+
+        <div class="method-heading">
+          <a href="#M000158" class="method-signature">
           <span class="method-name">stages_file</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Returns the <a href="Production.html#M000139">path</a> to the
+Returns the <a href="Production.html#M000155">path</a> to the
 production&#8216;s stages file
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000142-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000142-source">
+            onclick="toggleCode('M000158-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000158-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 63</span>
-63:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stages_file</span>
-64:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">path_to</span>(<span class="ruby-value str">&quot;stages.rb&quot;</span>)
-65:     <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 68</span>
+68:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stages_file</span>
+69:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">path_to</span>(<span class="ruby-value str">&quot;stages.rb&quot;</span>)
+70:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000143" class="method-detail">
-        <a name="M000143"></a>
+      <div id="method-M000159" class="method-detail">
+        <a name="M000159"></a>
 
         <div class="method-heading">
-          <a href="#M000143" class="method-signature">
+          <a href="#M000159" class="method-signature">
           <span class="method-name">styles_file</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Returns the <a href="Production.html#M000139">path</a> to the
+Returns the <a href="Production.html#M000155">path</a> to the
 production&#8216;s styles file
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000143-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000143-source">
+            onclick="toggleCode('M000159-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000159-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 69</span>
-69:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">styles_file</span>
-70:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">path_to</span>(<span class="ruby-value str">&quot;styles.rb&quot;</span>)
-71:     <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 74</span>
+74:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">styles_file</span>
+75:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">path_to</span>(<span class="ruby-value str">&quot;styles.rb&quot;</span>)
+76:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000173" class="method-detail">
+        <a name="M000173"></a>
+
+        <div class="method-heading">
+          <a href="#M000173" class="method-signature">
+          <span class="method-name">theater_empty!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Called when the last stage in this production&#8216;s theater is closed. If
+the <a href="Production.html#M000164">allow_close?</a> returns true this
+production will be closed.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000173-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000173-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/production.rb, line 166</span>
+166:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">theater_empty!</span>
+167:       <span class="ruby-identifier">close</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">allow_close?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">closed?</span>
+168:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

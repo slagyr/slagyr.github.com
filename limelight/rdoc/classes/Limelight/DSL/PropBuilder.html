@@ -135,10 +135,10 @@ See <a href="../Prop.html">Limelight::Prop</a>
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000088">__</a>&nbsp;&nbsp;
-      <a href="#M000089">__install</a>&nbsp;&nbsp;
-      <a href="#M000090">__install_instance_variables</a>&nbsp;&nbsp;
-      <a href="#M000087">new</a>&nbsp;&nbsp;
+      <a href="#M000071">__</a>&nbsp;&nbsp;
+      <a href="#M000072">__install</a>&nbsp;&nbsp;
+      <a href="#M000073">__install_instance_variables</a>&nbsp;&nbsp;
+      <a href="#M000070">new</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -204,25 +204,25 @@ Returns the root prop either passed in or created by this builder.
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M000087" class="method-detail">
-        <a name="M000087"></a>
+      <div id="method-M000070" class="method-detail">
+        <a name="M000070"></a>
 
         <div class="method-heading">
-          <a href="#M000087" class="method-signature">
+          <a href="#M000070" class="method-signature">
           <span class="method-name">new</span><span class="method-args">(options)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Creates a <a href="PropBuilder.html#M000087">new</a> builder. If a prop is
+Creates a <a href="PropBuilder.html#M000070">new</a> builder. If a prop is
 passed it, it will be the root on which props are created. If the paramter
 is a Hash, the Hash will be used to construct a prop that will be used as
 the root.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000087-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000087-source">
+            onclick="toggleCode('M000070-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000070-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/dsl/prop_builder.rb, line 73</span>
 73:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">options</span>)
@@ -239,11 +239,11 @@ the root.
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000088" class="method-detail">
-        <a name="M000088"></a>
+      <div id="method-M000071" class="method-detail">
+        <a name="M000071"></a>
 
         <div class="method-heading">
-          <a href="#M000088" class="method-signature">
+          <a href="#M000071" class="method-signature">
           <span class="method-name">__</span><span class="method-args">(options)</span>
           </a>
         </div>
@@ -267,8 +267,8 @@ initialization options: id, height, width, background_color. The two
 &#8216;branch&#8217; child props are identical.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000088-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000088-source">
+            onclick="toggleCode('M000071-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000071-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/dsl/prop_builder.rb, line 94</span>
 94:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">__</span>(<span class="ruby-identifier">options</span>)
@@ -279,11 +279,11 @@ initialization options: id, height, width, background_color. The two
         </div>
       </div>
 
-      <div id="method-M000089" class="method-detail">
-        <a name="M000089"></a>
+      <div id="method-M000072" class="method-detail">
+        <a name="M000072"></a>
 
         <div class="method-heading">
-          <a href="#M000089" class="method-signature">
+          <a href="#M000072" class="method-signature">
           <span class="method-name">__install</span><span class="method-args">(file, instance_variables = {})</span>
           </a>
         </div>
@@ -295,8 +295,8 @@ href="../DSL.html">DSL</a>. The path will be relative to the root directory
 of the current production.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000089-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000089-source">
+            onclick="toggleCode('M000072-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000072-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/dsl/prop_builder.rb, line 101</span>
 101:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">__install</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">instance_variables</span> = {})
@@ -315,11 +315,11 @@ of the current production.
         </div>
       </div>
 
-      <div id="method-M000090" class="method-detail">
-        <a name="M000090"></a>
+      <div id="method-M000073" class="method-detail">
+        <a name="M000073"></a>
 
         <div class="method-heading">
-          <a href="#M000090" class="method-signature">
+          <a href="#M000073" class="method-signature">
           <span class="method-name">__install_instance_variables</span><span class="method-args">(instance_variables)</span>
           </a>
         </div>
@@ -346,8 +346,8 @@ be defined on the top level builder and all children will have access to
 them.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000090-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000090-source">
+            onclick="toggleCode('M000073-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000073-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/dsl/prop_builder.rb, line 127</span>
 127:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">__install_instance_variables</span>(<span class="ruby-identifier">instance_variables</span>)

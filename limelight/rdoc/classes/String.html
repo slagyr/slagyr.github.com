@@ -83,8 +83,8 @@
 <li>Copyright © 2008-2009 8th Light, Inc. All Rights Reserved.
 
 </li>
-<li>Limelight and all included source files are distributed under terms of the
-GNU LGPL.
+<li><a href="Limelight.html">Limelight</a> and all included source files are
+distributed under terms of the GNU LGPL.
 
 </li>
 </ul>
@@ -145,7 +145,7 @@ Converts Ruby style names to Java style camal case.
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/string.rb, line 11</span>
 11:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">camalized</span>(<span class="ruby-identifier">starting_case</span> = <span class="ruby-identifier">:upper</span>)
-12:     <span class="ruby-identifier">value</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/[_| ][a-z]/</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">match</span><span class="ruby-operator">|</span> <span class="ruby-identifier">match</span>[<span class="ruby-value">-1</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>].<span class="ruby-identifier">upcase</span> }
+12:     <span class="ruby-identifier">value</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/[_| |\-][a-z]/</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">match</span><span class="ruby-operator">|</span> <span class="ruby-identifier">match</span>[<span class="ruby-value">-1</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>].<span class="ruby-identifier">upcase</span> }
 13:     <span class="ruby-identifier">value</span> = <span class="ruby-identifier">value</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">0</span>].<span class="ruby-identifier">upcase</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">value</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">starting_case</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">:upper</span>
 14:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">value</span>
 15:   <span class="ruby-keyword kw">end</span>

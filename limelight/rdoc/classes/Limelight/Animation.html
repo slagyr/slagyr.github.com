@@ -80,7 +80,7 @@
 
     <div id="description">
       <p>
-An object to manage a seqeunce of changes, assuably to a prop. The <a
+An object to manage a seqeunce of changes, assumedly to a prop. The <a
 href="Animation.html">Animation</a> object is constructed with options and
 a block. Once the <a href="Animation.html">Animation</a> is started, the
 block is invoked repeatedly until the <a
@@ -100,8 +100,8 @@ perform sequential updates in evenly spaced time frames.
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000228">new</a>&nbsp;&nbsp;
-      <a href="#M000229">running?</a>&nbsp;&nbsp;
+      <a href="#M000205">new</a>&nbsp;&nbsp;
+      <a href="#M000206">running?</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -123,11 +123,11 @@ perform sequential updates in evenly spaced time frames.
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M000228" class="method-detail">
-        <a name="M000228"></a>
+      <div id="method-M000205" class="method-detail">
+        <a name="M000205"></a>
 
         <div class="method-heading">
-          <a href="#M000228" class="method-signature">
+          <a href="#M000205" class="method-signature">
           <span class="method-name">new</span><span class="method-args">(prop, block, options={})</span>
           </a>
         </div>
@@ -135,9 +135,16 @@ perform sequential updates in evenly spaced time frames.
         <div class="method-description">
           <p>
 A <a href="Prop.html">Prop</a> and block are required to construct an <a
-href="Animation.html">Animation</a>. Options may include :name (string),
-:updates_per_second (int defaults to 60)
+href="Animation.html">Animation</a>. Options may include
 </p>
+<ol>
+<li>:name (string)
+
+</li>
+<li>:updates_per_second (int defaults to 60)
+
+</li>
+</ol>
 <pre>
   animation = Animation.new(prop, Proc.new { &quot;do something&quot;}, :updates_per_second =&gt; 20)
   animation.start
@@ -145,16 +152,16 @@ href="Animation.html">Animation</a>. Options may include :name (string),
   animation.stop
 </pre>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000228-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000228-source">
+            onclick="toggleCode('M000205-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000205-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/animation.rb, line 22</span>
-22:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">prop</span>, <span class="ruby-identifier">block</span>, <span class="ruby-identifier">options</span>={})
-23:       <span class="ruby-ivar">@block</span> = <span class="ruby-identifier">block</span>
-24:       <span class="ruby-identifier">name</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:name</span>] <span class="ruby-operator">||</span> <span class="ruby-node">&quot;#{prop.to_s} animation&quot;</span>
-25:       <span class="ruby-identifier">updates_per_second</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:updates_per_second</span>] <span class="ruby-operator">||</span> <span class="ruby-value">60</span>
-26:       <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">updates_per_second</span>)
-27:     <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/animation.rb, line 23</span>
+23:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">prop</span>, <span class="ruby-identifier">block</span>, <span class="ruby-identifier">options</span>={})
+24:       <span class="ruby-ivar">@block</span> = <span class="ruby-identifier">block</span>
+25:       <span class="ruby-identifier">name</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:name</span>] <span class="ruby-operator">||</span> <span class="ruby-node">&quot;#{prop.to_s} animation&quot;</span>
+26:       <span class="ruby-identifier">updates_per_second</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:updates_per_second</span>] <span class="ruby-operator">||</span> <span class="ruby-value">60</span>
+27:       <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">updates_per_second</span>)
+28:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -162,11 +169,11 @@ href="Animation.html">Animation</a>. Options may include :name (string),
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000229" class="method-detail">
-        <a name="M000229"></a>
+      <div id="method-M000206" class="method-detail">
+        <a name="M000206"></a>
 
         <div class="method-heading">
-          <a href="#M000229" class="method-signature">
+          <a href="#M000206" class="method-signature">
           <span class="method-name">running?</span><span class="method-args">()</span>
           </a>
         </div>
@@ -176,13 +183,13 @@ href="Animation.html">Animation</a>. Options may include :name (string),
 Lets you know if the animation is currently running or not.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000229-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000229-source">
+            onclick="toggleCode('M000206-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000206-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/animation.rb, line 35</span>
-35:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">running?</span>
-36:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">is_running</span>
-37:     <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/animation.rb, line 36</span>
+36:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">running?</span>
+37:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">is_running</span>
+38:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

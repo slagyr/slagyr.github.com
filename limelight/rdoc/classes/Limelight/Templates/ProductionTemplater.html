@@ -102,8 +102,8 @@ production_path, the following will be the result.
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000037">generate</a>&nbsp;&nbsp;
-      <a href="#M000036">new</a>&nbsp;&nbsp;
+      <a href="#M000012">generate</a>&nbsp;&nbsp;
+      <a href="#M000011">new</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -138,12 +138,12 @@ production_path, the following will be the result.
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M000036" class="method-detail">
-        <a name="M000036"></a>
+      <div id="method-M000011" class="method-detail">
+        <a name="M000011"></a>
 
         <div class="method-heading">
-          <a href="#M000036" class="method-signature">
-          <span class="method-name">new</span><span class="method-args">(production_path, default_scene_name)</span>
+          <a href="#M000011" class="method-signature">
+          <span class="method-name">new</span><span class="method-args">(options)</span>
           </a>
         </div>
       
@@ -153,18 +153,21 @@ To create a <a href="ProductionTemplater.html">ProductionTemplater</a>,
 provide a production_path and the name of the default scene.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000036-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000036-source">
+            onclick="toggleCode('M000011-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000011-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/templates/production_templater.rb, line 25</span>
-25:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">production_path</span>, <span class="ruby-identifier">default_scene_name</span>)
-26:         <span class="ruby-keyword kw">super</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">production_path</span>), <span class="ruby-constant">Templater</span>.<span class="ruby-identifier">source_dir</span>)
-27:         <span class="ruby-ivar">@production_path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">production_path</span>)
-28:         <span class="ruby-ivar">@tokens</span> = {}
-29:         <span class="ruby-ivar">@tokens</span>[<span class="ruby-identifier">:DEFAULT_SCENE_NAME</span>] = <span class="ruby-identifier">default_scene_name</span>
-30:         <span class="ruby-ivar">@tokens</span>[<span class="ruby-identifier">:PRODUCTION_NAME</span>] = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">production_path</span>).<span class="ruby-identifier">titleized</span>
-31:         <span class="ruby-ivar">@tokens</span>[<span class="ruby-identifier">:CURRENT_VERSION</span>] = <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span><span class="ruby-operator">::</span><span class="ruby-constant">STRING</span>
-32:       <span class="ruby-keyword kw">end</span>
+25:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">options</span>)
+26:         <span class="ruby-identifier">production_path</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:production_path</span>]
+27:         <span class="ruby-identifier">default_scene_name</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:scene_path</span>]
+28:         <span class="ruby-keyword kw">super</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">production_path</span>), <span class="ruby-constant">Templater</span>.<span class="ruby-identifier">source_dir</span>)
+29:         <span class="ruby-ivar">@production_path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">production_path</span>)
+30:         <span class="ruby-ivar">@spec_path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-ivar">@production_path</span>, <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:spec_path</span>])
+31:         <span class="ruby-ivar">@tokens</span> = {}
+32:         <span class="ruby-ivar">@tokens</span>[<span class="ruby-identifier">:DEFAULT_SCENE_NAME</span>] = <span class="ruby-identifier">default_scene_name</span>
+33:         <span class="ruby-ivar">@tokens</span>[<span class="ruby-identifier">:PRODUCTION_NAME</span>] = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">production_path</span>).<span class="ruby-identifier">titleized</span>
+34:         <span class="ruby-ivar">@tokens</span>[<span class="ruby-identifier">:CURRENT_VERSION</span>] = <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span><span class="ruby-operator">::</span><span class="ruby-constant">STRING</span>
+35:       <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -172,11 +175,11 @@ provide a production_path and the name of the default scene.
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000037" class="method-detail">
-        <a name="M000037"></a>
+      <div id="method-M000012" class="method-detail">
+        <a name="M000012"></a>
 
         <div class="method-heading">
-          <a href="#M000037" class="method-signature">
+          <a href="#M000012" class="method-signature">
           <span class="method-name">generate</span><span class="method-args">()</span>
           </a>
         </div>
@@ -186,16 +189,16 @@ provide a production_path and the name of the default scene.
 Generates the files
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000037-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000037-source">
+            onclick="toggleCode('M000012-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000012-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/templates/production_templater.rb, line 36</span>
-36:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generate</span>
-37:         <span class="ruby-identifier">file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-ivar">@production_path</span>, <span class="ruby-value str">&quot;production.rb&quot;</span>), <span class="ruby-value str">&quot;production/production.rb.template&quot;</span>, <span class="ruby-ivar">@tokens</span>)
-38:         <span class="ruby-identifier">file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-ivar">@production_path</span>, <span class="ruby-value str">&quot;stages.rb&quot;</span>), <span class="ruby-value str">&quot;production/stages.rb.template&quot;</span>, <span class="ruby-ivar">@tokens</span>)
-39:         <span class="ruby-identifier">file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-ivar">@production_path</span>, <span class="ruby-value str">&quot;styles.rb&quot;</span>), <span class="ruby-value str">&quot;production/styles.rb.template&quot;</span>, <span class="ruby-ivar">@tokens</span>)
-40:         <span class="ruby-identifier">file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-ivar">@production_path</span>, <span class="ruby-value str">&quot;spec&quot;</span>, <span class="ruby-value str">&quot;spec_helper.rb&quot;</span>), <span class="ruby-value str">&quot;production/spec/spec_helper.rb.template&quot;</span>, <span class="ruby-ivar">@tokens</span>)
-41:       <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/templates/production_templater.rb, line 39</span>
+39:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generate</span>
+40:         <span class="ruby-identifier">file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-ivar">@production_path</span>, <span class="ruby-value str">&quot;production.rb&quot;</span>), <span class="ruby-value str">&quot;production/production.rb.template&quot;</span>, <span class="ruby-ivar">@tokens</span>)
+41:         <span class="ruby-identifier">file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-ivar">@production_path</span>, <span class="ruby-value str">&quot;stages.rb&quot;</span>), <span class="ruby-value str">&quot;production/stages.rb.template&quot;</span>, <span class="ruby-ivar">@tokens</span>)
+42:         <span class="ruby-identifier">file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-ivar">@production_path</span>, <span class="ruby-value str">&quot;styles.rb&quot;</span>), <span class="ruby-value str">&quot;production/styles.rb.template&quot;</span>, <span class="ruby-ivar">@tokens</span>)
+43:         <span class="ruby-identifier">file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-ivar">@spec_path</span>, <span class="ruby-value str">&quot;spec_helper.rb&quot;</span>), <span class="ruby-value str">&quot;production/spec/spec_helper.rb.template&quot;</span>, <span class="ruby-ivar">@tokens</span>)
+44:       <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

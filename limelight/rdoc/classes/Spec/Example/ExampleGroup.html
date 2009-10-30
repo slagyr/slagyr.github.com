@@ -86,9 +86,11 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000253">producer</a>&nbsp;&nbsp;
-      <a href="#M000254">production</a>&nbsp;&nbsp;
-      <a href="#M000252">uses_scene</a>&nbsp;&nbsp;
+      <a href="#M000265">create_accessor_for</a>&nbsp;&nbsp;
+      <a href="#M000263">producer</a>&nbsp;&nbsp;
+      <a href="#M000264">production</a>&nbsp;&nbsp;
+      <a href="#M000262">uses_limelight</a>&nbsp;&nbsp;
+      <a href="#M000261">uses_scene</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -117,30 +119,57 @@
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M000252" class="method-detail">
-        <a name="M000252"></a>
+      <div id="method-M000262" class="method-detail">
+        <a name="M000262"></a>
 
         <div class="method-heading">
-          <a href="#M000252" class="method-signature">
-          <span class="method-name">uses_scene</span><span class="method-args">(scene_name, options = {})</span>
+          <a href="#M000262" class="method-signature">
+          <span class="method-name">uses_limelight</span><span class="method-args">(options = {}, &amp;prop_block)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000252-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000252-source">
+            onclick="toggleCode('M000262-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000262-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/specs/spec_helper.rb, line 44</span>
-44:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">uses_scene</span>(<span class="ruby-identifier">scene_name</span>, <span class="ruby-identifier">options</span> = {})
-45:         <span class="ruby-identifier">include</span> <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">Specs</span><span class="ruby-operator">::</span><span class="ruby-constant">SpecHelper</span>
-46: 
-47:         <span class="ruby-identifier">before</span>(<span class="ruby-identifier">:each</span>) <span class="ruby-keyword kw">do</span>
-48:           <span class="ruby-ivar">@scene_name</span> = <span class="ruby-identifier">scene_name</span>
-49:           <span class="ruby-ivar">@ll_spec_options</span> = <span class="ruby-identifier">options</span>
-50:           <span class="ruby-ivar">@scene</span> = <span class="ruby-keyword kw">nil</span>
-51:         <span class="ruby-keyword kw">end</span>
-52:       <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/specs/spec_helper.rb, line 86</span>
+86:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">uses_limelight</span>(<span class="ruby-identifier">options</span> = {}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">prop_block</span>)
+87:         <span class="ruby-identifier">include</span> <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">Specs</span><span class="ruby-operator">::</span><span class="ruby-constant">SpecHelper</span>
+88:         
+89:         <span class="ruby-identifier">before</span>(<span class="ruby-identifier">:each</span>) <span class="ruby-keyword kw">do</span>
+90:           <span class="ruby-ivar">@ll_spec_options</span> = <span class="ruby-identifier">options</span>
+91:           <span class="ruby-ivar">@prop_block</span> = <span class="ruby-identifier">prop_block</span>
+92:           <span class="ruby-ivar">@player</span> = <span class="ruby-ivar">@scene</span> = <span class="ruby-keyword kw">nil</span>
+93:           <span class="ruby-identifier">create_accessor_for</span>(<span class="ruby-ivar">@ll_spec_options</span>[<span class="ruby-identifier">:with_player</span>]) <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@ll_spec_options</span>[<span class="ruby-identifier">:with_player</span>]
+94:         <span class="ruby-keyword kw">end</span>
+95:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000261" class="method-detail">
+        <a name="M000261"></a>
+
+        <div class="method-heading">
+          <a href="#M000261" class="method-signature">
+          <span class="method-name">uses_scene</span><span class="method-args">(scene_name, options = {})</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Deprecated
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000261-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000261-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/limelight/specs/spec_helper.rb, line 82</span>
+82:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">uses_scene</span>(<span class="ruby-identifier">scene_name</span>, <span class="ruby-identifier">options</span> = {})
+83:         <span class="ruby-identifier">uses_limelight</span>({<span class="ruby-identifier">:scene</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">scene_name</span>}.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">options</span>))
+84:       <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -148,58 +177,82 @@
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000253" class="method-detail">
-        <a name="M000253"></a>
+      <div id="method-M000265" class="method-detail">
+        <a name="M000265"></a>
 
         <div class="method-heading">
-          <a href="#M000253" class="method-signature">
+          <a href="#M000265" class="method-signature">
+          <span class="method-name">create_accessor_for</span><span class="method-args">(player_name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000265-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000265-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/specs/spec_helper.rb, line 126</span>
+126:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_accessor_for</span>(<span class="ruby-identifier">player_name</span>)
+127:         <span class="ruby-identifier">accessor</span> = <span class="ruby-value str">&quot;def \#{player_name}\nreturn scene.find('\#{player_name}')\nend\n&quot;</span>
+128:         <span class="ruby-identifier">eval</span>(<span class="ruby-identifier">accessor</span>)
+129:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000263" class="method-detail">
+        <a name="M000263"></a>
+
+        <div class="method-heading">
+          <a href="#M000263" class="method-signature">
           <span class="method-name">producer</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000253-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000253-source">
+            onclick="toggleCode('M000263-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000263-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/specs/spec_helper.rb, line 64</span>
-64:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">producer</span>
-65:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">Specs</span>.<span class="ruby-identifier">producer</span>.<span class="ruby-identifier">nil?</span>
-66:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">$with_ui</span>
-67:             <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">Main</span>.<span class="ruby-identifier">initializeContext</span>
-68:           <span class="ruby-keyword kw">else</span>
-69:             <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">Main</span>.<span class="ruby-identifier">initializeTestContext</span>
-70:           <span class="ruby-keyword kw">end</span>
-71:           <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;$PRODUCTION_PATH undefined.  Make sure you specify the location of the production in $PRODUCTION_PATH.&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-identifier">$PRODUCTION_PATH</span>)
-72:           <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Could not find production: '#{$PRODUCTION_PATH}'. Check $PRODUCTION_PATH.&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">$PRODUCTION_PATH</span>)
-73:           <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">Specs</span>.<span class="ruby-identifier">producer</span> = <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">Producer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">$PRODUCTION_PATH</span>)
-74:           <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">Specs</span>.<span class="ruby-identifier">producer</span>.<span class="ruby-identifier">load</span>
-75:         <span class="ruby-keyword kw">end</span>
-76:         <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">Specs</span>.<span class="ruby-identifier">producer</span>
-77:       <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/specs/spec_helper.rb, line 107</span>
+107:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">producer</span>
+108:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">Specs</span>.<span class="ruby-identifier">producer</span>.<span class="ruby-identifier">nil?</span>
+109:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">$with_ui</span>
+110:             <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">Main</span>.<span class="ruby-identifier">initializeContext</span>
+111:           <span class="ruby-keyword kw">else</span>
+112:             <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">Main</span>.<span class="ruby-identifier">initializeTestContext</span>
+113:           <span class="ruby-keyword kw">end</span>
+114:           <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;$PRODUCTION_PATH undefined.  Make sure you specify the location of the production in $PRODUCTION_PATH.&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-identifier">$PRODUCTION_PATH</span>)
+115:           <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Could not find production: '#{$PRODUCTION_PATH}'. Check $PRODUCTION_PATH.&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">$PRODUCTION_PATH</span>)
+116:           <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">Specs</span>.<span class="ruby-identifier">producer</span> = <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">Producer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">$PRODUCTION_PATH</span>)
+117:           <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">Specs</span>.<span class="ruby-identifier">producer</span>.<span class="ruby-identifier">load</span>
+118:         <span class="ruby-keyword kw">end</span>
+119:         <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">Specs</span>.<span class="ruby-identifier">producer</span>
+120:       <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000254" class="method-detail">
-        <a name="M000254"></a>
+      <div id="method-M000264" class="method-detail">
+        <a name="M000264"></a>
 
         <div class="method-heading">
-          <a href="#M000254" class="method-signature">
+          <a href="#M000264" class="method-signature">
           <span class="method-name">production</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000254-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000254-source">
+            onclick="toggleCode('M000264-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000264-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/specs/spec_helper.rb, line 79</span>
-79:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">production</span>
-80:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">producer</span>.<span class="ruby-identifier">production</span>
-81:       <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/specs/spec_helper.rb, line 122</span>
+122:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">production</span>
+123:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">producer</span>.<span class="ruby-identifier">production</span>
+124:       <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

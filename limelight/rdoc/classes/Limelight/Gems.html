@@ -80,9 +80,9 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000058">install</a>&nbsp;&nbsp;
-      <a href="#M000059">install_gems_in_production</a>&nbsp;&nbsp;
-      <a href="#M000057">load_path</a>&nbsp;&nbsp;
+      <a href="#M000056">install</a>&nbsp;&nbsp;
+      <a href="#M000057">install_gems_in_production</a>&nbsp;&nbsp;
+      <a href="#M000055">load_path</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -117,19 +117,19 @@
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M000058" class="method-detail">
-        <a name="M000058"></a>
+      <div id="method-M000056" class="method-detail">
+        <a name="M000056"></a>
 
         <div class="method-heading">
-          <a href="#M000058" class="method-signature">
+          <a href="#M000056" class="method-signature">
           <span class="method-name">install</span><span class="method-args">(gem_name, paths)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000058-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000058-source">
+            onclick="toggleCode('M000056-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000056-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/gems.rb, line 16</span>
 16:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">install</span>(<span class="ruby-identifier">gem_name</span>, <span class="ruby-identifier">paths</span>)
@@ -143,11 +143,11 @@
         </div>
       </div>
 
-      <div id="method-M000059" class="method-detail">
-        <a name="M000059"></a>
+      <div id="method-M000057" class="method-detail">
+        <a name="M000057"></a>
 
         <div class="method-heading">
-          <a href="#M000059" class="method-signature">
+          <a href="#M000057" class="method-signature">
           <span class="method-name">install_gems_in_production</span><span class="method-args">(production)</span>
           </a>
         </div>
@@ -159,8 +159,8 @@ TODO - MDM - This doesn&#8216;t work when loading gems like: gem
 SourceIndex.load_gems_in
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000059-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000059-source">
+            onclick="toggleCode('M000057-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000057-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/gems.rb, line 24</span>
 24:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">install_gems_in_production</span>(<span class="ruby-identifier">production</span>)
@@ -181,26 +181,28 @@ SourceIndex.load_gems_in
 39:           <span class="ruby-keyword kw">end</span>
 40:         <span class="ruby-keyword kw">end</span>
 41: 
-42:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">current_production</span> = <span class="ruby-keyword kw">nil</span>
-43:       <span class="ruby-keyword kw">end</span>
+42:         <span class="ruby-constant">Gem</span>.<span class="ruby-identifier">use_paths</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">current_production</span>.<span class="ruby-identifier">gems_root</span>, <span class="ruby-constant">Gem</span>.<span class="ruby-identifier">default_path</span>)
+43: 
+44:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">current_production</span> = <span class="ruby-keyword kw">nil</span>        
+45:       <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000057" class="method-detail">
-        <a name="M000057"></a>
+      <div id="method-M000055" class="method-detail">
+        <a name="M000055"></a>
 
         <div class="method-heading">
-          <a href="#M000057" class="method-signature">
+          <a href="#M000055" class="method-signature">
           <span class="method-name">load_path</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000057-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000057-source">
+            onclick="toggleCode('M000055-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000055-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/gems.rb, line 11</span>
 11:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_path</span>

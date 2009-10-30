@@ -59,6 +59,10 @@
                 lib/limelight/specs/spec_helper.rb
                 </a>
         <br />
+                <a href="../../../files/lib/limelight/specs/test_scene_opener_rb.html">
+                lib/limelight/specs/test_scene_opener.rb
+                </a>
+        <br />
             </td>
         </tr>
 
@@ -72,6 +76,75 @@
 
   <div id="contextContent">
 
+    <div id="description">
+      <p>
+<a href="../../Limelight.html">Limelight</a> comes with builtin assistance
+for testing your productions with rspec. To get started, add the following
+to your describe block&#8230;
+</p>
+<pre>
+  uses_limelight :scene =&gt; &quot;my_scene&quot;
+</pre>
+<p>
+This will add before(:each) blocks that will setup your production and load
+your <a href="SpecHelper.html#M000049">scene</a> before each test. It also
+provides some accessors to common objects like the <a
+href="SpecHelper.html#M000049">scene</a> and production. Afterwards, you
+can write tests that look like this.
+</p>
+<pre>
+  it &quot;should do something with the scene&quot; do
+    scene.name.should == &quot;my_scene&quot;
+    scene.find(&quot;title&quot;).text.should == &quot;This is the Title&quot;
+    production.theater[&quot;default_stage&quot;].current_scene.should be(scene)
+  end
+</pre>
+<p>
+There are several other options you can supply with
+&#8216;uses_limelight&#8217;:
+</p>
+<p>
+:hidden - (true or false) Defaults to true, but if you turn it off, the <a
+href="SpecHelper.html#M000049">scene</a> will pop open on your screen. This
+can be really nifty at times and really annoying at other time.
+</p>
+<p>
+:stage - The name of the stage you want the <a
+href="SpecHelper.html#M000049">scene</a> to be loaded on. The
+theater&#8216;s default stage will be used by default.
+</p>
+<p>
+:scene_name - To be used instead of the :<a
+href="SpecHelper.html#M000049">scene</a> option. This will create an empty
+<a href="SpecHelper.html#M000049">scene</a> in your production with the
+specified name.
+</p>
+<p>
+:scene_path - To be used in conjunction with :scene_name. This will cause
+the empty <a href="SpecHelper.html#M000049">scene</a> to be loaded with the
+specified path. Styles and Players associated with the path will be applied
+to the created <a href="SpecHelper.html#M000049">scene</a>.
+</p>
+<p>
+The &#8216;uses_limelight&#8217; methods also accepts block using the <a
+href="../DSL/PropBuilder.html">Limelight::DSL::PropBuilder</a> <a
+href="../DSL.html">DSL</a>. This is convenient for building a simple prop
+structure sufficient to test the desired behavior. Here&#8216;s an example:
+</p>
+<pre>
+  describe &quot;my scene&quot; do
+    uses_limelight :scene_name =&gt; &quot;some_name&quot;, :scene_path =&gt; &quot;my_scene_path&quot; do
+      clicky :id =&gt; &quot;clicky&quot;, :text =&gt; &quot;click me&quot;, :on_mouse_clicked =&gt; &quot;self.text = 'Hey! You clicked me!'&quot;
+    end
+
+    it &quot;should change text on clicky when clicked&quot; do
+      scene.find(&quot;clicky&quot;).mouse_clicked(nil)
+      clicky.text.should == &quot;Hey!  You clicked me!&quot;
+    end
+  end
+</pre>
+
+    </div>
 
 
    </div>
@@ -80,8 +153,7 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000067">open_scene</a>&nbsp;&nbsp;
-      <a href="#M000068">scene</a>&nbsp;&nbsp;
+      <a href="#M000049">scene</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -103,57 +175,27 @@
     <div id="methods">
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000067" class="method-detail">
-        <a name="M000067"></a>
+      <div id="method-M000049" class="method-detail">
+        <a name="M000049"></a>
 
         <div class="method-heading">
-          <a href="#M000067" class="method-signature">
-          <span class="method-name">open_scene</span><span class="method-args">()</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000067-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000067-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/limelight/specs/spec_helper.rb, line 18</span>
-18:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">open_scene</span>
-19:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@ll_spec_options</span>[<span class="ruby-identifier">:stage</span>]
-20:           <span class="ruby-identifier">stage</span> = <span class="ruby-identifier">producer</span>.<span class="ruby-identifier">theater</span>[<span class="ruby-ivar">@ll_spec_options</span>[<span class="ruby-identifier">:stage</span>]]
-21:           <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;No such stage: '#{@ll_spec_options[:stage]}'&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">stage</span>
-22:         <span class="ruby-keyword kw">else</span>
-23:           <span class="ruby-identifier">stage</span> = <span class="ruby-identifier">producer</span>.<span class="ruby-identifier">theater</span>.<span class="ruby-identifier">default_stage</span>
-24:         <span class="ruby-keyword kw">end</span>
-25: 
-26:         <span class="ruby-identifier">stage</span>.<span class="ruby-identifier">should_remain_hidden</span> = <span class="ruby-ivar">@ll_spec_options</span>[<span class="ruby-identifier">:hidden</span>]
-27: 
-28:         <span class="ruby-ivar">@scene</span> = <span class="ruby-identifier">producer</span>.<span class="ruby-identifier">open_scene</span>(<span class="ruby-ivar">@scene_name</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">stage</span>)
-29:       <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M000068" class="method-detail">
-        <a name="M000068"></a>
-
-        <div class="method-heading">
-          <a href="#M000068" class="method-signature">
+          <a href="#M000049" class="method-signature">
           <span class="method-name">scene</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000068-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000068-source">
+            onclick="toggleCode('M000049-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000049-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/specs/spec_helper.rb, line 31</span>
-31:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">scene</span>
-32:         <span class="ruby-identifier">open_scene</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@scene</span>
-33:         <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@scene</span>
-34:       <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/specs/spec_helper.rb, line 66</span>
+66:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">scene</span>
+67:         <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@scene</span>
+68:           <span class="ruby-ivar">@scene</span> = <span class="ruby-constant">TestSceneOpener</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">producer</span>, <span class="ruby-ivar">@ll_spec_options</span>, <span class="ruby-ivar">@prop_block</span>).<span class="ruby-identifier">open_scene</span> 
+69:         <span class="ruby-keyword kw">end</span>
+70:         <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@scene</span>
+71:       <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

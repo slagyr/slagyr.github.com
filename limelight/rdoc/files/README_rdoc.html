@@ -56,7 +56,7 @@
     </tr>
     <tr class="top-aligned-row">
       <td><strong>Last Update:</strong></td>
-      <td>Thu Sep 18 14:24:54 -0500 2008</td>
+      <td>Wed Oct 28 15:06:39 -0500 2009</td>
     </tr>
     </table>
   </div>
@@ -69,11 +69,41 @@
   <div id="contextContent">
 
     <div id="description">
-      <h1>Limelight</h1>
+      <h1><a href="../classes/Limelight.html">Limelight</a></h1>
 <p>
-simple, dynamic, user interfaces.
+Simple UI Framework for Ruby
 </p>
-<h2>Preparing Development Environment</h2>
+<h2>API</h2>
+<p>
+Where to start:
+</p>
+<ul>
+<li><a href="../classes/Limelight/Main.html">Limelight::Main</a>
+
+</li>
+</ul>
+<h2>More Documentation</h2>
+<p>
+If you&#8216;re not using it already, be sure to check out the <a
+href="../classes/Limelight.html">Limelight</a> Docs production. It&#8216;s
+full of tutorials and examples that&#8216;ll teach you everything you need
+to know to build your own <a href="../classes/Limelight.html">Limelight</a>
+productions.
+</p>
+<p>
+Just install <a href="../classes/Limelight.html">Limelight</a> and
+let&#8216;er rip.
+</p>
+<h2>Developing with <a href="../classes/Limelight.html">Limelight</a></h2>
+<pre>
+  jruby -S gem install gemcutter
+  jruby -S gem tumble
+  jruby -S gem install limelight
+
+  jruby -S limelight create production my_first_production
+  jruby -S limelight open my_first_production
+</pre>
+<h2>Development on <a href="../classes/Limelight.html">Limelight</a></h2>
 <pre>
   git clone git://github.com/slagyr/limelight.git
   cd limelight
@@ -87,34 +117,11 @@ Try it out:
 <pre>
    bin/limelight open productions/examples/sandbox
 </pre>
-<h2>API</h2>
-<p>
-Where to start:
-</p>
-<ul>
-<li><a href="../classes/Limelight/Main.html">Limelight::Main</a>
-
-</li>
-<li><a href="../classes/Limelight/Producer.html">Limelight::Producer</a>
-
-</li>
-<li><a href="../classes/Limelight/Prop.html">Limelight::Prop</a>
-
-</li>
-<li><a href="../classes/Limelight/Scene.html">Limelight::Scene</a>
-
-</li>
-</ul>
-<h2>More Documentation</h2>
-<p>
-This RDoc for Limelight is for reference only. More complete documentation
-can be found on the official Limelight website: <a
-href="http://limelight.8thlight.com">limelight.8thlight.com</a>
-</p>
 <h2>License</h2>
 <p>
-Copyright 2008 8th Light, Inc. All Rights Reserved. Limelight and all
-included source files are distributed under terms of the GNU LGPL.
+Copyright 2008-2009 8th Light, Inc. All Rights Reserved. <a
+href="../classes/Limelight.html">Limelight</a> and all included source
+files are distributed under terms of the GNU LGPL.
 </p>
 <p>
 See license.txt

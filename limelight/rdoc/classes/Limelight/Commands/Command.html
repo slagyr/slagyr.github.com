@@ -101,16 +101,16 @@ all.
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000022">build_options</a>&nbsp;&nbsp;
-      <a href="#M000015">description</a>&nbsp;&nbsp;
-      <a href="#M000021">do_requires</a>&nbsp;&nbsp;
-      <a href="#M000014">install_as</a>&nbsp;&nbsp;
-      <a href="#M000020">options_spec</a>&nbsp;&nbsp;
-      <a href="#M000017">parse</a>&nbsp;&nbsp;
-      <a href="#M000018">parse_error</a>&nbsp;&nbsp;
-      <a href="#M000023">parse_remainder</a>&nbsp;&nbsp;
-      <a href="#M000016">run</a>&nbsp;&nbsp;
-      <a href="#M000019">usage</a>&nbsp;&nbsp;
+      <a href="#M000092">build_options</a>&nbsp;&nbsp;
+      <a href="#M000085">description</a>&nbsp;&nbsp;
+      <a href="#M000091">do_requires</a>&nbsp;&nbsp;
+      <a href="#M000084">install_as</a>&nbsp;&nbsp;
+      <a href="#M000090">options_spec</a>&nbsp;&nbsp;
+      <a href="#M000087">parse</a>&nbsp;&nbsp;
+      <a href="#M000088">parse_error</a>&nbsp;&nbsp;
+      <a href="#M000093">parse_remainder</a>&nbsp;&nbsp;
+      <a href="#M000086">run</a>&nbsp;&nbsp;
+      <a href="#M000089">usage</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -139,7 +139,7 @@ all.
           <td class="context-item-name">print_backtrace</td>
           <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
           <td class="context-item-desc">
-Flag. The backtrace on <a href="Command.html#M000017">parse</a> errors will
+Flag. The backtrace on <a href="Command.html#M000087">parse</a> errors will
 be printed if true.
 
 </td>
@@ -154,11 +154,11 @@ be printed if true.
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M000015" class="method-detail">
-        <a name="M000015"></a>
+      <div id="method-M000085" class="method-detail">
+        <a name="M000085"></a>
 
         <div class="method-heading">
-          <a href="#M000015" class="method-signature">
+          <a href="#M000085" class="method-signature">
           <span class="method-name">description</span><span class="method-args">()</span>
           </a>
         </div>
@@ -166,12 +166,12 @@ be printed if true.
         <div class="method-description">
           <p>
 Abstract class level methof that returns a string <a
-href="Command.html#M000015">description</a> of the command. Derivatives
+href="Command.html#M000085">description</a> of the command. Derivatives
 should override this class level method.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000015-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000015-source">
+            onclick="toggleCode('M000085-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000085-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/commands/command.rb, line 67</span>
 67:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">description</span>
@@ -182,11 +182,11 @@ should override this class level method.
         </div>
       </div>
 
-      <div id="method-M000014" class="method-detail">
-        <a name="M000014"></a>
+      <div id="method-M000084" class="method-detail">
+        <a name="M000084"></a>
 
         <div class="method-heading">
-          <a href="#M000014" class="method-signature">
+          <a href="#M000084" class="method-signature">
           <span class="method-name">install_as</span><span class="method-args">(name)</span>
           </a>
         </div>
@@ -197,8 +197,8 @@ Sets the alias for the derivative command and installs it in the command
 listing. All derivative much call this method exactly once.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000014-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000014-source">
+            onclick="toggleCode('M000084-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000084-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/commands/command.rb, line 58</span>
 58:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">install_as</span>(<span class="ruby-identifier">name</span>)
@@ -213,11 +213,11 @@ listing. All derivative much call this method exactly once.
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000017" class="method-detail">
-        <a name="M000017"></a>
+      <div id="method-M000087" class="method-detail">
+        <a name="M000087"></a>
 
         <div class="method-heading">
-          <a href="#M000017" class="method-signature">
+          <a href="#M000087" class="method-signature">
           <span class="method-name">parse</span><span class="method-args">(args)</span>
           </a>
         </div>
@@ -225,12 +225,12 @@ listing. All derivative much call this method exactly once.
         <div class="method-description">
           <p>
 Parse the arguments. All options will be parsed first, then <a
-href="Command.html#M000023">parse_remainder</a> will be called on remaining
+href="Command.html#M000093">parse_remainder</a> will be called on remaining
 args. Derivative should not override this method.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000017-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000017-source">
+            onclick="toggleCode('M000087-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000087-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/commands/command.rb, line 93</span>
  93:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">args</span>)         
@@ -249,11 +249,11 @@ args. Derivative should not override this method.
         </div>
       </div>
 
-      <div id="method-M000016" class="method-detail">
-        <a name="M000016"></a>
+      <div id="method-M000086" class="method-detail">
+        <a name="M000086"></a>
 
         <div class="method-heading">
-          <a href="#M000016" class="method-signature">
+          <a href="#M000086" class="method-signature">
           <span class="method-name">run</span><span class="method-args">(args)</span>
           </a>
         </div>
@@ -261,13 +261,13 @@ args. Derivative should not override this method.
         <div class="method-description">
           <p>
 Runs the command. This is TemplateMethod. It will first <a
-href="Command.html#M000017">parse</a> the arguments, then require files,
+href="Command.html#M000087">parse</a> the arguments, then require files,
 and finally process the command. Derivative should not override this
 method.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000016-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000016-source">
+            onclick="toggleCode('M000086-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000086-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/commands/command.rb, line 80</span>
 80:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run</span>(<span class="ruby-identifier">args</span>)
@@ -286,11 +286,11 @@ method.
 
       <h3 class="section-bar">Protected Instance methods</h3>
 
-      <div id="method-M000022" class="method-detail">
-        <a name="M000022"></a>
+      <div id="method-M000092" class="method-detail">
+        <a name="M000092"></a>
 
         <div class="method-heading">
-          <a href="#M000022" class="method-signature">
+          <a href="#M000092" class="method-signature">
           <span class="method-name">build_options</span><span class="method-args">(spec)</span>
           </a>
         </div>
@@ -301,8 +301,8 @@ Abstract method to define the command line options in the OptionParser.
 Derivative should override this method if they offer command line options
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000022-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000022-source">
+            onclick="toggleCode('M000092-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000092-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/commands/command.rb, line 154</span>
 154:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">build_options</span>(<span class="ruby-identifier">spec</span>)
@@ -313,11 +313,11 @@ Derivative should override this method if they offer command line options
         </div>
       </div>
 
-      <div id="method-M000021" class="method-detail">
-        <a name="M000021"></a>
+      <div id="method-M000091" class="method-detail">
+        <a name="M000091"></a>
 
         <div class="method-heading">
-          <a href="#M000021" class="method-signature">
+          <a href="#M000091" class="method-signature">
           <span class="method-name">do_requires</span><span class="method-args">()</span>
           </a>
         </div>
@@ -328,8 +328,8 @@ Abstract method to require any files needed for processing the command.
 Derivative should override this method if they need to require any files.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000021-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000021-source">
+            onclick="toggleCode('M000091-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000091-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/commands/command.rb, line 147</span>
 147:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">do_requires</span>
@@ -340,11 +340,11 @@ Derivative should override this method if they need to require any files.
         </div>
       </div>
 
-      <div id="method-M000020" class="method-detail">
-        <a name="M000020"></a>
+      <div id="method-M000090" class="method-detail">
+        <a name="M000090"></a>
 
         <div class="method-heading">
-          <a href="#M000020" class="method-signature">
+          <a href="#M000090" class="method-signature">
           <span class="method-name">options_spec</span><span class="method-args">()</span>
           </a>
         </div>
@@ -355,8 +355,8 @@ Retreives the OptionParser instance for this command. It will create it if
 it doesn&#8216;t exist.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000020-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000020-source">
+            onclick="toggleCode('M000090-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000090-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/commands/command.rb, line 135</span>
 135:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">options_spec</span>
@@ -372,11 +372,11 @@ it doesn&#8216;t exist.
         </div>
       </div>
 
-      <div id="method-M000018" class="method-detail">
-        <a name="M000018"></a>
+      <div id="method-M000088" class="method-detail">
+        <a name="M000088"></a>
 
         <div class="method-heading">
-          <a href="#M000018" class="method-signature">
+          <a href="#M000088" class="method-signature">
           <span class="method-name">parse_error</span><span class="method-args">(exception = nil)</span>
           </a>
         </div>
@@ -387,8 +387,8 @@ Prints an exception that occurs while parsing the arguments. The usages
 summary will follow.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000018-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000018-source">
+            onclick="toggleCode('M000088-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000088-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/commands/command.rb, line 113</span>
 113:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_error</span>(<span class="ruby-identifier">exception</span> = <span class="ruby-keyword kw">nil</span>)
@@ -405,25 +405,25 @@ summary will follow.
         </div>
       </div>
 
-      <div id="method-M000023" class="method-detail">
-        <a name="M000023"></a>
+      <div id="method-M000093" class="method-detail">
+        <a name="M000093"></a>
 
         <div class="method-heading">
-          <a href="#M000023" class="method-signature">
+          <a href="#M000093" class="method-signature">
           <span class="method-name">parse_remainder</span><span class="method-args">(args)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Abstract method to <a href="Command.html#M000017">parse</a> command line
+Abstract method to <a href="Command.html#M000087">parse</a> command line
 paramters. Parameter are those command line arguments listed after the
 options. Derivatives should override this method they take command line
 paramters.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000023-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000023-source">
+            onclick="toggleCode('M000093-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000093-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/commands/command.rb, line 161</span>
 161:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_remainder</span>(<span class="ruby-identifier">args</span>)
@@ -434,22 +434,22 @@ paramters.
         </div>
       </div>
 
-      <div id="method-M000019" class="method-detail">
-        <a name="M000019"></a>
+      <div id="method-M000089" class="method-detail">
+        <a name="M000089"></a>
 
         <div class="method-heading">
-          <a href="#M000019" class="method-signature">
+          <a href="#M000089" class="method-signature">
           <span class="method-name">usage</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Prints the <a href="Command.html#M000019">usage</a> summary for a command.
+Prints the <a href="Command.html#M000089">usage</a> summary for a command.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000019-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000019-source">
+            onclick="toggleCode('M000089-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000089-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/commands/command.rb, line 125</span>
 125:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">usage</span>

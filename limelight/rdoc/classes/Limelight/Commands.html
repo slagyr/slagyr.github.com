@@ -108,7 +108,7 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000007">load_command</a>&nbsp;&nbsp;
+      <a href="#M000077">load_command</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -156,24 +156,24 @@ Class <a href="Commands/VersionCommand.html" class="link">Limelight::Commands::V
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M000007" class="method-detail">
-        <a name="M000007"></a>
+      <div id="method-M000077" class="method-detail">
+        <a name="M000077"></a>
 
         <div class="method-heading">
-          <a href="#M000007" class="method-signature">
+          <a href="#M000077" class="method-signature">
           <span class="method-name">load_command</span><span class="method-args">(name)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000007-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000007-source">
+            onclick="toggleCode('M000077-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000077-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/commands/command.rb, line 22</span>
 22:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_command</span>(<span class="ruby-identifier">name</span>)
 23:         <span class="ruby-keyword kw">begin</span>
-24:           <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">'-'</span>, <span class="ruby-value str">''</span>)
+24:           <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">'-'</span>, <span class="ruby-value str">''</span>) 
 25:           <span class="ruby-identifier">require</span> <span class="ruby-node">&quot;limelight/commands/#{name}_command&quot;</span>
 26:         <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">LoadError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
 27:         <span class="ruby-keyword kw">end</span>

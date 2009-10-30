@@ -80,19 +80,19 @@
 
     <div id="description">
       <p>
-A class to create directories and <a href="Templater.html#M000030">file</a>
+A class to create directories and <a href="Templater.html#M000017">file</a>
 templates. An instance of <a href="Templater.html">Templater</a> must be
 provided with a target_root and a source_root. The target_root designates a
-root <a href="Templater.html#M000029">directory</a> in which all
+root <a href="Templater.html#M000016">directory</a> in which all
 directories and files will be created. The source_root designated a <a
-href="Templater.html#M000029">directory</a> where all the <a
-href="Templater.html#M000030">file</a> template can be found.
+href="Templater.html#M000016">directory</a> where all the <a
+href="Templater.html#M000017">file</a> template can be found.
 </p>
 <p>
-A <a href="Templater.html#M000030">file</a> template is a plain text <a
-href="Templater.html#M000030">file</a>. It may optionally contain token
+A <a href="Templater.html#M000017">file</a> template is a plain text <a
+href="Templater.html#M000017">file</a>. It may optionally contain token
 markers in the format !-TOKEN_NAME-!. When a <a
-href="Templater.html#M000030">file</a> template is installed by the
+href="Templater.html#M000017">file</a> template is installed by the
 templater, all the token margers will be replaced by tokens provided in a
 hash.
 </p>
@@ -106,11 +106,11 @@ hash.
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000027">clarify</a>&nbsp;&nbsp;
-      <a href="#M000029">directory</a>&nbsp;&nbsp;
-      <a href="#M000030">file</a>&nbsp;&nbsp;
-      <a href="#M000028">new</a>&nbsp;&nbsp;
-      <a href="#M000026">source_dir</a>&nbsp;&nbsp;
+      <a href="#M000014">clarify</a>&nbsp;&nbsp;
+      <a href="#M000016">directory</a>&nbsp;&nbsp;
+      <a href="#M000017">file</a>&nbsp;&nbsp;
+      <a href="#M000015">new</a>&nbsp;&nbsp;
+      <a href="#M000013">source_dir</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -158,11 +158,11 @@ See <a href="TemplaterLogger.html">TemplaterLogger</a>
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M000027" class="method-detail">
-        <a name="M000027"></a>
+      <div id="method-M000014" class="method-detail">
+        <a name="M000014"></a>
 
         <div class="method-heading">
-          <a href="#M000027" class="method-signature">
+          <a href="#M000014" class="method-signature">
           <span class="method-name">clarify</span><span class="method-args">(path)</span>
           </a>
         </div>
@@ -177,8 +177,8 @@ begins with a . if it&#8216;s not an absolute path.
   Templater.clarity('/root/path') -&gt; '/root/path'
 </pre>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000027-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000027-source">
+            onclick="toggleCode('M000014-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000014-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/templates/templater.rb, line 33</span>
 33:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">clarify</span>(<span class="ruby-identifier">path</span>)
@@ -191,11 +191,11 @@ begins with a . if it&#8216;s not an absolute path.
         </div>
       </div>
 
-      <div id="method-M000028" class="method-detail">
-        <a name="M000028"></a>
+      <div id="method-M000015" class="method-detail">
+        <a name="M000015"></a>
 
         <div class="method-heading">
-          <a href="#M000028" class="method-signature">
+          <a href="#M000015" class="method-signature">
           <span class="method-name">new</span><span class="method-args">(target_root, source_root=Templater.source_dir)</span>
           </a>
         </div>
@@ -204,15 +204,15 @@ begins with a . if it&#8216;s not an absolute path.
           <p>
 New instances <a href="Templater.html">Templater</a> require a target_root.
 The source_root may optionally be provided. source_root defaults to <a
-href="Templater.html#M000026">Templater.source_dir</a>
+href="Templater.html#M000013">Templater.source_dir</a>
 </p>
 <p>
 The logger is initializes as a <a
 href="TemplaterLogger.html">TemplaterLogger</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000028-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000028-source">
+            onclick="toggleCode('M000015-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000015-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/templates/templater.rb, line 50</span>
 50:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">target_root</span>, <span class="ruby-identifier">source_root</span>=<span class="ruby-constant">Templater</span>.<span class="ruby-identifier">source_dir</span>)
@@ -225,26 +225,27 @@ href="TemplaterLogger.html">TemplaterLogger</a>
         </div>
       </div>
 
-      <div id="method-M000026" class="method-detail">
-        <a name="M000026"></a>
+      <div id="method-M000013" class="method-detail">
+        <a name="M000013"></a>
 
         <div class="method-heading">
-          <a href="#M000026" class="method-signature">
+          <a href="#M000013" class="method-signature">
           <span class="method-name">source_dir</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Return the default source_root for Limelight related <a
-href="Templater.html#M000030">file</a> templates.
+Return the default source_root for <a
+href="../../Limelight.html">Limelight</a> related <a
+href="Templater.html#M000017">file</a> templates.
 </p>
 <p>
 $LIMELIGHT_LIB$/limelight/templates/sources
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000026-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000026-source">
+            onclick="toggleCode('M000013-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000013-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/templates/templater.rb, line 23</span>
 23:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">source_dir</span>
@@ -257,11 +258,11 @@ $LIMELIGHT_LIB$/limelight/templates/sources
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000029" class="method-detail">
-        <a name="M000029"></a>
+      <div id="method-M000016" class="method-detail">
+        <a name="M000016"></a>
 
         <div class="method-heading">
-          <a href="#M000029" class="method-signature">
+          <a href="#M000016" class="method-signature">
           <span class="method-name">directory</span><span class="method-args">(path)</span>
           </a>
         </div>
@@ -269,9 +270,9 @@ $LIMELIGHT_LIB$/limelight/templates/sources
         <div class="method-description">
           <p>
 Creates a deirectory. If the specified <a
-href="Templater.html#M000029">directory</a>&#8216;s parent <a
-href="Templater.html#M000029">directory</a> is missing, it will be created
-as will its parent <a href="Templater.html#M000029">directory</a>, and so
+href="Templater.html#M000016">directory</a>&#8216;s parent <a
+href="Templater.html#M000016">directory</a> is missing, it will be created
+as will its parent <a href="Templater.html#M000016">directory</a>, and so
 on.
 </p>
 <p>
@@ -291,8 +292,8 @@ existed prior to the call or not.
   dir1/dir2/dir3/dir4
 </pre>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000029-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000029-source">
+            onclick="toggleCode('M000016-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000016-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/templates/templater.rb, line 70</span>
 70:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">directory</span>(<span class="ruby-identifier">path</span>)
@@ -304,27 +305,27 @@ existed prior to the call or not.
         </div>
       </div>
 
-      <div id="method-M000030" class="method-detail">
-        <a name="M000030"></a>
+      <div id="method-M000017" class="method-detail">
+        <a name="M000017"></a>
 
         <div class="method-heading">
-          <a href="#M000030" class="method-signature">
+          <a href="#M000017" class="method-signature">
           <span class="method-name">file</span><span class="method-args">(target, source, tokens = {})</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Creates the specified <a href="Templater.html#M000030">file</a> from the
-specified <a href="Templater.html#M000030">file</a> template. The <a
-href="Templater.html#M000030">file</a> will be created within the
+Creates the specified <a href="Templater.html#M000017">file</a> from the
+specified <a href="Templater.html#M000017">file</a> template. The <a
+href="Templater.html#M000017">file</a> will be created within the
 target_root. All parent diretories will be created if needed. The source
 paramter should be a path pointing to a <a
-href="Templater.html#M000030">file</a> template in the source_root <a
-href="Templater.html#M000029">directory</a>.
+href="Templater.html#M000017">file</a> template in the source_root <a
+href="Templater.html#M000016">directory</a>.
 </p>
 <p>
-Assume the the <a href="Templater.html#M000030">file</a>
+Assume the the <a href="Templater.html#M000017">file</a>
 <tt>src/default.txt.template</tt> exists in the source_root with the
 following content.
 </p>
@@ -338,15 +339,15 @@ When the following command is executed,
   templater.file('dir/foo.txt', 'src/default.txt.template', :SCORES =&gt; &quot;Four&quot;, :YEARS =&gt; &quot;seven&quot;)
 </pre>
 <p>
-The <a href="Templater.html#M000030">file</a> <tt>dir/foo.txt</tt> will
+The <a href="Templater.html#M000017">file</a> <tt>dir/foo.txt</tt> will
 exist in the target_root with the following content.
 </p>
 <pre>
   Four score and seven years ago, ...
 </pre>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000030-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000030-source">
+            onclick="toggleCode('M000017-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000017-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/templates/templater.rb, line 91</span>
  91:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file</span>(<span class="ruby-identifier">target</span>, <span class="ruby-identifier">source</span>, <span class="ruby-identifier">tokens</span> = {})

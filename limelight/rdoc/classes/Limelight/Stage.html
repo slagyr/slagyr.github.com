@@ -87,7 +87,7 @@ href="Stage.html">Stage</a> represents a window on the computer screen. The
 href="Production.html">Production</a> are configured by the StagesBuilder.
 By default a <a href="Production.html">Production</a> will have one <a
 href="Stage.html">Stage</a>. A <a href="Stage.html">Stage</a> may <a
-href="Stage.html#M000219">open</a> any number of Scenes but it may only
+href="Stage.html#M000245">open</a> any number of Scenes but it may only
 have one current scene loaded at a time.
 </p>
 
@@ -100,35 +100,44 @@ have one current scene loaded at a time.
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000223">alert</a>&nbsp;&nbsp;
-      <a href="#M000215">always_on_top=</a>&nbsp;&nbsp;
-      <a href="#M000216">always_on_top?</a>&nbsp;&nbsp;
-      <a href="#M000212">background_color</a>&nbsp;&nbsp;
-      <a href="#M000211">background_color=</a>&nbsp;&nbsp;
-      <a href="#M000222">choose_file</a>&nbsp;&nbsp;
-      <a href="#M000220">close</a>&nbsp;&nbsp;
-      <a href="#M000213">framed=</a>&nbsp;&nbsp;
-      <a href="#M000214">framed?</a>&nbsp;&nbsp;
-      <a href="#M000204">fullscreen=</a>&nbsp;&nbsp;
-      <a href="#M000205">fullscreen?</a>&nbsp;&nbsp;
-      <a href="#M000208">hide</a>&nbsp;&nbsp;
-      <a href="#M000206">kiosk=</a>&nbsp;&nbsp;
-      <a href="#M000207">kiosk?</a>&nbsp;&nbsp;
-      <a href="#M000221">load_scene</a>&nbsp;&nbsp;
-      <a href="#M000202">location</a>&nbsp;&nbsp;
-      <a href="#M000203">location=</a>&nbsp;&nbsp;
-      <a href="#M000197">new</a>&nbsp;&nbsp;
-      <a href="#M000225">new_frame</a>&nbsp;&nbsp;
-      <a href="#M000219">open</a>&nbsp;&nbsp;
-      <a href="#M000224">should_allow_close</a>&nbsp;&nbsp;
-      <a href="#M000209">show</a>&nbsp;&nbsp;
-      <a href="#M000200">size</a>&nbsp;&nbsp;
-      <a href="#M000201">size=</a>&nbsp;&nbsp;
-      <a href="#M000198">title</a>&nbsp;&nbsp;
-      <a href="#M000199">title=</a>&nbsp;&nbsp;
-      <a href="#M000210">visible?</a>&nbsp;&nbsp;
-      <a href="#M000217">vital=</a>&nbsp;&nbsp;
-      <a href="#M000218">vital?</a>&nbsp;&nbsp;
+      <a href="#M000258">activated</a>&nbsp;&nbsp;
+      <a href="#M000249">alert</a>&nbsp;&nbsp;
+      <a href="#M000241">always_on_top=</a>&nbsp;&nbsp;
+      <a href="#M000242">always_on_top?</a>&nbsp;&nbsp;
+      <a href="#M000238">background_color</a>&nbsp;&nbsp;
+      <a href="#M000237">background_color=</a>&nbsp;&nbsp;
+      <a href="#M000248">choose_file</a>&nbsp;&nbsp;
+      <a href="#M000246">close</a>&nbsp;&nbsp;
+      <a href="#M000253">closed</a>&nbsp;&nbsp;
+      <a href="#M000251">closed?</a>&nbsp;&nbsp;
+      <a href="#M000252">closing</a>&nbsp;&nbsp;
+      <a href="#M000259">deactivated</a>&nbsp;&nbsp;
+      <a href="#M000257">deiconified</a>&nbsp;&nbsp;
+      <a href="#M000254">focus_gained</a>&nbsp;&nbsp;
+      <a href="#M000255">focus_lost</a>&nbsp;&nbsp;
+      <a href="#M000239">framed=</a>&nbsp;&nbsp;
+      <a href="#M000240">framed?</a>&nbsp;&nbsp;
+      <a href="#M000230">fullscreen=</a>&nbsp;&nbsp;
+      <a href="#M000231">fullscreen?</a>&nbsp;&nbsp;
+      <a href="#M000234">hide</a>&nbsp;&nbsp;
+      <a href="#M000256">iconified</a>&nbsp;&nbsp;
+      <a href="#M000232">kiosk=</a>&nbsp;&nbsp;
+      <a href="#M000233">kiosk?</a>&nbsp;&nbsp;
+      <a href="#M000247">load_scene</a>&nbsp;&nbsp;
+      <a href="#M000228">location</a>&nbsp;&nbsp;
+      <a href="#M000229">location=</a>&nbsp;&nbsp;
+      <a href="#M000223">new</a>&nbsp;&nbsp;
+      <a href="#M000260">new_frame</a>&nbsp;&nbsp;
+      <a href="#M000245">open</a>&nbsp;&nbsp;
+      <a href="#M000250">should_allow_close</a>&nbsp;&nbsp;
+      <a href="#M000235">show</a>&nbsp;&nbsp;
+      <a href="#M000226">size</a>&nbsp;&nbsp;
+      <a href="#M000227">size=</a>&nbsp;&nbsp;
+      <a href="#M000224">title</a>&nbsp;&nbsp;
+      <a href="#M000225">title=</a>&nbsp;&nbsp;
+      <a href="#M000236">visible?</a>&nbsp;&nbsp;
+      <a href="#M000243">vital=</a>&nbsp;&nbsp;
+      <a href="#M000244">vital?</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -190,26 +199,26 @@ have one current scene loaded at a time.
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M000197" class="method-detail">
-        <a name="M000197"></a>
+      <div id="method-M000223" class="method-detail">
+        <a name="M000223"></a>
 
         <div class="method-heading">
-          <a href="#M000197" class="method-signature">
+          <a href="#M000223" class="method-signature">
           <span class="method-name">new</span><span class="method-args">(theater, name, options = {})</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-To create a <a href="Stage.html#M000197">new</a> <a
+To create a <a href="Stage.html#M000223">new</a> <a
 href="Stage.html">Stage</a>, it be given a <a
 href="Theater.html">Theater</a> to which it belongs, and the name is
 optional. If no name is provided it will default to &#8216;default&#8217;.
 A stage name must be unique, so it is recommended you provide a name.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000197-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000197-source">
+            onclick="toggleCode('M000223-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000223-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 26</span>
 26:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">theater</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">options</span> = {})
@@ -226,11 +235,38 @@ A stage name must be unique, so it is recommended you provide a name.
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000223" class="method-detail">
-        <a name="M000223"></a>
+      <div id="method-M000258" class="method-detail">
+        <a name="M000258"></a>
 
         <div class="method-heading">
-          <a href="#M000223" class="method-signature">
+          <a href="#M000258" class="method-signature">
+          <span class="method-name">activated</span><span class="method-args">(e)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Invoked when the stage has become the active stage on the desktop. Only 1
+stage my be active at a time. System hook that should NOT be called by you.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000258-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000258-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 306</span>
+306:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">activated</span>(<span class="ruby-identifier">e</span>)
+307:       <span class="ruby-ivar">@theater</span>.<span class="ruby-identifier">stage_activated</span>(<span class="ruby-keyword kw">self</span>)
+308:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000249" class="method-detail">
+        <a name="M000249"></a>
+
+        <div class="method-heading">
+          <a href="#M000249" class="method-signature">
           <span class="method-name">alert</span><span class="method-args">(message)</span>
           </a>
         </div>
@@ -240,29 +276,29 @@ A stage name must be unique, so it is recommended you provide a name.
 Pops up a simple modal dialog with the provided message.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000223-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000223-source">
+            onclick="toggleCode('M000249-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000249-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 233</span>
-233:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">alert</span>(<span class="ruby-identifier">message</span>)
-234:       <span class="ruby-constant">Thread</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword kw">do</span>
-235:         <span class="ruby-keyword kw">begin</span>
-236:           <span class="ruby-constant">Studio</span>.<span class="ruby-identifier">utilities_production</span>.<span class="ruby-identifier">alert</span>(<span class="ruby-identifier">message</span>)
-237:         <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">StandardError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
-238:           <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Error on alert: #{e}&quot;</span>
-239:         <span class="ruby-keyword kw">end</span>
-240:       <span class="ruby-keyword kw">end</span>
-241:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 231</span>
+231:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">alert</span>(<span class="ruby-identifier">message</span>)
+232:       <span class="ruby-constant">Thread</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword kw">do</span>
+233:         <span class="ruby-keyword kw">begin</span>
+234:           <span class="ruby-constant">Context</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">studio</span>.<span class="ruby-identifier">utilities_production</span>.<span class="ruby-identifier">alert</span>(<span class="ruby-identifier">message</span>)
+235:         <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">StandardError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+236:           <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Error on alert: #{e}&quot;</span>
+237:         <span class="ruby-keyword kw">end</span>
+238:       <span class="ruby-keyword kw">end</span>
+239:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000215" class="method-detail">
-        <a name="M000215"></a>
+      <div id="method-M000241" class="method-detail">
+        <a name="M000241"></a>
 
         <div class="method-heading">
-          <a href="#M000215" class="method-signature">
+          <a href="#M000241" class="method-signature">
           <span class="method-name">always_on_top=</span><span class="method-args">(value)</span>
           </a>
         </div>
@@ -272,8 +308,8 @@ Pops up a simple modal dialog with the provided message.
 When true, the stage will remain on top of all other windows.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000215-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000215-source">
+            onclick="toggleCode('M000241-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000241-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 162</span>
 162:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">always_on_top=</span>(<span class="ruby-identifier">value</span>)
@@ -284,11 +320,11 @@ When true, the stage will remain on top of all other windows.
         </div>
       </div>
 
-      <div id="method-M000216" class="method-detail">
-        <a name="M000216"></a>
+      <div id="method-M000242" class="method-detail">
+        <a name="M000242"></a>
 
         <div class="method-heading">
-          <a href="#M000216" class="method-signature">
+          <a href="#M000242" class="method-signature">
           <span class="method-name">always_on_top?</span><span class="method-args">()</span>
           </a>
         </div>
@@ -298,8 +334,8 @@ When true, the stage will remain on top of all other windows.
 Return true if the stage has been set to always be on top.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000216-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000216-source">
+            onclick="toggleCode('M000242-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000242-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 168</span>
 168:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">always_on_top?</span>
@@ -310,11 +346,11 @@ Return true if the stage has been set to always be on top.
         </div>
       </div>
 
-      <div id="method-M000212" class="method-detail">
-        <a name="M000212"></a>
+      <div id="method-M000238" class="method-detail">
+        <a name="M000238"></a>
 
         <div class="method-heading">
-          <a href="#M000212" class="method-signature">
+          <a href="#M000238" class="method-signature">
           <span class="method-name">background_color</span><span class="method-args">()</span>
           </a>
         </div>
@@ -324,8 +360,8 @@ Return true if the stage has been set to always be on top.
 Returns the background color of the stage in the format RRGGBB(AA)
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000212-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000212-source">
+            onclick="toggleCode('M000238-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000238-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 143</span>
 143:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">background_color</span>
@@ -336,11 +372,11 @@ Returns the background color of the stage in the format RRGGBB(AA)
         </div>
       </div>
 
-      <div id="method-M000211" class="method-detail">
-        <a name="M000211"></a>
+      <div id="method-M000237" class="method-detail">
+        <a name="M000237"></a>
 
         <div class="method-heading">
-          <a href="#M000211" class="method-signature">
+          <a href="#M000237" class="method-signature">
           <span class="method-name">background_color=</span><span class="method-args">(value)</span>
           </a>
         </div>
@@ -350,8 +386,8 @@ Returns the background color of the stage in the format RRGGBB(AA)
 Sets the background color of the stage
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000211-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000211-source">
+            onclick="toggleCode('M000237-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000237-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 137</span>
 137:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">background_color=</span>(<span class="ruby-identifier">value</span>)
@@ -362,11 +398,11 @@ Sets the background color of the stage
         </div>
       </div>
 
-      <div id="method-M000222" class="method-detail">
-        <a name="M000222"></a>
+      <div id="method-M000248" class="method-detail">
+        <a name="M000248"></a>
 
         <div class="method-heading">
-          <a href="#M000222" class="method-signature">
+          <a href="#M000248" class="method-signature">
           <span class="method-name">choose_file</span><span class="method-args">(options={}, &amp;block)</span>
           </a>
         </div>
@@ -383,8 +419,8 @@ may include:
 <li>:directory =&gt; starting directory
 
 </li>
-<li>:<a href="Stage.html#M000198">title</a> =&gt; <a
-href="Stage.html#M000198">title</a> of the window
+<li>:<a href="Stage.html#M000224">title</a> =&gt; <a
+href="Stage.html#M000224">title</a> of the window
 
 </li>
 <li>:directories_only =&gt; boolean, true if the user must select a directory
@@ -395,25 +431,25 @@ href="Stage.html#M000198">title</a> of the window
 </li>
 </ul>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000222-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000222-source">
+            onclick="toggleCode('M000248-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000248-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 225</span>
-225:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">choose_file</span>(<span class="ruby-identifier">options</span>={}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
-226:       <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:parent</span>] = <span class="ruby-ivar">@frame</span>
-227:       <span class="ruby-identifier">chooser</span> = <span class="ruby-constant">FileChooser</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">options</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
-228:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">chooser</span>.<span class="ruby-identifier">choose_file</span>
-229:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 223</span>
+223:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">choose_file</span>(<span class="ruby-identifier">options</span>={}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+224:       <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:parent</span>] = <span class="ruby-ivar">@frame</span>
+225:       <span class="ruby-identifier">chooser</span> = <span class="ruby-constant">FileChooser</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">options</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+226:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">chooser</span>.<span class="ruby-identifier">choose_file</span>
+227:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000220" class="method-detail">
-        <a name="M000220"></a>
+      <div id="method-M000246" class="method-detail">
+        <a name="M000246"></a>
 
         <div class="method-heading">
-          <a href="#M000220" class="method-signature">
+          <a href="#M000246" class="method-signature">
           <span class="method-name">close</span><span class="method-args">()</span>
           </a>
         </div>
@@ -424,26 +460,213 @@ Closes the <a href="Stage.html">Stage</a>. It&#8216;s window will no longer
 be displayed on the screen.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000220-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000220-source">
+            onclick="toggleCode('M000246-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000246-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 199</span>
-199:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close</span>
-200:       <span class="ruby-ivar">@theater</span>.<span class="ruby-identifier">stage_closed</span>(<span class="ruby-keyword kw">self</span>)
+     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 200</span>
+200:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close</span>
 201:       <span class="ruby-ivar">@frame</span>.<span class="ruby-identifier">close</span>
-202:       <span class="ruby-ivar">@current_scene</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@current_scene</span>
-203:       <span class="ruby-ivar">@current_scene</span> = <span class="ruby-keyword kw">nil</span>
-204:     <span class="ruby-keyword kw">end</span>
+202:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000213" class="method-detail">
-        <a name="M000213"></a>
+      <div id="method-M000253" class="method-detail">
+        <a name="M000253"></a>
 
         <div class="method-heading">
-          <a href="#M000213" class="method-signature">
+          <a href="#M000253" class="method-signature">
+          <span class="method-name">closed</span><span class="method-args">(e)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Invoked when the stage has been <a href="Stage.html#M000253">closed</a>.
+System hook that should NOT be called by you.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000253-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000253-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 270</span>
+270:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">closed</span>(<span class="ruby-identifier">e</span>)
+271:       <span class="ruby-ivar">@current_scene</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@current_scene</span>
+272:       <span class="ruby-ivar">@current_scene</span> = <span class="ruby-keyword kw">nil</span>
+273:       <span class="ruby-ivar">@theater</span>.<span class="ruby-identifier">stage_closed</span>(<span class="ruby-keyword kw">self</span>)
+274:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000251" class="method-detail">
+        <a name="M000251"></a>
+
+        <div class="method-heading">
+          <a href="#M000251" class="method-signature">
+          <span class="method-name">closed?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+returns true if the stage has been <a href="Stage.html#M000253">closed</a>.
+Closed stages may not be reopened.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000251-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000251-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 257</span>
+257:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">closed?</span>
+258:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@frame</span>.<span class="ruby-identifier">closed?</span>
+259:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000252" class="method-detail">
+        <a name="M000252"></a>
+
+        <div class="method-heading">
+          <a href="#M000252" class="method-signature">
+          <span class="method-name">closing</span><span class="method-args">(e)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Invoked when the stage is being <a href="Stage.html#M000253">closed</a>.
+System hook that should NOT be called by you.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000252-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000252-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 264</span>
+264:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">closing</span>(<span class="ruby-identifier">e</span>)
+265:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000259" class="method-detail">
+        <a name="M000259"></a>
+
+        <div class="method-heading">
+          <a href="#M000259" class="method-signature">
+          <span class="method-name">deactivated</span><span class="method-args">(e)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Invoked when the stage has lost status as the active stage. Only 1 stage my
+have focus at a time. System hook that should NOT be called by you.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000259-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000259-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 313</span>
+313:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deactivated</span>(<span class="ruby-identifier">e</span>)
+314:       <span class="ruby-ivar">@theater</span>.<span class="ruby-identifier">stage_deactivated</span>(<span class="ruby-keyword kw">self</span>)  
+315:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000257" class="method-detail">
+        <a name="M000257"></a>
+
+        <div class="method-heading">
+          <a href="#M000257" class="method-signature">
+          <span class="method-name">deiconified</span><span class="method-args">(e)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Invoked when the stage has been <a
+href="Stage.html#M000257">deiconified</a>. This occurs when the icon for
+the stage has been removed from the taskbar or dock, and the stage is again
+visible on the desktop. System hook that should NOT be called by you.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000257-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000257-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 300</span>
+300:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deiconified</span>(<span class="ruby-identifier">e</span>)
+301:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000254" class="method-detail">
+        <a name="M000254"></a>
+
+        <div class="method-heading">
+          <a href="#M000254" class="method-signature">
+          <span class="method-name">focus_gained</span><span class="method-args">(e)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Invoked when the stage has gained focus on the desktop. Only 1 stage my
+have focus at a time. System hook that should NOT be called by you.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000254-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000254-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 279</span>
+279:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">focus_gained</span>(<span class="ruby-identifier">e</span>)
+280:       <span class="ruby-ivar">@theater</span>.<span class="ruby-identifier">stage_activated</span>(<span class="ruby-keyword kw">self</span>)
+281:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000255" class="method-detail">
+        <a name="M000255"></a>
+
+        <div class="method-heading">
+          <a href="#M000255" class="method-signature">
+          <span class="method-name">focus_lost</span><span class="method-args">(e)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Invoked when the stage has lost focus on the desktop. Only 1 stage my have
+focus at a time. System hook that should NOT be called by you.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000255-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000255-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 286</span>
+286:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">focus_lost</span>(<span class="ruby-identifier">e</span>)
+287:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000239" class="method-detail">
+        <a name="M000239"></a>
+
+        <div class="method-heading">
+          <a href="#M000239" class="method-signature">
           <span class="method-name">framed=</span><span class="method-args">(value)</span>
           </a>
         </div>
@@ -451,12 +674,12 @@ be displayed on the screen.
         <div class="method-description">
           <p>
 When true, the stage will be frame with the operating system&#8216;s
-standard window frame including <a href="Stage.html#M000220">close</a>,
+standard window frame including <a href="Stage.html#M000246">close</a>,
 minimize, and maximize buttons
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000213-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000213-source">
+            onclick="toggleCode('M000239-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000239-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 150</span>
 150:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">framed=</span>(<span class="ruby-identifier">value</span>)
@@ -467,11 +690,11 @@ minimize, and maximize buttons
         </div>
       </div>
 
-      <div id="method-M000214" class="method-detail">
-        <a name="M000214"></a>
+      <div id="method-M000240" class="method-detail">
+        <a name="M000240"></a>
 
         <div class="method-heading">
-          <a href="#M000214" class="method-signature">
+          <a href="#M000240" class="method-signature">
           <span class="method-name">framed?</span><span class="method-args">()</span>
           </a>
         </div>
@@ -481,8 +704,8 @@ minimize, and maximize buttons
 Return true if the stage is framed.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000214-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000214-source">
+            onclick="toggleCode('M000240-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000240-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 156</span>
 156:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">framed?</span>
@@ -493,11 +716,11 @@ Return true if the stage is framed.
         </div>
       </div>
 
-      <div id="method-M000204" class="method-detail">
-        <a name="M000204"></a>
+      <div id="method-M000230" class="method-detail">
+        <a name="M000230"></a>
 
         <div class="method-heading">
-          <a href="#M000204" class="method-signature">
+          <a href="#M000230" class="method-signature">
           <span class="method-name">fullscreen=</span><span class="method-args">(on)</span>
           </a>
         </div>
@@ -511,8 +734,8 @@ the entire screen and appear on top of all other windows.
   stage.fullscreen = true
 </pre>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000204-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000204-source">
+            onclick="toggleCode('M000230-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000230-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 87</span>
 87:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fullscreen=</span>(<span class="ruby-identifier">on</span>)
@@ -523,11 +746,11 @@ the entire screen and appear on top of all other windows.
         </div>
       </div>
 
-      <div id="method-M000205" class="method-detail">
-        <a name="M000205"></a>
+      <div id="method-M000231" class="method-detail">
+        <a name="M000231"></a>
 
         <div class="method-heading">
-          <a href="#M000205" class="method-signature">
+          <a href="#M000231" class="method-signature">
           <span class="method-name">fullscreen?</span><span class="method-args">()</span>
           </a>
         </div>
@@ -537,8 +760,8 @@ the entire screen and appear on top of all other windows.
 Returns true if the stage is in fullscreen mode.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000205-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000205-source">
+            onclick="toggleCode('M000231-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000231-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 93</span>
 93:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fullscreen?</span>
@@ -549,11 +772,11 @@ Returns true if the stage is in fullscreen mode.
         </div>
       </div>
 
-      <div id="method-M000208" class="method-detail">
-        <a name="M000208"></a>
+      <div id="method-M000234" class="method-detail">
+        <a name="M000234"></a>
 
         <div class="method-heading">
-          <a href="#M000208" class="method-signature">
+          <a href="#M000234" class="method-signature">
           <span class="method-name">hide</span><span class="method-args">()</span>
           </a>
         </div>
@@ -564,8 +787,8 @@ Hides the stage so that it is not visible on the screen without destroying
 it.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000208-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000208-source">
+            onclick="toggleCode('M000234-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000234-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 119</span>
 119:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hide</span>
@@ -576,11 +799,39 @@ it.
         </div>
       </div>
 
-      <div id="method-M000206" class="method-detail">
-        <a name="M000206"></a>
+      <div id="method-M000256" class="method-detail">
+        <a name="M000256"></a>
 
         <div class="method-heading">
-          <a href="#M000206" class="method-signature">
+          <a href="#M000256" class="method-signature">
+          <span class="method-name">iconified</span><span class="method-args">(e)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Invoked when the stage has been <a href="Stage.html#M000256">iconified</a>.
+This occurs when the stage is no longer visible on the desktop and an icon
+for the stage has been added to the OS&#8216;s taskbar or dock. System hook
+that should NOT be called by you.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000256-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000256-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 293</span>
+293:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">iconified</span>(<span class="ruby-identifier">e</span>)
+294:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000232" class="method-detail">
+        <a name="M000232"></a>
+
+        <div class="method-heading">
+          <a href="#M000232" class="method-signature">
           <span class="method-name">kiosk=</span><span class="method-args">(on)</span>
           </a>
         </div>
@@ -599,8 +850,8 @@ Turns kiosk mode for this stage on and off. When on, the stage will:
   stage.kiosk = true
 </pre>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000206-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000206-source">
+            onclick="toggleCode('M000232-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000232-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 106</span>
 106:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">kiosk=</span>(<span class="ruby-identifier">on</span>)
@@ -611,11 +862,11 @@ Turns kiosk mode for this stage on and off. When on, the stage will:
         </div>
       </div>
 
-      <div id="method-M000207" class="method-detail">
-        <a name="M000207"></a>
+      <div id="method-M000233" class="method-detail">
+        <a name="M000233"></a>
 
         <div class="method-heading">
-          <a href="#M000207" class="method-signature">
+          <a href="#M000233" class="method-signature">
           <span class="method-name">kiosk?</span><span class="method-args">()</span>
           </a>
         </div>
@@ -625,8 +876,8 @@ Turns kiosk mode for this stage on and off. When on, the stage will:
 Return true if the stage is in kiosk mode.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000207-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000207-source">
+            onclick="toggleCode('M000233-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000233-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 112</span>
 112:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">kiosk?</span>
@@ -637,11 +888,11 @@ Return true if the stage is in kiosk mode.
         </div>
       </div>
 
-      <div id="method-M000221" class="method-detail">
-        <a name="M000221"></a>
+      <div id="method-M000247" class="method-detail">
+        <a name="M000247"></a>
 
         <div class="method-heading">
-          <a href="#M000221" class="method-signature">
+          <a href="#M000247" class="method-signature">
           <span class="method-name">load_scene</span><span class="method-args">(scene)</span>
           </a>
         </div>
@@ -651,47 +902,47 @@ Return true if the stage is in kiosk mode.
 Loads a scene on the <a href="Stage.html">Stage</a>. If the <a
 href="Stage.html">Stage</a> is currently hosting a <a
 href="Scene.html">Scene</a>, the original <a href="Scene.html">Scene</a>
-will be removed and the <a href="Stage.html#M000197">new</a> <a
+will be removed and the <a href="Stage.html#M000223">new</a> <a
 href="Scene.html">Scene</a> will replace it.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000221-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000221-source">
+            onclick="toggleCode('M000247-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000247-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 209</span>
-209:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_scene</span>(<span class="ruby-identifier">scene</span>)
-210:       <span class="ruby-comment cmt">#      @frame.setJMenuBar(scene.menu_bar)</span>
-211:       <span class="ruby-ivar">@frame</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">scene</span>.<span class="ruby-identifier">panel</span>)
-212:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">has_static_size?</span>(<span class="ruby-identifier">scene</span>.<span class="ruby-identifier">style</span>))
-213:         <span class="ruby-ivar">@frame</span>.<span class="ruby-identifier">set_size</span>(<span class="ruby-identifier">scene</span>.<span class="ruby-identifier">style</span>.<span class="ruby-identifier">compiled_width</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@frame</span>.<span class="ruby-identifier">getHorizontalInsetWidth</span>, <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">style</span>.<span class="ruby-identifier">compiled_height</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@frame</span>.<span class="ruby-identifier">getVerticalInsetWidth</span>)
-214:       <span class="ruby-keyword kw">end</span>
-215:       <span class="ruby-ivar">@current_scene</span> = <span class="ruby-identifier">scene</span>
-216:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 207</span>
+207:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_scene</span>(<span class="ruby-identifier">scene</span>)      
+208:       <span class="ruby-comment cmt">#      @frame.setJMenuBar(scene.menu_bar)</span>
+209:       <span class="ruby-ivar">@frame</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">scene</span>.<span class="ruby-identifier">panel</span>)
+210:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">has_static_size?</span>(<span class="ruby-identifier">scene</span>.<span class="ruby-identifier">style</span>))
+211:         <span class="ruby-ivar">@frame</span>.<span class="ruby-identifier">set_size</span>(<span class="ruby-identifier">scene</span>.<span class="ruby-identifier">style</span>.<span class="ruby-identifier">compiled_width</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@frame</span>.<span class="ruby-identifier">getHorizontalInsetWidth</span>, <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">style</span>.<span class="ruby-identifier">compiled_height</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@frame</span>.<span class="ruby-identifier">getVerticalInsetWidth</span>)
+212:       <span class="ruby-keyword kw">end</span>
+213:       <span class="ruby-ivar">@current_scene</span> = <span class="ruby-identifier">scene</span>
+214:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000202" class="method-detail">
-        <a name="M000202"></a>
+      <div id="method-M000228" class="method-detail">
+        <a name="M000228"></a>
 
         <div class="method-heading">
-          <a href="#M000202" class="method-signature">
+          <a href="#M000228" class="method-signature">
           <span class="method-name">location</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-The <a href="Stage.html#M000202">location</a> styles of the <a
+The <a href="Stage.html#M000228">location</a> styles of the <a
 href="Stage.html">Stage</a>.
 </p>
 <pre>
   x, y = stage.location
 </pre>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000202-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000202-source">
+            onclick="toggleCode('M000228-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000228-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 68</span>
 68:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">location</span>
@@ -702,26 +953,26 @@ href="Stage.html">Stage</a>.
         </div>
       </div>
 
-      <div id="method-M000203" class="method-detail">
-        <a name="M000203"></a>
+      <div id="method-M000229" class="method-detail">
+        <a name="M000229"></a>
 
         <div class="method-heading">
-          <a href="#M000203" class="method-signature">
+          <a href="#M000229" class="method-signature">
           <span class="method-name">location=</span><span class="method-args">(*values)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Sets the <a href="Stage.html#M000202">location</a> styles of the <a
+Sets the <a href="Stage.html#M000228">location</a> styles of the <a
 href="Stage.html">Stage</a>.
 </p>
 <pre>
   stage.location = [500, 200]
 </pre>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000203-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000203-source">
+            onclick="toggleCode('M000229-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000229-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 76</span>
 76:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">location=</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">values</span>)
@@ -733,11 +984,11 @@ href="Stage.html">Stage</a>.
         </div>
       </div>
 
-      <div id="method-M000219" class="method-detail">
-        <a name="M000219"></a>
+      <div id="method-M000245" class="method-detail">
+        <a name="M000245"></a>
 
         <div class="method-heading">
-          <a href="#M000219" class="method-signature">
+          <a href="#M000245" class="method-signature">
           <span class="method-name">open</span><span class="method-args">(scene)</span>
           </a>
         </div>
@@ -748,31 +999,32 @@ Opens the <a href="Stage.html">Stage</a> and loads the provided <a
 href="Scene.html">Scene</a>.
 </p>
 <p>
-See <a href="Stage.html#M000221">load_scene</a>
+See <a href="Stage.html#M000247">load_scene</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000219-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000219-source">
+            onclick="toggleCode('M000245-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000245-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 188</span>
 188:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">open</span>(<span class="ruby-identifier">scene</span>)
-189:       <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">stage</span> = <span class="ruby-keyword kw">self</span>
-190:       <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">illuminate</span>
-191:       <span class="ruby-identifier">load_scene</span>(<span class="ruby-identifier">scene</span>)
-192:       <span class="ruby-ivar">@frame</span>.<span class="ruby-identifier">open</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@should_remain_hidden</span>
-193:       <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword kw">true</span>
-194:       <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">scene_opened</span>(<span class="ruby-keyword kw">self</span>)
-195:     <span class="ruby-keyword kw">end</span>
+189:       <span class="ruby-ivar">@current_scene</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@current_scene</span>
+190:       <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">stage</span> = <span class="ruby-keyword kw">self</span>
+191:       <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">illuminate</span>
+192:       <span class="ruby-identifier">load_scene</span>(<span class="ruby-identifier">scene</span>)
+193:       <span class="ruby-ivar">@frame</span>.<span class="ruby-identifier">open</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@should_remain_hidden</span>
+194:       <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword kw">true</span>
+195:       <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">scene_opened</span>(<span class="ruby-keyword kw">self</span>)
+196:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000224" class="method-detail">
-        <a name="M000224"></a>
+      <div id="method-M000250" class="method-detail">
+        <a name="M000250"></a>
 
         <div class="method-heading">
-          <a href="#M000224" class="method-signature">
+          <a href="#M000250" class="method-signature">
           <span class="method-name">should_allow_close</span><span class="method-args">()</span>
           </a>
         </div>
@@ -780,30 +1032,31 @@ See <a href="Stage.html#M000221">load_scene</a>
         <div class="method-description">
           <p>
 Called when the user or system would like to <a
-href="Stage.html#M000220">close</a> the stage. The stage will return true,
-allowing it to be closed, unless the current_scene defines the allow_close?
-method in which case the decision it left up to the current_scene.
+href="Stage.html#M000246">close</a> the stage. The stage will return true,
+allowing it to be <a href="Stage.html#M000253">closed</a>, unless the
+current_scene defines the allow_close? method in which case the decision it
+left up to the current_scene.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000224-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000224-source">
+            onclick="toggleCode('M000250-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000250-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 247</span>
-247:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">should_allow_close</span>
-248:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@current_scene</span>.<span class="ruby-identifier">nil?</span>
-249:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@current_scene</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">:allow_close?</span>)
-250:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@current_scene</span>.<span class="ruby-identifier">allow_close?</span>
-251:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 245</span>
+245:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">should_allow_close</span>
+246:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@current_scene</span>.<span class="ruby-identifier">nil?</span>
+247:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@current_scene</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">:allow_close?</span>)
+248:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@current_scene</span>.<span class="ruby-identifier">allow_close?</span>
+249:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000209" class="method-detail">
-        <a name="M000209"></a>
+      <div id="method-M000235" class="method-detail">
+        <a name="M000235"></a>
 
         <div class="method-heading">
-          <a href="#M000209" class="method-signature">
+          <a href="#M000235" class="method-signature">
           <span class="method-name">show</span><span class="method-args">()</span>
           </a>
         </div>
@@ -813,8 +1066,8 @@ method in which case the decision it left up to the current_scene.
 Shows the stage after having hiding it.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000209-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000209-source">
+            onclick="toggleCode('M000235-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000235-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 125</span>
 125:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show</span>
@@ -825,11 +1078,11 @@ Shows the stage after having hiding it.
         </div>
       </div>
 
-      <div id="method-M000200" class="method-detail">
-        <a name="M000200"></a>
+      <div id="method-M000226" class="method-detail">
+        <a name="M000226"></a>
 
         <div class="method-heading">
-          <a href="#M000200" class="method-signature">
+          <a href="#M000226" class="method-signature">
           <span class="method-name">size</span><span class="method-args">()</span>
           </a>
         </div>
@@ -842,8 +1095,8 @@ Returns the width and height styles of the <a href="Stage.html">Stage</a>.
   width, height = stage.size
 </pre>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000200-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000200-source">
+            onclick="toggleCode('M000226-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000226-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 50</span>
 50:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">size</span>
@@ -854,11 +1107,11 @@ Returns the width and height styles of the <a href="Stage.html">Stage</a>.
         </div>
       </div>
 
-      <div id="method-M000201" class="method-detail">
-        <a name="M000201"></a>
+      <div id="method-M000227" class="method-detail">
+        <a name="M000227"></a>
 
         <div class="method-heading">
-          <a href="#M000201" class="method-signature">
+          <a href="#M000227" class="method-signature">
           <span class="method-name">size=</span><span class="method-args">(*values)</span>
           </a>
         </div>
@@ -872,8 +1125,8 @@ Sets the width and height styles of the <a href="Stage.html">Stage</a>.
   state.size = [&quot;50%&quot;, &quot;100%&quot;] # consuming 50% of the width and 100% of the height of the screen
 </pre>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000201-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000201-source">
+            onclick="toggleCode('M000227-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000227-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 59</span>
 59:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">size=</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">values</span>)
@@ -885,23 +1138,23 @@ Sets the width and height styles of the <a href="Stage.html">Stage</a>.
         </div>
       </div>
 
-      <div id="method-M000198" class="method-detail">
-        <a name="M000198"></a>
+      <div id="method-M000224" class="method-detail">
+        <a name="M000224"></a>
 
         <div class="method-heading">
-          <a href="#M000198" class="method-signature">
+          <a href="#M000224" class="method-signature">
           <span class="method-name">title</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Returns the <a href="Stage.html#M000198">title</a> that is displayed at the
+Returns the <a href="Stage.html#M000224">title</a> that is displayed at the
 top of the window that this stage represents.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000198-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000198-source">
+            onclick="toggleCode('M000224-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000224-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 36</span>
 36:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">title</span>
@@ -912,23 +1165,23 @@ top of the window that this stage represents.
         </div>
       </div>
 
-      <div id="method-M000199" class="method-detail">
-        <a name="M000199"></a>
+      <div id="method-M000225" class="method-detail">
+        <a name="M000225"></a>
 
         <div class="method-heading">
-          <a href="#M000199" class="method-signature">
+          <a href="#M000225" class="method-signature">
           <span class="method-name">title=</span><span class="method-args">(value)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Sets the <a href="Stage.html#M000198">title</a> that is displayed at the
+Sets the <a href="Stage.html#M000224">title</a> that is displayed at the
 top of the window that this stage represents.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000199-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000199-source">
+            onclick="toggleCode('M000225-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000225-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 42</span>
 42:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">title=</span>(<span class="ruby-identifier">value</span>)
@@ -939,11 +1192,11 @@ top of the window that this stage represents.
         </div>
       </div>
 
-      <div id="method-M000210" class="method-detail">
-        <a name="M000210"></a>
+      <div id="method-M000236" class="method-detail">
+        <a name="M000236"></a>
 
         <div class="method-heading">
-          <a href="#M000210" class="method-signature">
+          <a href="#M000236" class="method-signature">
           <span class="method-name">visible?</span><span class="method-args">()</span>
           </a>
         </div>
@@ -953,8 +1206,8 @@ top of the window that this stage represents.
 Returns true if the stage is visible on the screen.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000210-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000210-source">
+            onclick="toggleCode('M000236-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000236-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 131</span>
 131:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">visible?</span>
@@ -965,23 +1218,23 @@ Returns true if the stage is visible on the screen.
         </div>
       </div>
 
-      <div id="method-M000217" class="method-detail">
-        <a name="M000217"></a>
+      <div id="method-M000243" class="method-detail">
+        <a name="M000243"></a>
 
         <div class="method-heading">
-          <a href="#M000217" class="method-signature">
+          <a href="#M000243" class="method-signature">
           <span class="method-name">vital=</span><span class="method-args">(value)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Sets the vitality of the stage. Limelight will not exit while vital frames
-remain visible.
+Sets the vitality of the stage. <a href="../Limelight.html">Limelight</a>
+will not exit while vital frames remain visible.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000217-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000217-source">
+            onclick="toggleCode('M000243-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000243-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 174</span>
 174:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">vital=</span>(<span class="ruby-identifier">value</span>)
@@ -992,23 +1245,24 @@ remain visible.
         </div>
       </div>
 
-      <div id="method-M000218" class="method-detail">
-        <a name="M000218"></a>
+      <div id="method-M000244" class="method-detail">
+        <a name="M000244"></a>
 
         <div class="method-heading">
-          <a href="#M000218" class="method-signature">
+          <a href="#M000244" class="method-signature">
           <span class="method-name">vital?</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Returns true if this is a vital stage. Limelight will not exit while vital
-frames remain visible.
+Returns true if this is a vital stage. <a
+href="../Limelight.html">Limelight</a> will not exit while vital frames
+remain visible.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000218-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000218-source">
+            onclick="toggleCode('M000244-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000244-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 180</span>
 180:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">vital?</span>
@@ -1021,24 +1275,24 @@ frames remain visible.
 
       <h3 class="section-bar">Protected Instance methods</h3>
 
-      <div id="method-M000225" class="method-detail">
-        <a name="M000225"></a>
+      <div id="method-M000260" class="method-detail">
+        <a name="M000260"></a>
 
         <div class="method-heading">
-          <a href="#M000225" class="method-signature">
+          <a href="#M000260" class="method-signature">
           <span class="method-name">new_frame</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000225-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000225-source">
+            onclick="toggleCode('M000260-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000260-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 259</span>
-259:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">new_frame</span>
-260:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">UI</span><span class="ruby-operator">::</span><span class="ruby-constant">Model</span><span class="ruby-operator">::</span><span class="ruby-constant">Frame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>)
-261:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/stage.rb, line 319</span>
+319:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">new_frame</span>
+320:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">UI</span><span class="ruby-operator">::</span><span class="ruby-constant">Model</span><span class="ruby-operator">::</span><span class="ruby-constant">Frame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>)
+321:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

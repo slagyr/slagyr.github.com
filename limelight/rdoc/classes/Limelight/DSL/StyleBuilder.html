@@ -92,8 +92,8 @@ The basis of the <a href="../DSL.html">DSL</a> for defining a Style object.
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000080">extends</a>&nbsp;&nbsp;
-      <a href="#M000079">hover</a>&nbsp;&nbsp;
+      <a href="#M000063">extends</a>&nbsp;&nbsp;
+      <a href="#M000062">hover</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -115,11 +115,11 @@ The basis of the <a href="../DSL.html">DSL</a> for defining a Style object.
     <div id="methods">
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000080" class="method-detail">
-        <a name="M000080"></a>
+      <div id="method-M000063" class="method-detail">
+        <a name="M000063"></a>
 
         <div class="method-heading">
-          <a href="#M000080" class="method-signature">
+          <a href="#M000063" class="method-signature">
           <span class="method-name">extends</span><span class="method-args">(*style_names)</span>
           </a>
         </div>
@@ -145,34 +145,34 @@ will have a red background. Styles may override attributes aquired through
 extension.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000080-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000080-source">
+            onclick="toggleCode('M000063-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000063-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/dsl/styles_builder.rb, line 114</span>
-114:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extends</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">style_names</span>)
-115:         <span class="ruby-identifier">style_names</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">style_name</span><span class="ruby-operator">|</span>
-116:           <span class="ruby-identifier">extension</span> = <span class="ruby-ivar">@__styles_builder</span>.<span class="ruby-identifier">__styles__</span>[<span class="ruby-identifier">style_name</span>.<span class="ruby-identifier">to_s</span>]
-117:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">StyleBuilderException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Can't extend missing style: '#{style_name}'&quot;</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">extension</span>.<span class="ruby-identifier">nil?</span>
-118:           <span class="ruby-ivar">@__style__</span>.<span class="ruby-identifier">add_extension</span>(<span class="ruby-identifier">extension</span>)
-119:         <span class="ruby-keyword kw">end</span>
-120:       <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/dsl/styles_builder.rb, line 133</span>
+133:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extends</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">style_names</span>)
+134:         <span class="ruby-identifier">style_names</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">style_name</span><span class="ruby-operator">|</span>
+135:           <span class="ruby-identifier">extension</span> = <span class="ruby-ivar">@__styles_builder</span>.<span class="ruby-identifier">__styles</span>[<span class="ruby-identifier">style_name</span>.<span class="ruby-identifier">to_s</span>] <span class="ruby-operator">||</span> <span class="ruby-ivar">@__styles_builder</span>.<span class="ruby-identifier">__extendable_styles</span>[<span class="ruby-identifier">style_name</span>.<span class="ruby-identifier">to_s</span>]
+136:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">StyleBuilderException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Can't extend missing style: '#{style_name}'&quot;</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">extension</span>.<span class="ruby-identifier">nil?</span>
+137:           <span class="ruby-ivar">@__style</span>.<span class="ruby-identifier">add_extension</span>(<span class="ruby-identifier">extension</span>)
+138:         <span class="ruby-keyword kw">end</span>
+139:       <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000079" class="method-detail">
-        <a name="M000079"></a>
+      <div id="method-M000062" class="method-detail">
+        <a name="M000062"></a>
 
         <div class="method-heading">
-          <a href="#M000079" class="method-signature">
+          <a href="#M000062" class="method-signature">
           <span class="method-name">hover</span><span class="method-args">(&amp;block)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Used to define a <a href="StyleBuilder.html#M000079">hover</a> style. Hover
+Used to define a <a href="StyleBuilder.html#M000062">hover</a> style. Hover
 styles are appiled when the mouse passed over a prop using the specified
 style.
 </p>
@@ -190,13 +190,13 @@ The text color of props using the &#8216;spinner&#8217; style will become
 white when the mouse hovers over them.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000079-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000079-source">
+            onclick="toggleCode('M000062-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000062-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/dsl/styles_builder.rb, line 96</span>
-96:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hover</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
-97:         <span class="ruby-ivar">@__styles_builder</span>.<span class="ruby-identifier">__add_style__</span>(<span class="ruby-node">&quot;#{@__name}.hover&quot;</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
-98:       <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/dsl/styles_builder.rb, line 115</span>
+115:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hover</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+116:         <span class="ruby-ivar">@__styles_builder</span>.<span class="ruby-identifier">__add_style</span>(<span class="ruby-node">&quot;#{@__name}.hover&quot;</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+117:       <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

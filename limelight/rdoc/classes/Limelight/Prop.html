@@ -81,11 +81,11 @@
     <div id="description">
       <p>
 <a href="Prop.html">Prop</a> is the fundamental building block of a <a
-href="Prop.html#M000187">scene</a>. A prop represents a rectangular <a
-href="Prop.html#M000191">area</a> in the <a
-href="Prop.html#M000187">scene</a>, of almost any dimension. It may have
+href="Prop.html#M000194">scene</a>. A prop represents a rectangular <a
+href="Prop.html#M000198">area</a> in the <a
+href="Prop.html#M000194">scene</a>, of almost any dimension. It may have
 borders, backgrounds, margin, padding, and it may contain other props or <a
-href="Prop.html#M000186">text</a>. However it is the props&#8217; Styles
+href="Prop.html#M000193">text</a>. However it is the props&#8217; Styles
 that determine their size and appearance.
 </p>
 <p>
@@ -104,30 +104,31 @@ tree.
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000178">&lt;&lt;</a>&nbsp;&nbsp;
-      <a href="#M000177">add</a>&nbsp;&nbsp;
-      <a href="#M000190">add_options</a>&nbsp;&nbsp;
-      <a href="#M000183">after_painting</a>&nbsp;&nbsp;
-      <a href="#M000194">animate</a>&nbsp;&nbsp;
-      <a href="#M000191">area</a>&nbsp;&nbsp;
-      <a href="#M000192">bordered_area</a>&nbsp;&nbsp;
-      <a href="#M000179">build</a>&nbsp;&nbsp;
-      <a href="#M000173">event</a>&nbsp;&nbsp;
-      <a href="#M000175">event2</a>&nbsp;&nbsp;
-      <a href="#M000174">events</a>&nbsp;&nbsp;
-      <a href="#M000184">find_by_name</a>&nbsp;&nbsp;
-      <a href="#M000182">include_player</a>&nbsp;&nbsp;
-      <a href="#M000196">launch</a>&nbsp;&nbsp;
-      <a href="#M000188">loader</a>&nbsp;&nbsp;
-      <a href="#M000176">new</a>&nbsp;&nbsp;
-      <a href="#M000193">pen</a>&nbsp;&nbsp;
-      <a href="#M000195">play_sound</a>&nbsp;&nbsp;
-      <a href="#M000189">production</a>&nbsp;&nbsp;
-      <a href="#M000180">remove</a>&nbsp;&nbsp;
-      <a href="#M000181">remove_all</a>&nbsp;&nbsp;
-      <a href="#M000187">scene</a>&nbsp;&nbsp;
-      <a href="#M000186">text</a>&nbsp;&nbsp;
-      <a href="#M000185">text=</a>&nbsp;&nbsp;
+      <a href="#M000185">&lt;&lt;</a>&nbsp;&nbsp;
+      <a href="#M000184">add</a>&nbsp;&nbsp;
+      <a href="#M000197">add_options</a>&nbsp;&nbsp;
+      <a href="#M000190">after_painting</a>&nbsp;&nbsp;
+      <a href="#M000202">animate</a>&nbsp;&nbsp;
+      <a href="#M000198">area</a>&nbsp;&nbsp;
+      <a href="#M000199">bordered_area</a>&nbsp;&nbsp;
+      <a href="#M000186">build</a>&nbsp;&nbsp;
+      <a href="#M000200">child_area</a>&nbsp;&nbsp;
+      <a href="#M000180">event</a>&nbsp;&nbsp;
+      <a href="#M000182">event2</a>&nbsp;&nbsp;
+      <a href="#M000181">events</a>&nbsp;&nbsp;
+      <a href="#M000191">find_by_name</a>&nbsp;&nbsp;
+      <a href="#M000189">include_player</a>&nbsp;&nbsp;
+      <a href="#M000204">launch</a>&nbsp;&nbsp;
+      <a href="#M000195">loader</a>&nbsp;&nbsp;
+      <a href="#M000183">new</a>&nbsp;&nbsp;
+      <a href="#M000201">pen</a>&nbsp;&nbsp;
+      <a href="#M000203">play_sound</a>&nbsp;&nbsp;
+      <a href="#M000196">production</a>&nbsp;&nbsp;
+      <a href="#M000187">remove</a>&nbsp;&nbsp;
+      <a href="#M000188">remove_all</a>&nbsp;&nbsp;
+      <a href="#M000194">scene</a>&nbsp;&nbsp;
+      <a href="#M000193">text</a>&nbsp;&nbsp;
+      <a href="#M000192">text=</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -199,19 +200,19 @@ tree.
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M000173" class="method-detail">
-        <a name="M000173"></a>
+      <div id="method-M000180" class="method-detail">
+        <a name="M000180"></a>
 
         <div class="method-heading">
-          <a href="#M000173" class="method-signature">
+          <a href="#M000180" class="method-signature">
           <span class="method-name">event</span><span class="method-args">(event_symbol)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000173-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000173-source">
+            onclick="toggleCode('M000180-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000180-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 22</span>
 22:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">event</span>(<span class="ruby-identifier">event_symbol</span>)
@@ -224,19 +225,19 @@ tree.
         </div>
       </div>
 
-      <div id="method-M000175" class="method-detail">
-        <a name="M000175"></a>
+      <div id="method-M000182" class="method-detail">
+        <a name="M000182"></a>
 
         <div class="method-heading">
-          <a href="#M000175" class="method-signature">
+          <a href="#M000182" class="method-signature">
           <span class="method-name">event2</span><span class="method-args">(event_symbol)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000175-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000175-source">
+            onclick="toggleCode('M000182-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000182-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 32</span>
 32:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">event2</span>(<span class="ruby-identifier">event_symbol</span>)
@@ -249,19 +250,19 @@ tree.
         </div>
       </div>
 
-      <div id="method-M000174" class="method-detail">
-        <a name="M000174"></a>
+      <div id="method-M000181" class="method-detail">
+        <a name="M000181"></a>
 
         <div class="method-heading">
-          <a href="#M000174" class="method-signature">
+          <a href="#M000181" class="method-signature">
           <span class="method-name">events</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000174-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000174-source">
+            onclick="toggleCode('M000181-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000181-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 28</span>
 28:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">events</span>
@@ -272,11 +273,11 @@ tree.
         </div>
       </div>
 
-      <div id="method-M000176" class="method-detail">
-        <a name="M000176"></a>
+      <div id="method-M000183" class="method-detail">
+        <a name="M000183"></a>
 
         <div class="method-heading">
-          <a href="#M000176" class="method-signature">
+          <a href="#M000183" class="method-signature">
           <span class="method-name">new</span><span class="method-args">(hash = {})</span>
           </a>
         </div>
@@ -291,17 +292,16 @@ properties are not set until the prop is added to a <a
 href="Prop.html">Prop</a> tree with a <a href="Scene.html">Scene</a>.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000176-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000176-source">
+            onclick="toggleCode('M000183-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000183-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 52</span>
 52:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">hash</span> = {})
-53:       <span class="ruby-ivar">@options</span> = <span class="ruby-identifier">hash</span>
+53:       <span class="ruby-ivar">@options</span> = <span class="ruby-identifier">hash</span> <span class="ruby-operator">||</span> {}
 54:       <span class="ruby-ivar">@children</span> = []
 55:       <span class="ruby-ivar">@style</span> = <span class="ruby-constant">Styles</span><span class="ruby-operator">::</span><span class="ruby-constant">ScreenableStyle</span>.<span class="ruby-identifier">new</span>
 56:       <span class="ruby-ivar">@panel</span> = <span class="ruby-constant">UI</span><span class="ruby-operator">::</span><span class="ruby-constant">Model</span><span class="ruby-operator">::</span><span class="ruby-constant">Panel</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>)
-57:       <span class="ruby-ivar">@illuminated</span> = <span class="ruby-keyword kw">false</span>
-58:     <span class="ruby-keyword kw">end</span>
+57:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -309,42 +309,42 @@ href="Prop.html">Prop</a> tree with a <a href="Scene.html">Scene</a>.
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000178" class="method-detail">
-        <a name="M000178"></a>
+      <div id="method-M000185" class="method-detail">
+        <a name="M000185"></a>
 
         <div class="method-heading">
-          <a href="#M000178" class="method-signature">
+          <a href="#M000185" class="method-signature">
           <span class="method-name">&lt;&lt;</span><span class="method-args">(child)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Same as <a href="Prop.html#M000177">add</a>. Returns self so adding may be
+Same as <a href="Prop.html#M000184">add</a>. Returns self so adding may be
 chained.
 </p>
 <pre>
   prop &lt;&lt; child1 &lt;&lt; child2 &lt;&lt; child3
 </pre>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000178-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000178-source">
+            onclick="toggleCode('M000185-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000185-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 72</span>
-72:     <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-identifier">child</span>)
-73:       <span class="ruby-identifier">add</span>(<span class="ruby-identifier">child</span>)
-74:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
-75:     <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 71</span>
+71:     <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-identifier">child</span>)
+72:       <span class="ruby-identifier">add</span>(<span class="ruby-identifier">child</span>)
+73:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
+74:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000177" class="method-detail">
-        <a name="M000177"></a>
+      <div id="method-M000184" class="method-detail">
+        <a name="M000184"></a>
 
         <div class="method-heading">
-          <a href="#M000177" class="method-signature">
+          <a href="#M000184" class="method-signature">
           <span class="method-name">add</span><span class="method-args">(child)</span>
           </a>
         </div>
@@ -355,15 +355,44 @@ Add a <a href="Prop.html">Prop</a> as a child of this <a
 href="Prop.html">Prop</a>.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000177-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000177-source">
+            onclick="toggleCode('M000184-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000184-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 62</span>
-62:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add</span>(<span class="ruby-identifier">child</span>)
-63:       <span class="ruby-identifier">child</span>.<span class="ruby-identifier">set_parent</span>(<span class="ruby-keyword kw">self</span>)
-64:       <span class="ruby-ivar">@children</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">child</span>
-65:       <span class="ruby-ivar">@panel</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">child</span>.<span class="ruby-identifier">panel</span>)
-66:     <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 61</span>
+61:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add</span>(<span class="ruby-identifier">child</span>)
+62:       <span class="ruby-identifier">child</span>.<span class="ruby-identifier">set_parent</span>(<span class="ruby-keyword kw">self</span>)
+63:       <span class="ruby-ivar">@children</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">child</span>
+64:       <span class="ruby-ivar">@panel</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">child</span>.<span class="ruby-identifier">panel</span>)
+65:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000197" class="method-detail">
+        <a name="M000197"></a>
+
+        <div class="method-heading">
+          <a href="#M000197" class="method-signature">
+          <span class="method-name">add_options</span><span class="method-args">(more_options)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Allows the addition of extra initialization options. Will raise an
+exception if the <a href="Prop.html">Prop</a> has already been illuminated
+(added to a <a href="Prop.html#M000194">scene</a>).
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000197-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000197-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 201</span>
+201:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_options</span>(<span class="ruby-identifier">more_options</span>)
+202:       <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Too late to add options&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">illuminated?</span>
+203:       <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">more_options</span>)
+204:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -374,35 +403,6 @@ href="Prop.html">Prop</a>.
 
         <div class="method-heading">
           <a href="#M000190" class="method-signature">
-          <span class="method-name">add_options</span><span class="method-args">(more_options)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-Allows the addition of extra initialization options. Will raise an
-exception if the <a href="Prop.html">Prop</a> has already been illuminated
-(added to a <a href="Prop.html#M000187">scene</a>).
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000190-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000190-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 200</span>
-200:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_options</span>(<span class="ruby-identifier">more_options</span>)
-201:       <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Too late to add options&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">nil?</span>
-202:       <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">more_options</span>)
-203:     <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M000183" class="method-detail">
-        <a name="M000183"></a>
-
-        <div class="method-heading">
-          <a href="#M000183" class="method-signature">
           <span class="method-name">after_painting</span><span class="method-args">(flag = true, &amp;block)</span>
           </a>
         </div>
@@ -412,27 +412,27 @@ exception if the <a href="Prop.html">Prop</a> has already been illuminated
 A hook to invoke behavior after a <a href="Prop.html">Prop</a> is painted.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000183-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000183-source">
+            onclick="toggleCode('M000190-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000190-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 134</span>
-134:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">after_painting</span>(<span class="ruby-identifier">flag</span> = <span class="ruby-keyword kw">true</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
-135:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">flag</span>
-136:         <span class="ruby-ivar">@panel</span>.<span class="ruby-identifier">after_paint_action</span> = <span class="ruby-constant">PaintAction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
-137:       <span class="ruby-keyword kw">else</span>
-138:         <span class="ruby-ivar">@panel</span>.<span class="ruby-identifier">after_paint_action</span> = <span class="ruby-keyword kw">nil</span>
-139:       <span class="ruby-keyword kw">end</span>
-140:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 133</span>
+133:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">after_painting</span>(<span class="ruby-identifier">flag</span> = <span class="ruby-keyword kw">true</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+134:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">flag</span>
+135:         <span class="ruby-ivar">@panel</span>.<span class="ruby-identifier">after_paint_action</span> = <span class="ruby-constant">PaintAction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+136:       <span class="ruby-keyword kw">else</span>
+137:         <span class="ruby-ivar">@panel</span>.<span class="ruby-identifier">after_paint_action</span> = <span class="ruby-keyword kw">nil</span>
+138:       <span class="ruby-keyword kw">end</span>
+139:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000194" class="method-detail">
-        <a name="M000194"></a>
+      <div id="method-M000202" class="method-detail">
+        <a name="M000202"></a>
 
         <div class="method-heading">
-          <a href="#M000194" class="method-signature">
+          <a href="#M000202" class="method-signature">
           <span class="method-name">animate</span><span class="method-args">(options={}, &amp;block)</span>
           </a>
         </div>
@@ -456,25 +456,25 @@ This above example will cause the <a href="Prop.html">Prop</a>&#8216;s
 border to grow until it is 60 pixels wide.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000194-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000194-source">
+            onclick="toggleCode('M000202-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000202-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 239</span>
-239:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">animate</span>(<span class="ruby-identifier">options</span>={}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
-240:       <span class="ruby-identifier">animation</span> = <span class="ruby-constant">Animation</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">block</span>, <span class="ruby-identifier">options</span>)
-241:       <span class="ruby-identifier">animation</span>.<span class="ruby-identifier">start</span>
-242:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">animation</span>
-243:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 247</span>
+247:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">animate</span>(<span class="ruby-identifier">options</span>={}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+248:       <span class="ruby-identifier">animation</span> = <span class="ruby-constant">Animation</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">block</span>, <span class="ruby-identifier">options</span>)
+249:       <span class="ruby-identifier">animation</span>.<span class="ruby-identifier">start</span>
+250:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">animation</span>
+251:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000191" class="method-detail">
-        <a name="M000191"></a>
+      <div id="method-M000198" class="method-detail">
+        <a name="M000198"></a>
 
         <div class="method-heading">
-          <a href="#M000191" class="method-signature">
+          <a href="#M000198" class="method-signature">
           <span class="method-name">area</span><span class="method-args">()</span>
           </a>
         </div>
@@ -491,23 +491,23 @@ href="Pen.html">Pen</a>.
   box.width, box.height # represents the Prop's dimensions
 </pre>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000191-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000191-source">
+            onclick="toggleCode('M000198-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000198-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 211</span>
-211:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">area</span>
-212:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">panel</span>.<span class="ruby-identifier">get_bounding_box</span>.<span class="ruby-identifier">clone</span>
-213:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 212</span>
+212:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">area</span>
+213:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">panel</span>.<span class="ruby-identifier">get_bounding_box</span>.<span class="ruby-identifier">clone</span>
+214:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000192" class="method-detail">
-        <a name="M000192"></a>
+      <div id="method-M000199" class="method-detail">
+        <a name="M000199"></a>
 
         <div class="method-heading">
-          <a href="#M000192" class="method-signature">
+          <a href="#M000199" class="method-signature">
           <span class="method-name">bordered_area</span><span class="method-args">()</span>
           </a>
         </div>
@@ -517,26 +517,26 @@ href="Pen.html">Pen</a>.
 Returns a Box representing the bounds inside the borders of the prop. If
 the <a href="Prop.html">Prop</a>&#8216;s style has no margin or
 border_width, then this will be equivalant to <a
-href="Prop.html#M000191">area</a>.
+href="Prop.html#M000198">area</a>.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000192-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000192-source">
+            onclick="toggleCode('M000199-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000199-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 218</span>
-218:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">bordered_area</span>
-219:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">panel</span>.<span class="ruby-identifier">get_box_inside_borders</span>.<span class="ruby-identifier">clone</span>
-220:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 219</span>
+219:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">bordered_area</span>
+220:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">panel</span>.<span class="ruby-identifier">get_box_inside_borders</span>.<span class="ruby-identifier">clone</span>
+221:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000179" class="method-detail">
-        <a name="M000179"></a>
+      <div id="method-M000186" class="method-detail">
+        <a name="M000186"></a>
 
         <div class="method-heading">
-          <a href="#M000179" class="method-signature">
+          <a href="#M000186" class="method-signature">
           <span class="method-name">build</span><span class="method-args">(options = {}, &amp;block)</span>
           </a>
         </div>
@@ -555,56 +555,85 @@ href="DSL.html">DSL</a>.
    end
 </pre>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000179-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000179-source">
+            onclick="toggleCode('M000186-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000186-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 86</span>
-86:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">build</span>(<span class="ruby-identifier">options</span> = {}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
-87:       <span class="ruby-identifier">require</span> <span class="ruby-value str">'limelight/dsl/prop_builder'</span>
-88:       <span class="ruby-identifier">builder</span> = <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">DSL</span><span class="ruby-operator">::</span><span class="ruby-constant">PropBuilder</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>)
-89:       <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">__install_instance_variables</span>(<span class="ruby-identifier">options</span>)
-90:       <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">__loader__</span> = <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">loader</span>
-91:       <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
-92:     <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 85</span>
+85:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">build</span>(<span class="ruby-identifier">options</span> = {}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+86:       <span class="ruby-identifier">require</span> <span class="ruby-value str">'limelight/dsl/prop_builder'</span>
+87:       <span class="ruby-identifier">builder</span> = <span class="ruby-constant">Limelight</span><span class="ruby-operator">::</span><span class="ruby-constant">DSL</span><span class="ruby-operator">::</span><span class="ruby-constant">PropBuilder</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>)
+88:       <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">__install_instance_variables</span>(<span class="ruby-identifier">options</span>)
+89:       <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">__loader__</span> = <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">loader</span>
+90:       <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+91:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000184" class="method-detail">
-        <a name="M000184"></a>
+      <div id="method-M000200" class="method-detail">
+        <a name="M000200"></a>
 
         <div class="method-heading">
-          <a href="#M000184" class="method-signature">
+          <a href="#M000200" class="method-signature">
+          <span class="method-name">child_area</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns a Box representing the bounds inside the padding of the prop. This
+is the <a href="Prop.html#M000198">area</a> where child props may be
+located
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000200-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000200-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 226</span>
+226:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">child_area</span>
+227:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">panel</span>.<span class="ruby-identifier">getChildConsumableArea</span>().<span class="ruby-identifier">clone</span>
+228:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000191" class="method-detail">
+        <a name="M000191"></a>
+
+        <div class="method-heading">
+          <a href="#M000191" class="method-signature">
           <span class="method-name">find_by_name</span><span class="method-args">(name, results = [])</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Searches all children for Props with the specified name. Returns an Array
-of matching Props. Returns an empty Array is none are found.
+Searches all descendant of the <a href="Prop.html">Prop</a> (including
+itself) for Props with the specified name. Returns an Array of matching
+Props. Returns an empty Array if none are found.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000184-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000184-source">
+            onclick="toggleCode('M000191-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000191-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 145</span>
-145:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_by_name</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">results</span> = [])
-146:       <span class="ruby-identifier">results</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@name</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">name</span>
-147:       <span class="ruby-ivar">@children</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">find_by_name</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">results</span>) }
-148:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">results</span>
-149:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 144</span>
+144:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_by_name</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">results</span> = [])
+145:       <span class="ruby-identifier">results</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@name</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">name</span>
+146:       <span class="ruby-ivar">@children</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">find_by_name</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">results</span>) }
+147:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">results</span>
+148:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000182" class="method-detail">
-        <a name="M000182"></a>
+      <div id="method-M000189" class="method-detail">
+        <a name="M000189"></a>
 
         <div class="method-heading">
-          <a href="#M000182" class="method-signature">
+          <a href="#M000189" class="method-signature">
           <span class="method-name">include_player</span><span class="method-args">(player_module)</span>
           </a>
         </div>
@@ -616,26 +645,26 @@ href="Prop.html">Prop</a>. The Player must be a <a
 href="../Module.html">Module</a>.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000182-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000182-source">
+            onclick="toggleCode('M000189-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000189-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 113</span>
-113:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">include_player</span>(<span class="ruby-identifier">player_module</span>)
-114:       <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-identifier">player_module</span>)
-115:         <span class="ruby-identifier">extend</span> <span class="ruby-identifier">player_module</span>
-116:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">casted</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">player_module</span>.<span class="ruby-identifier">instance_methods</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-value str">&quot;casted&quot;</span>)
-117:       <span class="ruby-keyword kw">end</span> 
-118:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 112</span>
+112:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">include_player</span>(<span class="ruby-identifier">player_module</span>)
+113:       <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-identifier">player_module</span>)
+114:         <span class="ruby-identifier">extend</span> <span class="ruby-identifier">player_module</span>
+115:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">casted</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">player_module</span>.<span class="ruby-identifier">instance_methods</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-value str">&quot;casted&quot;</span>)
+116:       <span class="ruby-keyword kw">end</span> 
+117:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000196" class="method-detail">
-        <a name="M000196"></a>
+      <div id="method-M000204" class="method-detail">
+        <a name="M000204"></a>
 
         <div class="method-heading">
-          <a href="#M000196" class="method-signature">
+          <a href="#M000204" class="method-signature">
           <span class="method-name">launch</span><span class="method-args">(url)</span>
           </a>
         </div>
@@ -649,30 +678,30 @@ example, opening a URL in a browser:
   launch('http://www.google.com')
 </pre>
 <p>
-To create a link prop <a href="Prop.html#M000177">add</a> an accessor on
+To create a link prop <a href="Prop.html#M000184">add</a> an accessor on
 the player (say url) and use that in the prop definition Ex:
 </p>
 <pre>
   link :text =&gt; &quot;I am a link&quot;, :url =&gt; &quot;http://www.8thlight.com&quot;
 </pre>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000196-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000196-source">
+            onclick="toggleCode('M000204-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000204-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 260</span>
-260:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">launch</span>(<span class="ruby-identifier">url</span>)
-261:       <span class="ruby-constant">Context</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">os</span>.<span class="ruby-identifier">launch</span>(<span class="ruby-identifier">url</span>)
-262:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 268</span>
+268:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">launch</span>(<span class="ruby-identifier">url</span>)
+269:       <span class="ruby-constant">Context</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">os</span>.<span class="ruby-identifier">launch</span>(<span class="ruby-identifier">url</span>)
+270:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000188" class="method-detail">
-        <a name="M000188"></a>
+      <div id="method-M000195" class="method-detail">
+        <a name="M000195"></a>
 
         <div class="method-heading">
-          <a href="#M000188" class="method-signature">
+          <a href="#M000195" class="method-signature">
           <span class="method-name">loader</span><span class="method-args">()</span>
           </a>
         </div>
@@ -683,23 +712,23 @@ TODO get rid of me.&#8230; The Java <a href="Prop.html">Prop</a> interface
 declares this method.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000188-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000188-source">
+            onclick="toggleCode('M000195-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000195-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 173</span>
-173:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">loader</span>
-174:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">production</span>.<span class="ruby-identifier">root</span>;
-175:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 172</span>
+172:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">loader</span>
+173:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">production</span>.<span class="ruby-identifier">root</span>;
+174:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000193" class="method-detail">
-        <a name="M000193"></a>
+      <div id="method-M000201" class="method-detail">
+        <a name="M000201"></a>
 
         <div class="method-heading">
-          <a href="#M000193" class="method-signature">
+          <a href="#M000201" class="method-signature">
           <span class="method-name">pen</span><span class="method-args">()</span>
           </a>
         </div>
@@ -711,23 +740,23 @@ objects allow to you to draw directly on the screen, withing to bounds of
 this <a href="Prop.html">Prop</a>.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000193-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000193-source">
+            onclick="toggleCode('M000201-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000201-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 224</span>
-224:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pen</span>
-225:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Pen</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">panel</span>.<span class="ruby-identifier">getGraphics</span>)
-226:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 232</span>
+232:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pen</span>
+233:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Pen</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">panel</span>.<span class="ruby-identifier">getGraphics</span>)
+234:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000195" class="method-detail">
-        <a name="M000195"></a>
+      <div id="method-M000203" class="method-detail">
+        <a name="M000203"></a>
 
         <div class="method-heading">
-          <a href="#M000195" class="method-signature">
+          <a href="#M000203" class="method-signature">
           <span class="method-name">play_sound</span><span class="method-args">(filename)</span>
           </a>
         </div>
@@ -739,23 +768,23 @@ of a .au sound file. This filename should relative to the root directory of
 the current <a href="Production.html">Production</a>, or an absolute path.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000195-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000195-source">
+            onclick="toggleCode('M000203-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000203-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 248</span>
-248:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">play_sound</span>(<span class="ruby-identifier">filename</span>)
-249:       <span class="ruby-ivar">@panel</span>.<span class="ruby-identifier">play_sound</span>(<span class="ruby-identifier">scene</span>.<span class="ruby-identifier">loader</span>.<span class="ruby-identifier">path_to</span>(<span class="ruby-identifier">filename</span>))
-250:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 256</span>
+256:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">play_sound</span>(<span class="ruby-identifier">filename</span>)
+257:       <span class="ruby-ivar">@panel</span>.<span class="ruby-identifier">play_sound</span>(<span class="ruby-identifier">scene</span>.<span class="ruby-identifier">loader</span>.<span class="ruby-identifier">path_to</span>(<span class="ruby-identifier">filename</span>))
+258:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000189" class="method-detail">
-        <a name="M000189"></a>
+      <div id="method-M000196" class="method-detail">
+        <a name="M000196"></a>
 
         <div class="method-heading">
-          <a href="#M000189" class="method-signature">
+          <a href="#M000196" class="method-signature">
           <span class="method-name">production</span><span class="method-args">()</span>
           </a>
         </div>
@@ -766,71 +795,13 @@ Returns the current <a href="Production.html">Production</a> this <a
 href="Prop.html">Prop</a> lives in.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000189-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000189-source">
+            onclick="toggleCode('M000196-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000196-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 179</span>
-179:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">production</span>
-180:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">production</span>
-181:     <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M000180" class="method-detail">
-        <a name="M000180"></a>
-
-        <div class="method-heading">
-          <a href="#M000180" class="method-signature">
-          <span class="method-name">remove</span><span class="method-args">(child)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-Removes a child <a href="Prop.html">Prop</a>. The child <a
-href="Prop.html">Prop</a> will be parentless after removal.
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000180-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000180-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 96</span>
- 96:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove</span>(<span class="ruby-identifier">child</span>)
- 97:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">children</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">child</span>)
- 98:         <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">unindex_prop</span>(<span class="ruby-identifier">child</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">scene</span>
- 99:         <span class="ruby-ivar">@panel</span>.<span class="ruby-identifier">remove</span>(<span class="ruby-identifier">child</span>.<span class="ruby-identifier">panel</span>)
-100:       <span class="ruby-keyword kw">end</span>
-101:     <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M000181" class="method-detail">
-        <a name="M000181"></a>
-
-        <div class="method-heading">
-          <a href="#M000181" class="method-signature">
-          <span class="method-name">remove_all</span><span class="method-args">()</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-Removes all child Props.
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000181-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000181-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 105</span>
-105:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_all</span>
-106:       <span class="ruby-ivar">@panel</span>.<span class="ruby-identifier">remove_all</span>
-107:       <span class="ruby-ivar">@children</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span> <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">unindex_prop</span>(<span class="ruby-identifier">child</span>) } <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">scene</span>
-108:       <span class="ruby-ivar">@children</span> = []
-109:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 178</span>
+178:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">production</span>
+179:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">production</span>
+180:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -841,82 +812,140 @@ Removes all child Props.
 
         <div class="method-heading">
           <a href="#M000187" class="method-signature">
+          <span class="method-name">remove</span><span class="method-args">(child)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Removes a child <a href="Prop.html">Prop</a>. The child <a
+href="Prop.html">Prop</a> will be parentless after removal.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000187-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000187-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 95</span>
+ 95:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove</span>(<span class="ruby-identifier">child</span>)
+ 96:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">children</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">child</span>)
+ 97:         <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">unindex_prop</span>(<span class="ruby-identifier">child</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">scene</span>
+ 98:         <span class="ruby-ivar">@panel</span>.<span class="ruby-identifier">remove</span>(<span class="ruby-identifier">child</span>.<span class="ruby-identifier">panel</span>)
+ 99:       <span class="ruby-keyword kw">end</span>
+100:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000188" class="method-detail">
+        <a name="M000188"></a>
+
+        <div class="method-heading">
+          <a href="#M000188" class="method-signature">
+          <span class="method-name">remove_all</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Removes all child Props.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000188-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000188-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 104</span>
+104:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_all</span>
+105:       <span class="ruby-ivar">@panel</span>.<span class="ruby-identifier">remove_all</span>
+106:       <span class="ruby-ivar">@children</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span> <span class="ruby-identifier">scene</span>.<span class="ruby-identifier">unindex_prop</span>(<span class="ruby-identifier">child</span>) } <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">scene</span>
+107:       <span class="ruby-ivar">@children</span> = []
+108:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000194" class="method-detail">
+        <a name="M000194"></a>
+
+        <div class="method-heading">
+          <a href="#M000194" class="method-signature">
           <span class="method-name">scene</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Returns the <a href="Prop.html#M000187">scene</a> to which this prop
+Returns the <a href="Prop.html#M000194">scene</a> to which this prop
 belongs to.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000187-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000187-source">
+            onclick="toggleCode('M000194-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000194-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 166</span>
-166:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">scene</span> 
-167:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">nil?</span>
-168:       <span class="ruby-ivar">@scene</span> = <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">scene</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@scene</span>.<span class="ruby-identifier">nil?</span>
-169:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@scene</span>
-170:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 165</span>
+165:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">scene</span> 
+166:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">nil?</span>
+167:       <span class="ruby-ivar">@scene</span> = <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">scene</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@scene</span>.<span class="ruby-identifier">nil?</span>
+168:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@scene</span>
+169:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000186" class="method-detail">
-        <a name="M000186"></a>
+      <div id="method-M000193" class="method-detail">
+        <a name="M000193"></a>
 
         <div class="method-heading">
-          <a href="#M000186" class="method-signature">
+          <a href="#M000193" class="method-signature">
           <span class="method-name">text</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Returns the <a href="Prop.html#M000186">text</a> of the <a
+Returns the <a href="Prop.html#M000193">text</a> of the <a
 href="Prop.html">Prop</a>.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000186-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000186-source">
+            onclick="toggleCode('M000193-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000193-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 160</span>
-160:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text</span>
-161:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">panel</span>.<span class="ruby-identifier">text</span>
-162:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 159</span>
+159:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text</span>
+160:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">panel</span>.<span class="ruby-identifier">text</span>
+161:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000185" class="method-detail">
-        <a name="M000185"></a>
+      <div id="method-M000192" class="method-detail">
+        <a name="M000192"></a>
 
         <div class="method-heading">
-          <a href="#M000185" class="method-signature">
+          <a href="#M000192" class="method-signature">
           <span class="method-name">text=</span><span class="method-args">(value)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Sets the <a href="Prop.html#M000186">text</a> of this <a
+Sets the <a href="Prop.html#M000193">text</a> of this <a
 href="Prop.html">Prop</a>. If a prop is given <a
-href="Prop.html#M000186">text</a>, it will become sterilized (it may not
+href="Prop.html#M000193">text</a>, it will become sterilized (it may not
 have any more children). Some Players such as text_box, will cause the <a
-href="Prop.html#M000186">text</a> to appear in the text_box.
+href="Prop.html#M000193">text</a> to appear in the text_box.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000185-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000185-source">
+            onclick="toggleCode('M000192-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000192-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 154</span>
-154:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text=</span>(<span class="ruby-identifier">value</span>)    
-155:       <span class="ruby-ivar">@panel</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>
-156:     <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/limelight/prop.rb, line 153</span>
+153:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text=</span>(<span class="ruby-identifier">value</span>)    
+154:       <span class="ruby-ivar">@panel</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>
+155:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

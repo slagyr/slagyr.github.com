@@ -80,39 +80,80 @@
 
     <div id="description">
       <p>
-Used to open and manage Limelight Productions.
+<a href="Main.html">Limelight::Main</a> is used, when installed as a gem,
+to work with <a href="../Limelight.html">Limelight</a> production. It
+provides a handful of utilities to create, bundle, and develop with <a
+href="../Limelight.html">Limelight</a>.
 </p>
 <p>
-Productions may have a single scene or multiple scenes.
-</p>
-<p>
-Single-<a href="Scene.html">Scene</a> <a
-href="Production.html">Production</a> Directory Structure:
+For example, running the following command will generate a new <a
+href="../Limelight.html">Limelight</a> production for you.
 </p>
 <pre>
-  - calculator
-  | - props.rb
-  | - styles.rb
-  | - players
-    | - &lt;player_name&gt;.rb
-    | - *
-  | - stages.rb
-  | - production.rb
+  jruby -S limelight create production &lt;production name&gt;
 </pre>
 <p>
-In a Single-<a href="Scene.html">Scene</a> production, the scene name and
-production name are the same. As seen above, both names are
-&#8216;calculator&#8217;. Inside the scene there are three files and one
-directory, all of which are options.
+Assuming you used &quot;sandbox&quot; as the name or your production,
+you&#8216;d end up with the following directory structure generated for
+you.
 </p>
-<h2>props.rb</h2>
+<pre>
+  - sandbox
+  | - stages.rb
+  | - styles.rb
+  | - production.rb
+  | - default_scene
+    | - props.rb
+    | - styles.rb
+    | - players
+      | - &lt;player_name&gt;.rb
+  | - spec
+    | - spec_helper.rb
+    | - default_scene
+      | - default_scene_spec.rb
+</pre>
 <p>
-This file defines the props contained in the scene See
-Limelight::PropBuilder
+In this case, you&#8216;ve just created a production called
+&quot;Sandbox&quot;. By convention, the name of the production matches the
+name of the root directory. Notice that there are 3 files and 2
+directories. Let&#8216;s start by talking about the files.
+</p>
+<h2>stages.rb</h2>
+<p>
+This file uses a <a href="DSL.html">DSL</a> to configure the stages that
+will be used in the production. See Limelight::StagesBuilder
 </p>
 <h2>styles.rb</h2>
 <p>
-This file defines the styles used in the scene See Limelight::StylesBuilder
+This file defines production level styles. Each scene may have their own
+styles but styles defined here will be avaiable to all scenes. See
+Limelight::StylesBuilder
+</p>
+<h2>production.rb</h2>
+<p>
+This file defines a module names <a href="Production.html">Production</a>
+where you can defined hooks and behavior for your production. See <a
+href="Production.html">Limelight::Production</a>
+</p>
+<p>
+For the most part, each directory inside the root directory is a scene.
+This production has one scene named &quot;default_scene&quot; (this is the
+default name). Each scene starts out containing 2 file and a directory.
+Let&#8216;s look at those..
+</p>
+<h2>props.rb</h2>
+<p>
+This file defines the structure of your scene. Scenes are composed of
+Props. In this file you use the <a href="Prop.html">Prop</a> <a
+href="DSL.html">DSL</a> to specify all the components of your scene. See
+Limelight::PropBuilder See <a href="Prop.html">Limelight::Prop</a>
+</p>
+<h2>styles.rb</h2>
+<p>
+Similar to the styles.rb file located in the root directory, this file
+contains definitions of styles. However, all styles defined here are only
+available to the containgin scene. Styles define the look and feel of your
+scenes. See Limelight::StylesBuilder See Limelight::Style
 </p>
 <h2>players</h2>
 <p>
@@ -124,55 +165,14 @@ Inside &#8216;wall.rb&#8217; you would define a module named
 &#8216;Wall&#8217;. All behavior defined in the Wall modules will
 automatically be included in every prop named &#8216;wall&#8217;.
 </p>
-<h2>stages.rb</h2>
 <p>
-This file uses a <a href="DSL.html">DSL</a> to configure the stages that
-will be used in the production. See Limelight::StagesBuilder
-</p>
-<h2>production.rb</h2>
-<p>
-This file uses a <a href="DSL.html">DSL</a> to configure the current <a
-href="Production.html">Production</a>. See Limelight::ProductionBuilder
+So there&#8216;s a brief overview for you. Besure to check out the <a
+href="../Limelight.html">Limelight</a> Docs production. You can find it by
+installing <a href="../Limelight.html">Limelight</a> and starting it up.
 </p>
 <p>
-Multiple-<a href="Scene.html">Scene</a> <a
-href="Production.html">Production</a> Directory Structure:
-</p>
-<pre>
-  - sandbox
-  | - stages.rb
-  | - production.rb
-  | - styles.rb
-  | - players
-    | - &lt;player_name&gt;.rb
-  | - fader
-    | - props.rb
-    | - styles.rb
-    | - players
-      | - &lt;player_name&gt;.rb
-  | - floater
-    | - props.rb
-    | - styles.rb
-    | - players
-      | - &lt;player_name&gt;.rb
-</pre>
-<p>
-In a Multiple-<a href="Scene.html">Scene</a> production, the production
-acquires that name of the root directory. In this case the production is
-named &#8216;sandbox&#8217;. Each directory inside the root directory is a
-scene. This production has two scenes named &#8216;fader&#8217; and
-&#8216;floater&#8217;. Each scene is structured the same as in a Single-<a
-href="Scene.html">Scene</a> production with the exception of the
-&#8216;stages.rb&#8217; file. This file is specific to the production. The
-production may contain a &#8216;styles.rb&#8217; which contains styles used
-by multiple scenes. If some players are used in multiple Scenes, then it is
-useful to to create a players directory in the <a
-href="Production.html">Production</a> root to hold the common players.
-Other files may exist in the directory structure and they will not conflict
-with Limelight.
-</p>
-<p>
-See <a href="Commands.html">Limelight::Commands</a>
+For more info on available commands: See <a
+href="Commands.html">Limelight::Commands</a>
 </p>
 
     </div>
@@ -184,9 +184,9 @@ See <a href="Commands.html">Limelight::Commands</a>
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000164">run</a>&nbsp;&nbsp;
-      <a href="#M000165">run</a>&nbsp;&nbsp;
-      <a href="#M000166">usage</a>&nbsp;&nbsp;
+      <a href="#M000150">run</a>&nbsp;&nbsp;
+      <a href="#M000151">run</a>&nbsp;&nbsp;
+      <a href="#M000152">usage</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -208,11 +208,11 @@ See <a href="Commands.html">Limelight::Commands</a>
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M000164" class="method-detail">
-        <a name="M000164"></a>
+      <div id="method-M000150" class="method-detail">
+        <a name="M000150"></a>
 
         <div class="method-heading">
-          <a href="#M000164" class="method-signature">
+          <a href="#M000150" class="method-signature">
           <span class="method-name">run</span><span class="method-args">(args)</span>
           </a>
         </div>
@@ -223,13 +223,13 @@ Instantiates a new instance of <a href="Main.html">Main</a> to process the
 command
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000164-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000164-source">
+            onclick="toggleCode('M000150-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000150-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/main.rb, line 80</span>
-80:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">run</span>(<span class="ruby-identifier">args</span>)
-81:       <span class="ruby-identifier">new</span>().<span class="ruby-identifier">run</span>(<span class="ruby-identifier">args</span>)
-82:     <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/main.rb, line 77</span>
+77:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">run</span>(<span class="ruby-identifier">args</span>)
+78:       <span class="ruby-identifier">new</span>().<span class="ruby-identifier">run</span>(<span class="ruby-identifier">args</span>)
+79:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -237,11 +237,11 @@ command
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000165" class="method-detail">
-        <a name="M000165"></a>
+      <div id="method-M000151" class="method-detail">
+        <a name="M000151"></a>
 
         <div class="method-heading">
-          <a href="#M000165" class="method-signature">
+          <a href="#M000151" class="method-signature">
           <span class="method-name">run</span><span class="method-args">(args)</span>
           </a>
         </div>
@@ -251,46 +251,46 @@ command
 Executes behavior of limelight command.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000165-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000165-source">
+            onclick="toggleCode('M000151-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000151-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/limelight/main.rb, line 86</span>
-86:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run</span>(<span class="ruby-identifier">args</span>)
-87:       <span class="ruby-identifier">command_name</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
-88:       <span class="ruby-identifier">command</span> = <span class="ruby-constant">Commands</span>[<span class="ruby-identifier">command_name</span>]
-89:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">command</span>
-90:         <span class="ruby-identifier">command</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">run</span>(<span class="ruby-identifier">args</span>)
-91:       <span class="ruby-keyword kw">else</span>
-92:         <span class="ruby-identifier">usage</span>
-93:       <span class="ruby-keyword kw">end</span>
-94:     <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/main.rb, line 83</span>
+83:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run</span>(<span class="ruby-identifier">args</span>)
+84:       <span class="ruby-identifier">command_name</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+85:       <span class="ruby-identifier">command</span> = <span class="ruby-constant">Commands</span>[<span class="ruby-identifier">command_name</span>]
+86:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">command</span>
+87:         <span class="ruby-identifier">command</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">run</span>(<span class="ruby-identifier">args</span>)
+88:       <span class="ruby-keyword kw">else</span>
+89:         <span class="ruby-identifier">usage</span>
+90:       <span class="ruby-keyword kw">end</span>
+91:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000166" class="method-detail">
-        <a name="M000166"></a>
+      <div id="method-M000152" class="method-detail">
+        <a name="M000152"></a>
 
         <div class="method-heading">
-          <a href="#M000166" class="method-signature">
+          <a href="#M000152" class="method-signature">
           <span class="method-name">usage</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Prints the <a href="Main.html#M000166">usage</a> of the limelight command.
+Prints the <a href="Main.html#M000152">usage</a> of the limelight command.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000166-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000166-source">
+            onclick="toggleCode('M000152-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000152-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/limelight/main.rb, line 98</span>
- 98:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">usage</span>
- 99:       <span class="ruby-constant">Commands</span>[<span class="ruby-value str">&quot;help&quot;</span>].<span class="ruby-identifier">new</span>.<span class="ruby-identifier">run</span>([])
-100:       <span class="ruby-identifier">exit</span> <span class="ruby-value">-1</span>
-101:     <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/limelight/main.rb, line 95</span>
+95:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">usage</span>
+96:       <span class="ruby-constant">Commands</span>[<span class="ruby-value str">&quot;help&quot;</span>].<span class="ruby-identifier">new</span>.<span class="ruby-identifier">run</span>([])
+97:       <span class="ruby-identifier">exit</span> <span class="ruby-value">-1</span>
+98:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

@@ -80,8 +80,8 @@
 
     <div id="description">
       <p>
-A class used to <a href="MenuBar.html#M000075">build</a> <a
-href="MenuBar.html#M000077">menu</a> bars using a <a
+A class used to <a href="MenuBar.html#M000058">build</a> <a
+href="MenuBar.html#M000060">menu</a> bars using a <a
 href="../DSL.html">DSL</a>.
 </p>
 <pre>
@@ -93,13 +93,13 @@ href="../DSL.html">DSL</a>.
  end
 </pre>
 <p>
-This example created one <a href="MenuBar.html#M000077">menu</a> named
-&#8216;File&#8217; with two <a href="MenuBar.html#M000077">menu</a> items:
+This example created one <a href="MenuBar.html#M000060">menu</a> named
+&#8216;File&#8217; with two <a href="MenuBar.html#M000060">menu</a> items:
 &#8216;Open&#8217; and &#8216;Refresh&#8217;. The seconds parameter of the
-<a href="MenuBar.html#M000077">menu</a> items is the symbol of a method on
+<a href="MenuBar.html#M000060">menu</a> items is the symbol of a method on
 the context that will be invoked when the <a
-href="MenuBar.html#M000077">menu</a> <a
-href="MenuBar.html#M000078">item</a> is selected.
+href="MenuBar.html#M000060">menu</a> <a
+href="MenuBar.html#M000061">item</a> is selected.
 </p>
 
     </div>
@@ -111,10 +111,10 @@ href="MenuBar.html#M000078">item</a> is selected.
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000075">build</a>&nbsp;&nbsp;
-      <a href="#M000078">item</a>&nbsp;&nbsp;
-      <a href="#M000077">menu</a>&nbsp;&nbsp;
-      <a href="#M000076">new</a>&nbsp;&nbsp;
+      <a href="#M000058">build</a>&nbsp;&nbsp;
+      <a href="#M000061">item</a>&nbsp;&nbsp;
+      <a href="#M000060">menu</a>&nbsp;&nbsp;
+      <a href="#M000059">new</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -149,19 +149,19 @@ href="MenuBar.html#M000078">item</a> is selected.
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M000075" class="method-detail">
-        <a name="M000075"></a>
+      <div id="method-M000058" class="method-detail">
+        <a name="M000058"></a>
 
         <div class="method-heading">
-          <a href="#M000075" class="method-signature">
+          <a href="#M000058" class="method-signature">
           <span class="method-name">build</span><span class="method-args">(context, &amp;prop)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000075-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000075-source">
+            onclick="toggleCode('M000058-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000058-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/dsl/menu_bar.rb, line 36</span>
 36:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">build</span>(<span class="ruby-identifier">context</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">prop</span>)
@@ -174,11 +174,11 @@ href="MenuBar.html#M000078">item</a> is selected.
         </div>
       </div>
 
-      <div id="method-M000076" class="method-detail">
-        <a name="M000076"></a>
+      <div id="method-M000059" class="method-detail">
+        <a name="M000059"></a>
 
         <div class="method-heading">
-          <a href="#M000076" class="method-signature">
+          <a href="#M000059" class="method-signature">
           <span class="method-name">new</span><span class="method-args">(context)</span>
           </a>
         </div>
@@ -186,13 +186,13 @@ href="MenuBar.html#M000078">item</a> is selected.
         <div class="method-description">
           <p>
 This builder must be provided with a context. All <a
-href="MenuBar.html#M000077">menu</a> <a
-href="MenuBar.html#M000078">item</a> actions will be invoked on the
+href="MenuBar.html#M000060">menu</a> <a
+href="MenuBar.html#M000061">item</a> actions will be invoked on the
 context.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000076-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000076-source">
+            onclick="toggleCode('M000059-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000059-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/dsl/menu_bar.rb, line 46</span>
 46:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">context</span>)
@@ -206,26 +206,26 @@ context.
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000078" class="method-detail">
-        <a name="M000078"></a>
+      <div id="method-M000061" class="method-detail">
+        <a name="M000061"></a>
 
         <div class="method-heading">
-          <a href="#M000078" class="method-signature">
+          <a href="#M000061" class="method-signature">
           <span class="method-name">item</span><span class="method-args">(name, symbol)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Created a <a href="MenuBar.html#M000076">new</a> <a
-href="MenuBar.html#M000077">menu</a> <a
-href="MenuBar.html#M000078">item</a> with the provided name. The symbols
+Created a <a href="MenuBar.html#M000059">new</a> <a
+href="MenuBar.html#M000060">menu</a> <a
+href="MenuBar.html#M000061">item</a> with the provided name. The symbols
 paramter is the name of a method on the context that will be invoked when
-the <a href="MenuBar.html#M000078">item</a> is selected.
+the <a href="MenuBar.html#M000061">item</a> is selected.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000078-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000078-source">
+            onclick="toggleCode('M000061-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000061-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/dsl/menu_bar.rb, line 62</span>
 62:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">item</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">symbol</span>)
@@ -238,23 +238,23 @@ the <a href="MenuBar.html#M000078">item</a> is selected.
         </div>
       </div>
 
-      <div id="method-M000077" class="method-detail">
-        <a name="M000077"></a>
+      <div id="method-M000060" class="method-detail">
+        <a name="M000060"></a>
 
         <div class="method-heading">
-          <a href="#M000077" class="method-signature">
+          <a href="#M000060" class="method-signature">
           <span class="method-name">menu</span><span class="method-args">(name) {|| ...}</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Creates a <a href="MenuBar.html#M000076">new</a> <a
-href="MenuBar.html#M000077">menu</a> with the provided name
+Creates a <a href="MenuBar.html#M000059">new</a> <a
+href="MenuBar.html#M000060">menu</a> with the provided name
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000077-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000077-source">
+            onclick="toggleCode('M000060-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000060-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/limelight/dsl/menu_bar.rb, line 53</span>
 53:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">menu</span>(<span class="ruby-identifier">name</span>)

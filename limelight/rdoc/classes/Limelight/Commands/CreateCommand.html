@@ -85,11 +85,13 @@
 See the following usages summary
 </p>
 <pre>
-    Usage: limelight create [options] &lt;production|scene&gt; &lt;path&gt;
-       Creates the directories and files for a production and/or scene.
-       options:
-       -h, --help                       Prints this usage summary.
-       -s, --scene=&lt;name&gt;               Name of scene when creating a production.  Defaults to 'default_scene'.
+ Usage: limelight create [options] &lt;production|scene&gt; &lt;path&gt;
+     Creates the directories and files for a production and/or scene.
+     options:
+     -h, --help                       Prints this usage summary.
+     -s, --scene=&lt;name&gt;               Name of scene when creating a production.  Defaults to 'default_scene'.
+     -p, --production_path=&lt;path&gt;     Path of production to contain scene.  Defaults to '.'.
+     -S, --spec_path=&lt;path&gt;           Path to spec directory, relative to &lt;production_path&gt;.  Defaults to 'spec'.
 </pre>
 <p>
 Assume you wanted to create a new production named &quot;love_story&quot;
@@ -99,7 +101,7 @@ the needed files.
 </p>
 <pre>
   $ jruby -S limelight create -s midnight_romance production love_story
-  $ jruby -S limelight create scene love_story/happily_ever_after
+  $ jruby -S limelight create -p love_story scene happily_ever_after
 </pre>
 
     </div>
