@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Statemachine Example 4</title>
+    <link href="default.css" media="all" rel="Stylesheet" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+	<div id="frame">
+		<div id="canvas">
+			<div id="title_box">
+				<img src="images/logo.png"><br/>
+				<div class="tag_line">A Ruby Library, Gem, and Rails Plugin</div>
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="index.html">Overview</a></li>
+					<li><a href="documentation.html">Documentation</a></li>
+					<li><a href="example.html">Examples</a></li>
+					<li><a href="rdoc/index.html">RDoc</a></li>
+					<li><a href="http://github.com/slagyr/statemachine/">Project</a></li>
+				</ul>
+			</div>
+		    <div id="body">
+                <h2>Superstates</h2>
+
+<p>Often in statemachines, duplication can arise. For example, the vending machine in our examples may need periodic repairs. It’s not certain which state the vending machine will be in when the repair man arrives. So all states should have a transition into the Repair Mode state.</p>
+
+<p><img src="images/examples/vending_machine4b.png" style="border: 1px solid black" />
+<br /><b>Diagram 1 - Without Superstates</b></p>
+
+<p>In this diagram, both the Waiting and Paid states have a transition to the Repair Mode invoked by the repair event. Duplication! We can dry this up by using the <b>Superstate</b> construct. See below:</p>
+
+<p><img src="images/examples/vending_machine4a.png" style="border: 1px solid black" />
+<br /><b>Diagram 2 - With Superstates</b></p>
+
+<p>Here we introduce the Operational superstate. Both the Waiting and Paid states are contained within the superstate which implies that they inherit all of the superstate’s transitions. That means we only need one transition into the Repair Mode state from the Operational superstate to achieve the same behavior as the solution in <i>diagram 1</i>.</p>
+
+<p>One statemachine may have multiple superstates. And every superstate may contain other superstates. ie. Superstates can be nested.</p>
+
+<h2>History State</h2>
+
+<p>The solution in <i>diagram 2</i> has an advantage over <i>diagram 1</i>. In <i>diagram 1</i>, once the repair man is done he triggers the operate event and the vending machine transitions into the Waiting event. This is unfortunate. Even if the vending machine was in the Paid state before the repair man came along, it will be in the Waiting state after he leaves. Shouldn’t it go back into the Paid state?</p>
+
+<p>This is where use of the history state is useful. You can see the history state being use in <i>diagram 2</i>. In this solution, the history state allows the vending machine to return from a repair session into the same state it was in before, as though nothing happened at all.</p>
+
+<h2>Code</h2>
+
+<p>The following code builds the statemachine in <i>diagram 2</i>. Watch out for the _H. This is how the history state is denoted. If you have a superstate named foo, then it’s history state will be named foo_H.</p>
+
+<pre>require 'rubygems'
+require 'statemachine'
+
+vending_machine = Statemachine.build do
+  superstate :operational do
+    trans :waiting, :dollar, :paid
+    trans :paid, :selection, :waiting
+    trans :waiting, :selection, :waiting
+    trans :paid, :dollar, :paid
+
+    event :repair, :repair_mode,  Proc.new { puts "Entering Repair Mode" }
+  end
+
+  trans :repair_mode, :operate, :operational_H, Proc.new { puts "Exiting Repair Mode" }
+
+  on_entry_of :waiting, Proc.new { puts "Entering Waiting State" }
+  on_entry_of :paid, Proc.new { puts "Entering Paid State" }
+end
+
+vending_machine.repair
+vending_machine.operate
+vending_machine.dollar
+vending_machine.repair
+vending_machine.operate</pre>
+
+<p>Output:</p>
+
+<pre>Entering Repair Mode
+Exiting Repair Mode
+Entering Waiting State
+Entering Paid State
+Entering Repair Mode
+Exiting Repair Mode
+Entering Paid State</pre>
+
+		    </div>
+			<div id="footer">
+				<table border="0" cellpadding="0" cellspacing="0" align="center">
+					<tr>
+						<td align="right"> Written by Micah Martin </td>
+						<td width="20"></td>
+						<td align="left"><a href="8thlight.com"><img src="images/8l_star.png"></a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>	
+	<div id="bottom_frame">&nbsp;</div>
+  </body>
+</html>

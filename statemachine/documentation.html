@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Statemachine Documentation</title>
+    <link href="default.css" media="all" rel="Stylesheet" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+	<div id="frame">
+		<div id="canvas">
+			<div id="title_box">
+				<img src="images/logo.png"><br/>
+				<div class="tag_line">A Ruby Library, Gem, and Rails Plugin</div>
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="index.html">Overview</a></li>
+					<li><a href="documentation.html">Documentation</a></li>
+					<li><a href="example.html">Examples</a></li>
+					<li><a href="rdoc/index.html">RDoc</a></li>
+					<li><a href="http://github.com/slagyr/statemachine/">Project</a></li>
+				</ul>
+			</div>
+		    <div id="body">
+                <h2>What is a statemachine?</h2>
+
+<p>A statemachine keeps track of the status(state) of an application or device and responds to different inputs, which alter the state of the machine.</p>
+
+<h2>States, Transitions, and Events</h2>
+
+<ul>
+  <li>State: This is the status of the device or application the statemachine is being used for. At any given time, the statemachine is in one of its predefined states.</li>
+  <li>Transition: Moving from one state to another is called a transition.  Transitions are invoked by Events.</li>
+  <li>Event: Events are the inputs to a statemachine.</li>
+</ul>
+
+<p>In the Statemachine project, a statemachine is defined by its transitions.</p>
+
+<p>Take a look at <a href="example1.html">Example 1</a> to see States, Transitions, and Events being used.</p>
+
+<h2>Actions</h2>
+
+<p>Actions allow statemachines to perform operations at various point during execution. There are two models for incorporating actions into statemachines.</p>
+
+<ul>
+  <li>Mealy: A Mealy machine performs actions on transitions. Each transition in a statemachine may invoke a unique action.</li>
+  <li>Moore: A Moore machine performs actions when entering a state. Each state may have it’s own entry action.</li>
+</ul>
+
+<p>Mealy and Moore machines each have advantages and disadvantages. But one great advantage of both it that they are not mutually exclusive. If we use both models, and toss in some exit actions, we’ve got it made!</p>
+
+<p>Take a look at <a href="example2.html">Example 2</a> to see Actions being used.</p>
+
+<h2>Conditional Logic</h2>
+
+<p>If you’re doing any significant amount of work with statemachines, you will most certainly encounter some conditional logic in your statemachines. You may need the state machine to go to one state if a certain condition is true and a different state if it is false.  To accomplish this, you can have a state check for the condition and invoke the appropriate transition in an entry action.</p>
+
+<p>Take a look at <a href="example3.html">Example 3</a> to see Conditional Logic being used.</p>
+
+<h2>Superstates</h2>
+
+<p>Oftentimes duplication can arise within a statemachine.  One way to solve this problem is through the use of superstates.  A <b>superstate</b> is a state that contains other states. One statemachine may have multiple superstates. And every superstate may contain other superstates. ie. Superstates can be nested.</p>
+
+<h3>History State</h3>
+
+<p>One problem with superstates is that they may not know which state to return to when coming into that state.  To solve this problem, superstates come with the <b>history state</b>. Every superstate will remember which state it is in before the superstate is exited. This memory is stored in a pseudo state called the history state. Transitions that end in the history state will recall the last active state of the superstate and enter it.</p>
+
+<p>Take a look at <a href="example4.html">Example 4</a> to see Superstates and History States being used.</p>
+
+		    </div>
+			<div id="footer">
+				<table border="0" cellpadding="0" cellspacing="0" align="center">
+					<tr>
+						<td align="right"> Written by Micah Martin </td>
+						<td width="20"></td>
+						<td align="left"><a href="8thlight.com"><img src="images/8l_star.png"></a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>	
+	<div id="bottom_frame">&nbsp;</div>
+  </body>
+</html>

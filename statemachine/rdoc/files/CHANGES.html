@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: CHANGES</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>CHANGES</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>CHANGES
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Tue Mar 23 09:23:10 -0500 2010</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <h1><a href="../classes/Statemachine.html">Statemachine</a> Changelog</h1>
+<h2>Version 0.4.2</h2>
+<p>
+Simple Fixes
+</p>
+<ul>
+<li>Fixed respond_to? to handle the, what should be impossible, case when the
+state is nil
+
+</li>
+<li>Switch history members variable to store id rather than object.
+
+</li>
+</ul>
+<h2>Version 0.4.1</h2>
+<p>
+Simple Fixes
+</p>
+<ul>
+<li>Fixed priority of default transitions, self defaults first, then superstate
+defaults.
+
+</li>
+</ul>
+<h2>Version 0.4.0</h2>
+<p>
+Feature enhancements
+</p>
+<ul>
+<li>enabled nested superstate history
+
+</li>
+<li>TransitionMissingException&#8216;s are raised when the statemachine
+can&#8216;t respond to an event
+
+</li>
+<li>Statmachine overrides respond_to? to respond to valid events.
+
+</li>
+</ul>
+<p>
+Behavior Fixes
+</p>
+<ul>
+<li>fixed default transition so that superstate transitions have priority over
+default
+
+</li>
+</ul>
+<h2>Version 0.3.0</h2>
+<p>
+Feature enhancements
+</p>
+<ul>
+<li>added default transitions
+
+</li>
+<li>added default history for superstates
+
+</li>
+<li>the context method in the builder will set the context&#8216;s statemachine
+variable if the context respond_to?(:statemachine=)
+
+</li>
+</ul>
+<p>
+Behavior Fixes
+</p>
+<ul>
+<li>the entry action of the startstate is called when the statemachine starts
+or is reset.
+
+</li>
+<li>resetting the statemachine will reset the history state for each
+superstate.
+
+</li>
+</ul>
+<h2>Version 0.2.2</h2>
+<p>
+Minor plugin update
+</p>
+<ul>
+<li>introduced before_event and after_event hooks for controllers
+
+</li>
+</ul>
+<h2>Version 0.2.1</h2>
+<p>
+Rails Plugin.
+</p>
+<ul>
+<li>Rails plugin introduced
+
+</li>
+</ul>
+<h2>Version 0.2.0</h2>
+<p>
+Separation of logic from behavior.
+</p>
+<ul>
+<li>Prefered builder syntax implemented
+
+</li>
+<li>statemachine have a context which defines all the behavior
+
+</li>
+<li>startstate can be set at any time in the builder
+
+</li>
+<li>states can be declared without blocks
+
+</li>
+<li>context can be set in builder
+
+</li>
+</ul>
+<h2>Version 0.1.0</h2>
+<p>
+A new way to build the statemachines
+</p>
+<ul>
+<li>cleaner API for running a statemachine
+
+</li>
+<li>much refactoring
+
+</li>
+<li>new API for building statemachine
+
+</li>
+<li>process_event accepts strings
+
+</li>
+</ul>
+<h2>Version 0.0.4</h2>
+<p>
+Some minor improvements
+</p>
+<ul>
+<li>Proper handling of state transition implemented, such that the proper state
+is set for entry and exit actions.
+
+</li>
+<li>can now use State objects in addition to symbols while creating a
+transition
+
+</li>
+<li>more compliant implementation of history state
+
+</li>
+</ul>
+<h2>Version 0.0.3</h2>
+<p>
+Bug fix dealing with entry and exit actions. The state machine&#8216;s
+state need to be set to the entered/exited state before calling the
+exit/entry action.
+</p>
+<ul>
+<li>added a couple specs in the exit_entry_spec
+
+</li>
+<li>modified state.entered/exited methods to set the state
+
+</li>
+<li>modifed the StateMachine.state to accept state objects.
+
+</li>
+<li>removed running attribute from StateMachine because it wasn&#8216;t much
+use
+
+</li>
+<li>also removed the nil (end state)
+
+</li>
+</ul>
+<h2>Version 0.0.2</h2>
+<p>
+More conventional file structure
+</p>
+<ul>
+<li>nothing much to report in terms of changes.
+
+</li>
+</ul>
+<h2>Version 0.0.1</h2>
+<p>
+0.0.0 didn&#8216;t seem to work as a gem so maybe this one will.
+</p>
+<ul>
+<li>nothing really, just playing with rake and release configuration
+
+</li>
+</ul>
+<h2>Version 0.0.0</h2>
+<p>
+The first release. Most finite state machine features are implemented
+</p>
+<ul>
+<li>states
+
+</li>
+<li>transitions
+
+</li>
+<li>transition actions
+
+</li>
+<li>super states
+
+</li>
+<li>entry actions
+
+</li>
+<li>exit actions
+
+</li>
+<li>history state
+
+</li>
+</ul>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

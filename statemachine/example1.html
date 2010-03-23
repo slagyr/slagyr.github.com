@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Statemachine Example 1</title>
+    <link href="default.css" media="all" rel="Stylesheet" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+	<div id="frame">
+		<div id="canvas">
+			<div id="title_box">
+				<img src="images/logo.png"><br/>
+				<div class="tag_line">A Ruby Library, Gem, and Rails Plugin</div>
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="index.html">Overview</a></li>
+					<li><a href="documentation.html">Documentation</a></li>
+					<li><a href="example.html">Examples</a></li>
+					<li><a href="rdoc/index.html">RDoc</a></li>
+					<li><a href="http://github.com/slagyr/statemachine/">Project</a></li>
+				</ul>
+			</div>
+		    <div id="body">
+                <h2>States, Transitions, and Events</h2>
+
+<h3>This is a simple statemachine showing use of states and transitions.</h3>
+
+<p><img src="images/examples/vending_machine.png" style="border: 1px solid black" />
+<br /><b>The Vending Machine Statemachine Diagram</b></p>
+
+<p>Above is a UML diagram of the statemachine the runs a simple vending machine. We can see that there are two rectangles with rounded corners. These are States. The vending machine has two possible states, Waiting and Paid. At any given time during execution, the vending machine will be in one of these states.</p>
+
+<p>Note the arrows going from one state to another. These arrows represent the transitions of the statemachine. Also note that each transition is labeled with an Event. They invoke transitions. For example, when the vending machine is in the Waiting state and the dollar event is received, the statemachine will transition into the Paid state. When in the paid state and the selection event is received, the statemachine will transition back into the Waiting state.</p>
+
+<p>This should seem reasonable. Imagine a real vending machine. When you walk up to it it’s waiting for you to put money in. You pay by sticking a dollar in and then you make your selection. After this happy transaction, the vending machine waits for the next client.</p>
+
+<p>This scenario is not the only possibility though. Statemachine are very helpful in examining all possible flows through the system. Take the Waiting state. We don’t normally expect users to make selections if they haven’t paid but it’s a possibility. As you can see this unexpected event is handled by our vending machine. It will simply continue to wait for your dollar. And it would be foolish for someone to put more money in the the vending machine if they’ve already paid. Foolish or not, you and I know it happens. Our vending machine handles this graciously by taking the money and allowing the user to make a selection for the fist dollar they supplied. Effectively the client loses the extra money they put in. (grin)</p>
+
+<p>Implementing the Statemachine:</p>
+
+<p>We have identified 3 fundamental components to a statemachine: States, Transitions, and Events. It turns out that the simplest way to define a statemachine is to define its transitions. Each transition can be defined by identifying the state where it begins, the event by which is invoked, and the state where it ends. Using this scheme we can define out vending machine like so…</p>
+
+<table style="border: 1px solid black; margin: 10px;">
+<tr><th>Origin State</th><th>Event</th><th>Destination State</th></tr>
+<tr><td>Waiting</td><td>dollar</td><td>Paid</td></tr>
+<tr><td>Paid</td><td>selection</td><td>Waiting</td></tr>
+
+<tr><td>Waiting</td><td>selection</td><td>Waiting</td></tr>
+<tr><td>Paid</td><td>dollar</td><td>Paid</td></tr>
+</table>
+
+<p>Defining it in ruby is not much harder:</p>
+<pre>require 'rubygems'
+require 'statemachine'
+
+vending_machine = Statemachine.build do
+  trans :waiting, :dollar, :paid
+  trans :paid, :selection, :waiting
+  trans :waiting, :selection, :waiting
+  trans :paid, :dollar, :paid
+end</pre>
+
+<p>The above snippet assumes you have the statemachine gem installed. (See <a href="overview.html">Overview</a> for installation instructions).</p>
+
+<p>The outcome of this code an instance of Statemachine stored in the variable named vending_machine. To use our statemachine we need to send events to it. This is done by calling methods that correspond to events.</p>
+
+<pre>puts vending_machine.state
+vending_machine.dollar
+puts vending_machine.state
+vending_machine.selection
+puts vending_machine.state</pre>
+<p>That sequence of events will produce the following ouput:</p>
+<pre>waiting
+paid
+waiting</pre>
+
+<p>That’s it for the basics. <a href="example2.html">Example 2</a> shows how to make our statemachine more functional by adding actions.</p>
+
+		    </div>
+			<div id="footer">
+				<table border="0" cellpadding="0" cellspacing="0" align="center">
+					<tr>
+						<td align="right"> Written by Micah Martin </td>
+						<td width="20"></td>
+						<td align="left"><a href="8thlight.com"><img src="images/8l_star.png"></a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>	
+	<div id="bottom_frame">&nbsp;</div>
+  </body>
+</html>

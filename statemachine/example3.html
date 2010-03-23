@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Statemachine Example 3</title>
+    <link href="default.css" media="all" rel="Stylesheet" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+	<div id="frame">
+		<div id="canvas">
+			<div id="title_box">
+				<img src="images/logo.png"><br/>
+				<div class="tag_line">A Ruby Library, Gem, and Rails Plugin</div>
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="index.html">Overview</a></li>
+					<li><a href="documentation.html">Documentation</a></li>
+					<li><a href="example.html">Examples</a></li>
+					<li><a href="rdoc/index.html">RDoc</a></li>
+					<li><a href="http://github.com/slagyr/statemachine/">Project</a></li>
+				</ul>
+			</div>
+		    <div id="body">
+                <h2>Conditional Logic</h2>
+
+<p>Out vending machine is a good example of when we may need conditional logic. When ever a coin is inserted, the invoked event will depend on whether the total amount of money inserted is sufficient to buy something. If enough money has been tendered, the display should suggest that the customer make a selection. If insufficient money has been inserted, the customer should be prompted to insert more.</p>
+
+<p>Conditional logic can be accomplished by using <b>entry actions</b>. See the diagram below.</p>
+
+<p><img src="images/examples/vending_machine3.png" style="border: 1px solid black" />
+<br /><b>State Diagram with Conditional Logic</b></p>
+
+<p>Starting in the Accept Money state, when a coin is inserted, the coin event is fired and the statemachine transitions into the Coin Inserted state. This is where it gets fun. Upon entering of the Coin Inserted state its entry event is invoked: count_amount_tendered. This method will count the money and invoke the not_paid_yet or paid event accordingly. This will cause the statemachine to transition into the appropriate state.</p>
+
+<p>The Coin Inserted state is unique. You wouldn’t expect to find the statemachine in the Coin Inserted state for any reason except to make this decision. Once the decision is made, the state changes. States like this are called <b>Decision States</b>.</p>
+
+<h2>Code</h2>
+
+<pre>require 'rubygems'
+require 'statemachine'
+
+class VendingMachineContext
+
+  attr_accessor :statemachine
+
+  def initialize
+    @amount_tendered = 0
+  end
+
+  def add_coin
+    @amount_tendered = @amount_tendered + 25
+  end
+
+  def count_amount_tendered
+    if @amount_tendered &gt;= 100
+      @statemachine.paid
+    else
+      @statemachine.not_paid_yet
+    end
+  end
+
+  def prompt_money
+    puts "$.#{@amount_tendered}: more money please"
+  end
+
+  def prompt_selection
+    puts "please make a selection"
+  end
+end
+
+vending_machine = Statemachine.build do
+  trans :accept_money, :coin, :coin_inserted, :add_coin
+  state :coin_inserted do
+    event :not_paid_yet, :accept_money, :prompt_money
+    event :paid, :await_selection, :prompt_selection
+    on_entry :count_amount_tendered
+  end
+  context VendingMachineContext.new
+end
+vending_machine.context.statemachine = vending_machine
+
+vending_machine.coin
+vending_machine.coin
+vending_machine.coin
+vending_machine.coin</pre>
+
+<p>Output:</p>
+
+<pre>$.25: more money please
+$.50: more money please
+$.75: more money please
+please make a selection</pre>
+
+<p>Moving on to <a href="example4.html">Example 4</a>, we will begin to deal with superstates.</p>
+
+		    </div>
+			<div id="footer">
+				<table border="0" cellpadding="0" cellspacing="0" align="center">
+					<tr>
+						<td align="right"> Written by Micah Martin </td>
+						<td width="20"></td>
+						<td align="left"><a href="8thlight.com"><img src="images/8l_star.png"></a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>	
+	<div id="bottom_frame">&nbsp;</div>
+  </body>
+</html>
