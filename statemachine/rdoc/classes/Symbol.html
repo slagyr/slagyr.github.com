@@ -5,10 +5,10 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Class: Statemachine::StateBuilder</title>
+  <title>Class: Symbol</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <meta http-equiv="Content-Script-Type" content="text/javascript" />
-  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
   <script type="text/javascript">
   // <![CDATA[
 
@@ -50,13 +50,13 @@
         <table class="header-table">
         <tr class="top-aligned-row">
           <td><strong>Class</strong></td>
-          <td class="class-name-in-header">Statemachine::StateBuilder</td>
+          <td class="class-name-in-header">Symbol</td>
         </tr>
         <tr class="top-aligned-row">
             <td><strong>In:</strong></td>
             <td>
-                <a href="../../files/lib/statemachine/builder_rb.html">
-                lib/statemachine/builder.rb
+                <a href="../files/lib/statemachine/generate/util_rb.html">
+                lib/statemachine/generate/util.rb
                 </a>
         <br />
             </td>
@@ -65,7 +65,9 @@
         <tr class="top-aligned-row">
             <td><strong>Parent:</strong></td>
             <td>
-                Builder
+                <a href="Object.html">
+                Object
+               </a>
             </td>
         </tr>
         </table>
@@ -78,13 +80,6 @@
 
   <div id="contextContent">
 
-    <div id="description">
-      <p>
-Builder class used to define states. Creates by <a
-href="SuperstateBuilding.html#M000005">SuperstateBuilding#state</a>
-</p>
-
-    </div>
 
 
    </div>
@@ -93,7 +88,7 @@ href="SuperstateBuilding.html#M000005">SuperstateBuilding#state</a>
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000033">new</a>&nbsp;&nbsp;
+      <a href="#M000002">&lt;=&gt;</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -101,13 +96,6 @@ href="SuperstateBuilding.html#M000005">SuperstateBuilding#state</a>
 
 
     <!-- if includes -->
-    <div id="includes">
-      <h3 class="section-bar">Included Modules</h3>
-
-      <div id="includes-list">
-        <span class="include-name"><a href="StateBuilding.html">StateBuilding</a></span>
-      </div>
-    </div>
 
     <div id="section">
 
@@ -120,27 +108,26 @@ href="SuperstateBuilding.html#M000005">SuperstateBuilding#state</a>
 
     <!-- if method_list -->
     <div id="methods">
-      <h3 class="section-bar">Public Class methods</h3>
+      <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000033" class="method-detail">
-        <a name="M000033"></a>
+      <div id="method-M000002" class="method-detail">
+        <a name="M000002"></a>
 
         <div class="method-heading">
-          <a href="#M000033" class="method-signature">
-          <span class="method-name">new</span><span class="method-args">(id, superstate, statemachine)</span>
+          <a href="#M000002" class="method-signature">
+          <span class="method-name">&lt;=&gt;</span><span class="method-args">(other)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000033-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000033-source">
+            onclick="toggleCode('M000002-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000002-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/statemachine/builder.rb, line 224</span>
-224:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">superstate</span>, <span class="ruby-identifier">statemachine</span>)
-225:       <span class="ruby-keyword kw">super</span> <span class="ruby-identifier">statemachine</span>
-226:       <span class="ruby-ivar">@subject</span> = <span class="ruby-identifier">acquire_state_in</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">superstate</span>)
-227:     <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/statemachine/generate/util.rb, line 34</span>
+34:   <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&lt;=&gt;</span>(<span class="ruby-identifier">other</span>)
+35:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_s</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">to_s</span>
+36:   <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

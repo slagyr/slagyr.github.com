@@ -86,11 +86,11 @@ The builder module used to declare states.
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000015">default</a>&nbsp;&nbsp;
-      <a href="#M000011">event</a>&nbsp;&nbsp;
-      <a href="#M000013">on_entry</a>&nbsp;&nbsp;
-      <a href="#M000012">on_event</a>&nbsp;&nbsp;
-      <a href="#M000014">on_exit</a>&nbsp;&nbsp;
+      <a href="#M000029">default</a>&nbsp;&nbsp;
+      <a href="#M000025">event</a>&nbsp;&nbsp;
+      <a href="#M000027">on_entry</a>&nbsp;&nbsp;
+      <a href="#M000026">on_event</a>&nbsp;&nbsp;
+      <a href="#M000028">on_exit</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -125,19 +125,19 @@ The builder module used to declare states.
     <div id="methods">
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000015" class="method-detail">
-        <a name="M000015"></a>
+      <div id="method-M000029" class="method-detail">
+        <a name="M000029"></a>
 
         <div class="method-heading">
-          <a href="#M000015" class="method-signature">
+          <a href="#M000029" class="method-signature">
           <span class="method-name">default</span><span class="method-args">(destination_id, action = nil)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Declare a <a href="StateBuilding.html#M000015">default</a> transition for
-the state. Any <a href="StateBuilding.html#M000011">event</a> that is not
+Declare a <a href="StateBuilding.html#M000029">default</a> transition for
+the state. Any <a href="StateBuilding.html#M000025">event</a> that is not
 already handled by the state will be handled by this transition.
 </p>
 <pre>
@@ -148,8 +148,8 @@ already handled by the state will be handled by this transition.
   end
 </pre>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000015-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000015-source">
+            onclick="toggleCode('M000029-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000029-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/statemachine/builder.rb, line 114</span>
 114:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">default</span>(<span class="ruby-identifier">destination_id</span>, <span class="ruby-identifier">action</span> = <span class="ruby-keyword kw">nil</span>)
@@ -160,11 +160,11 @@ already handled by the state will be handled by this transition.
         </div>
       </div>
 
-      <div id="method-M000011" class="method-detail">
-        <a name="M000011"></a>
+      <div id="method-M000025" class="method-detail">
+        <a name="M000025"></a>
 
         <div class="method-heading">
-          <a href="#M000011" class="method-signature">
+          <a href="#M000025" class="method-signature">
           <span class="method-name">event</span><span class="method-args">(event, destination_id, action = nil)</span>
           </a>
         </div>
@@ -172,11 +172,11 @@ already handled by the state will be handled by this transition.
         <div class="method-description">
           <p>
 Declares that the state responds to the spcified <a
-href="StateBuilding.html#M000011">event</a>. The <tt><a
-href="StateBuilding.html#M000011">event</a></tt> paramter should be a
-Symbol. The <tt>destination_id</tt>, which should also be a Symbol, is the
-id of the state that will <a href="StateBuilding.html#M000011">event</a>
-will transition into.
+href="StateBuilding.html#M000025">event</a>. The <tt><a
+href="StateBuilding.html#M000025">event</a></tt> paramter should be a <a
+href="../Symbol.html">Symbol</a>. The <tt>destination_id</tt>, which should
+also be a <a href="../Symbol.html">Symbol</a>, is the id of the state that
+will <a href="StateBuilding.html#M000025">event</a> will transition into.
 </p>
 <p>
 The 3rd <tt>action</tt> paramter is optional
@@ -189,8 +189,8 @@ The 3rd <tt>action</tt> paramter is optional
   end
 </pre>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000011-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000011-source">
+            onclick="toggleCode('M000025-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000025-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/statemachine/builder.rb, line 73</span>
 73:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">event</span>(<span class="ruby-identifier">event</span>, <span class="ruby-identifier">destination_id</span>, <span class="ruby-identifier">action</span> = <span class="ruby-keyword kw">nil</span>)
@@ -201,11 +201,11 @@ The 3rd <tt>action</tt> paramter is optional
         </div>
       </div>
 
-      <div id="method-M000013" class="method-detail">
-        <a name="M000013"></a>
+      <div id="method-M000027" class="method-detail">
+        <a name="M000027"></a>
 
         <div class="method-heading">
-          <a href="#M000013" class="method-signature">
+          <a href="#M000027" class="method-signature">
           <span class="method-name">on_entry</span><span class="method-args">(entry_action)</span>
           </a>
         </div>
@@ -222,8 +222,8 @@ Declare the entry action for the state.
   end
 </pre>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000013-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000013-source">
+            onclick="toggleCode('M000027-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000027-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/statemachine/builder.rb, line 89</span>
 89:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on_entry</span>(<span class="ruby-identifier">entry_action</span>)
@@ -234,19 +234,19 @@ Declare the entry action for the state.
         </div>
       </div>
 
-      <div id="method-M000012" class="method-detail">
-        <a name="M000012"></a>
+      <div id="method-M000026" class="method-detail">
+        <a name="M000026"></a>
 
         <div class="method-heading">
-          <a href="#M000012" class="method-signature">
+          <a href="#M000026" class="method-signature">
           <span class="method-name">on_event</span><span class="method-args">(event, options)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000012-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000012-source">
+            onclick="toggleCode('M000026-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000026-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/statemachine/builder.rb, line 77</span>
 77:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on_event</span>(<span class="ruby-identifier">event</span>, <span class="ruby-identifier">options</span>)
@@ -257,11 +257,11 @@ Declare the entry action for the state.
         </div>
       </div>
 
-      <div id="method-M000014" class="method-detail">
-        <a name="M000014"></a>
+      <div id="method-M000028" class="method-detail">
+        <a name="M000028"></a>
 
         <div class="method-heading">
-          <a href="#M000014" class="method-signature">
+          <a href="#M000028" class="method-signature">
           <span class="method-name">on_exit</span><span class="method-args">(exit_action)</span>
           </a>
         </div>
@@ -278,8 +278,8 @@ Declare the exit action for the state.
   end
 </pre>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000014-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000014-source">
+            onclick="toggleCode('M000028-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000028-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/statemachine/builder.rb, line 101</span>
 101:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on_exit</span>(<span class="ruby-identifier">exit_action</span>)
