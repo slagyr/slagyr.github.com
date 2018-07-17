@@ -82,6 +82,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
+  margin-top: $spacing-unit / 2;
   font-weight: $base-font-weight;
 }
 
@@ -195,4 +196,37 @@ pre {
   path {
     fill: $grey-color;
   }
+}
+
+.home-intro {
+  clear: both;
+  display: table;
+}
+
+img.home-img {
+  border-radius: 10%;
+  max-height: 300px;
+  float: right;
+}
+
+.company {
+
+  clear: both;
+  display: table;
+
+  .logo {
+    float: left;
+    width: 200px;
+    text-align: center;
+  }
+
+  img {
+    max-width: 180px;
+    max-height: 180px;
+  }
+
+  p {
+    padding-top: 60px;
+  }
+
 }
