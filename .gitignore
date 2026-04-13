@@ -3,4 +3,6 @@
 /.idea
 /.sass-cache
 /_site
+/.bundle
+/vendor/bundle
 /onex.iml

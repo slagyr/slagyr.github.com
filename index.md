@@ -4,12 +4,8 @@ title: Home
 permalink: /
 ---
 
-<div class="home-intro">
-    <img class="home-img" alt="Mesa Verde Family Pic" src="/img/mesaverde.jpg"/>
-    <h3>Welcome!</h3>
-    <p>Hey There!  I'm Micah Martin.  This is my website. That's my family there in that picture.</p>
-    <p>What you'll find here is links to... well... stuff I've done.  Enjoy!</p>  
-</div>
+#### software craftsman, builder, and pilot.
+Micah Martin is a software craftsman, entrepreneur, and pilot whose career spans software consulting, technical education, and aviation. He has built products and teams at companies including 8th Light, co-founded Clean Coders with Robert C. Martin, founded Clean Coders Studio, Airworthy, lemonGRAFT, and more.
 
 ### Social Media
 
@@ -20,13 +16,16 @@ permalink: /
 
 ### Blogs and Sites
 
-* [eflight Blog](/eflight) - Blog my adventures in developing electric airplanes. 
-* [OneX Blog](/onex) - Documents the construction of my OneX kit plane
-* [8th Light Blog](https://8thlight.com/blog/micah-martin/) - My blog entries while at 8th Light, Inc.
-* [mmhttp](/mmhttp) - JavaDoc for a simple HTTP server written in Java
-* [Statemachine](/statemachine) - Documentation for my Ruby Statemachine Gem
-* [Sparring](/sparring) - Ruby Sparring results and documentation from a while back
-* [Limelight](/limelight/rdoc/) - Limelight RDoc ... long deprecated.  I should probably delete it.
+* [Craftsman Series](http://micahmartin.com/craftsman-series) - Revival of Unclebob's "Craftsman" series from 2002 - 2010. 
+* [Pendulums](http://micahmartin.com/pendulums) - A fun coupled pendulums simulator. 
+* [Clean Coders Blog](https://cleancoders.com/blog) - Several blog entries published here.  Search for Micah. 
+* [eflight Blog](http://micahmartin.com/eflight) - Blog adventures in developing electric airplanes. 
+* [OneX Blog](http://micahmartin.com/onex) - Documents the construction of a OneX kit plane
+* [8th Light Blog](https://8thlight.com/blog/micah-martin/) - blog entries while at 8th Light, Inc.
+* [mmhttp](http://micahmartin.com/mmhttp) - JavaDoc for a simple HTTP server written in Java
+* [Statemachine](http://micahmartin.com/statemachine) - Documentation for Ruby Statemachine Gem
+* [Sparring](http://micahmartin.com/sparring) - Ruby Sparring results and documentation from a while back
+* [Limelight](http://micahmartin.com/limelight/rdoc/) - Limelight RDoc ... long deprecated.
 
 ### Companies
 
@@ -35,6 +34,20 @@ permalink: /
         <img src="/img/airworthy-logo.png"/>
     </a> 
     <p>Airworthy, <a href="http://airworthy.co">airworthy.co</a>, has a meandering history, and a promising future.</p>
+</div>
+
+<div class="company">
+    <a class="logo" href="https://cleancoders.com/studio">
+        <img src="/img/cleancoders-studio-logo.png"/>
+    </a> 
+    <p>Clean Coders Studio, <a href="https://cleancoders.com/studio">cleancoders.com/studio</a>, is a software craftsmanship, contract development company.</p>
+</div>
+
+<div class="company">
+    <a class="logo" href="https://lemongraft.com">
+        <img src="/img/lemongraft-logo.png"/>
+    </a> 
+    <p>lemonGRAFT, <a href="https:lemonGRAFT.com//">lemongraft.com</a>, is a digital marketplace for buying local, homegrown food. Shop in your neighborhood to find the most fresh, ethical, and nutritious foods on the market. .</p>
 </div>
 
 <div class="company">

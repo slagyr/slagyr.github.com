@@ -4,7 +4,7 @@ GEM
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
     colorator (1.1.0)
-    ffi (1.9.15)
+    ffi (1.16.3)
     forwardable-extended (2.6.0)
     jekyll (3.3.1)
       addressable (~> 2.4)
@@ -45,9 +45,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ffi (~> 1.16.3)
   jekyll (= 3.3.1)
   jekyll-feed (~> 0.6)
   minima (~> 2.0)
 
 BUNDLED WITH
-   1.13.7
+   1.17.2
