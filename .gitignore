@@ -1,4 +1,6 @@
+*.iml
+.DS_Store
 /.idea
-/onex.iml
-/_site
 /.sass-cache
+/_site
+/onex.iml
